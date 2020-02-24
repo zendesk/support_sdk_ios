@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZendeskSupportSDK"
-  s.version      = "5.0.0"
+  s.version      = "5.0.1"
   s.summary      = "ZendeskSupportSDK #{s.version.to_s}"
   s.homepage     = "https://developer.zendesk.com/embeddables"
   s.license      = {
