@@ -522,6 +522,7 @@ SWIFT_CLASS_NAMED("RequestUiConfiguration")
 /// version:
 /// 2.0.0
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1172,6 +1173,7 @@ SWIFT_CLASS_NAMED("RequestUiConfiguration")
 /// version:
 /// 2.0.0
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
 @end
 
 

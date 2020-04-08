@@ -273,6 +273,7 @@ public struct AsyncMiddleware : SupportSDK.Middleware {
   @objc final public var ticketFormID: Foundation.NSNumber?
   @objc final public var fileAttachments: [SupportSDK.RequestAttachment]
   @objc override required dynamic public init()
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
 }
 public protocol Reducer {
