@@ -6,13 +6,13 @@
 	<array>
 		<dict>
 			<key>LibraryIdentifier</key>
-			<string>ios-i386_x86_64-simulator</string>
+			<string>ios-x86_64_i386-simulator</string>
 			<key>LibraryPath</key>
 			<string>SupportSDK.framework</string>
 			<key>SupportedArchitectures</key>
 			<array>
-				<string>i386</string>
 				<string>x86_64</string>
+				<string>i386</string>
 			</array>
 			<key>SupportedPlatform</key>
 			<string>ios</string>
