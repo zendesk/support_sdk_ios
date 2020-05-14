@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
   s.swift_version = '5.2.2'
   s.source       = { :git => "https://github.com/zendesk/support_sdk_ios.git", :tag => s.version }
   s.vendored_frameworks = 'SupportSDK.framework'
-  s.dependency 'ZendeskSupportProvidersSDK', '~> 5.0.0'
-  s.dependency 'ZendeskMessagingSDK', '~> 3.0.0'
+  s.dependency 'ZendeskSupportProvidersSDK', '~> 5.0.3'
+  s.dependency 'ZendeskMessagingSDK', '~> 3.4.0'
 end
