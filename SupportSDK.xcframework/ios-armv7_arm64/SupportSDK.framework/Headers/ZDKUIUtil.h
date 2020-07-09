@@ -165,7 +165,10 @@ CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
 {
     CGRect screen = [UIScreen mainScreen].bounds;
 
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    #pragma clang diagnostic pop
 
     CGRect rect;
 
@@ -221,7 +224,10 @@ CGCenterRectInRect(CGRect rect, CGRect inRect)
 CG_INLINE BOOL
 ZDKUIIsLandscape()
 {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    #pragma clang diagnostic pop
     return UIInterfaceOrientationIsLandscape(orientation);
 }
 
