@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportSDK
 import AVFoundation
 import CommonUISDK
@@ -21,7 +21,9 @@ import os
   final public let transferOptionDescription: MessagingAPI.TransferOptionDescription
   final public var configs: SDKConfigurations.Configurations
   final public var onUpdate: ([Foundation.UUID : (MessagingAPI.Update) -> Swift.Void])
-  @objc final public func isConversationOngoing() -> Swift.Bool
+  @available(*, deprecated, message: "Use isConversationOngoing(_ completion: @escaping (Bool) -> Void) instead")
+  final public func isConversationOngoing() -> Swift.Bool
+  @objc final public func isConversationOngoing(_ completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public static func engine() throws -> SupportSDK.SupportEngine
   final public func start(messagingAPI: MessagingAPI.MessagingAPIProtocol)
   final public func stop()
@@ -140,6 +142,12 @@ final public class BlockMiddleware : SupportSDK.Middleware {
   @objc deinit
 }
 public func + (lhs: SupportSDK.Middleware, rhs: SupportSDK.Middleware) -> SupportSDK.Middleware
+@_inheritsConvenienceInitializers @objc(ZDKRequestListUiConfiguration) final public class RequestListUIConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
+  @objc override required dynamic public init()
+  @objc final public var allowRequestCreation: Swift.Bool
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @available(*, deprecated, renamed: "CommonTheme")
 @objc(ZDKTheme) public class Theme : ObjectiveC.NSObject {
   @objc public static let currentTheme: SupportSDK.Theme
