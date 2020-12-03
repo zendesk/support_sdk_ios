@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonUISDK
 import AVFoundation
 import CommonCrypto
@@ -9,7 +9,6 @@ import Foundation
 import MobileCoreServices
 import Photos
 import QuickLook
-import SDKConfigurations
 import Swift
 import UIKit.UIImage
 import UIKit
@@ -333,7 +332,7 @@ final public class MessagingCoordinator : CommonUISDK.MessagingCoordinatorProtoc
   final public var interactions: [CommonUISDK.InteractionCellViewModelProtocol] {
     get
   }
-  public init(configs: [SDKConfigurations.Configuration] = [])
+  public init()
   final public func configureViewController(avatarImage: UIKit.UIImage?, inputFieldState: CommonUISDK.InputFieldViewModel) -> UIKit.UIViewController
   final public func set(avatarImage: UIKit.UIImage? = nil, animated: Swift.Bool = true)
   final public func updateInputField(_ inputFieldState: CommonUISDK.InputFieldViewModel)
@@ -556,7 +555,7 @@ extension InputField : UIKit.UITextViewDelegate {
 }
 public protocol InteractionCellDelegate : AnyObject {
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionView : UIKit.UIButton {
   @objc deinit
 }
 public struct SeparatorWithTextViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {

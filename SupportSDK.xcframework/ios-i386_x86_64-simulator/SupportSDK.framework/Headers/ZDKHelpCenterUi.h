@@ -17,7 +17,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ZDKHelpCenterConversationsUIDelegate.h"
+#import <SupportSDK/ZDKHelpCenterConversationsUIDelegate.h>
 
 @protocol ZDKConfiguration;
 

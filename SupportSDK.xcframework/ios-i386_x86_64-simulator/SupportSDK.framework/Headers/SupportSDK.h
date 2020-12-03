@@ -20,18 +20,18 @@
 #define SupportSDK_h
 
 
-#import "ZDKCreateRequestUIDelegate.h"
-#import "ZDKHelpCenterArticleRatingHandlerProtocol.h"
-#import "ZDKHelpCenterAttachmentsDataSource.h"
-#import "ZDKHelpCenterConversationsUIDelegate.h"
-#import "ZDKHelpCenterDataSource.h"
-#import "ZDKHelpCenterErrorCodes.h"
-#import "ZDKHelpCenterUi.h"
-#import "ZDKLayoutGuideApplicator.h"
-#import "ZDKSpinnerDelegate.h"
-#import "ZDKSupportAttachmentCell.h"
-#import "ZDKToastViewWrapper.h"
-#import "ZDKUIUtil.h"
+#import <SupportSDK/ZDKCreateRequestUIDelegate.h>
+#import <SupportSDK/ZDKHelpCenterArticleRatingHandlerProtocol.h>
+#import <SupportSDK/ZDKHelpCenterAttachmentsDataSource.h>
+#import <SupportSDK/ZDKHelpCenterConversationsUIDelegate.h>
+#import <SupportSDK/ZDKHelpCenterDataSource.h>
+#import <SupportSDK/ZDKHelpCenterErrorCodes.h>
+#import <SupportSDK/ZDKHelpCenterUi.h>
+#import <SupportSDK/ZDKLayoutGuideApplicator.h>
+#import <SupportSDK/ZDKSpinnerDelegate.h>
+#import <SupportSDK/ZDKSupportAttachmentCell.h>
+#import <SupportSDK/ZDKToastViewWrapper.h>
+#import <SupportSDK/ZDKUIUtil.h>
 
 #if MODULES_DISABLED
 #import <SupportProvidersSDK/SupportProvidersSDK.h>

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportSDK
 import AVFoundation
 import CommonUISDK
@@ -44,8 +44,8 @@ public struct ActionSubscription {
   public func removeListener()
   public func linkLifeCycleTo(object: ObjectiveC.NSObject)
 }
-public let alwaysFilter: SupportSDK.FilterFunction<Any>
-public let EqualsFilter: SupportSDK.FilterFunction<Any>
+public let alwaysFilter: (Any, Any) -> Swift.Bool
+public let EqualsFilter: (Any, Any) -> Swift.Bool
 @objc @_inheritsConvenienceInitializers public class ContainerViewController : UIKit.UIViewController {
   @objc override dynamic public func viewDidLoad()
   @objc deinit

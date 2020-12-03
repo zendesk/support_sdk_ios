@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZendeskCoreSDK
 import Foundation
 import Swift
@@ -121,6 +121,9 @@ extension Zendesk {
   }
   @objc final public func setIdentity(_ newIdentity: ZendeskCoreSDK.ZDKObjCIdentity)
   @objc final public func objCIdentity() -> ZendeskCoreSDK.ZDKObjCIdentity?
+}
+extension Zendesk : ZendeskCoreSDK.AccessStatusProvider {
+  final public func getAccessStatus(callback: @escaping (ZendeskCoreSDK.AccessStatus) -> Swift.Void)
 }
 public struct SDKError : Swift.Error {
   public let description: Swift.String
@@ -423,6 +426,13 @@ extension Jwt : Swift.Equatable {
   @objc public init(withToken token: Swift.String)
   @objc override dynamic public init()
   @objc deinit
+}
+public enum AccessStatus {
+  case accessExists
+  case accessError(Swift.Error)
+}
+public protocol AccessStatusProvider {
+  func getAccessStatus(callback: @escaping (ZendeskCoreSDK.AccessStatus) -> Swift.Void)
 }
 public struct SettingsProvider {
   public init(accountDetails: ZendeskCoreSDK.AccountDetails)
