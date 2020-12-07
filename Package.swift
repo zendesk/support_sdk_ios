@@ -15,17 +15,16 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "ZendeskSupportProvidersSDK",
-                 url: "https://github.com/zendesk/support_providers_sdk_ios/releases/download/5.2.0/SupportProvidersSDK.xcframework.zip",
+                 url: "https://github.com/zendesk/support_providers_sdk_ios",
                  from: "5.2.0"),
         .package(name: "ZendeskMessagingSDK",
-                 url: "https://github.com/zendesk/messaging_sdk_ios/releases/download/3.8.1/MessagingSDK.xcframework.zip",
+                 url: "https://github.com/zendesk/messaging_sdk_ios",
                  from: "3.8.1")
     ],
     targets: [
         .binaryTarget(
             name: "ZendeskSupportSDK",
-            url: "https://github.com/zendesk/support_sdk_ios/releases/download/5.2.0/SupportSDK.xcframework.zip",
-            checksum: "c599572d583cbe601a381cc700085f569a566cdcc97d788f6bfa89a95e898ec1"
+            path: "SupportSDK.xcframework"
         ),
         .target(name: "ZendeskSupportSDKTargets",
                 dependencies: [
