@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
 // swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportSDK
 import AVFoundation
 import CommonUISDK
@@ -20,7 +20,7 @@ import os
   final public let id: Swift.String
   final public let transferOptionDescription: MessagingAPI.TransferOptionDescription
   final public var configs: SDKConfigurations.Configurations
-  final public var onUpdate: ([Foundation.UUID : (MessagingAPI.Update) -> Swift.Void])
+  final public var onUpdate: ([MessagingAPI.ObservableIdentifier : (MessagingAPI.Update) -> Swift.Void])
   @available(*, deprecated, message: "Use isConversationOngoing(_ completion: @escaping (Bool) -> Void) instead")
   final public func isConversationOngoing() -> Swift.Bool
   @objc final public func isConversationOngoing(_ completion: @escaping (Swift.Bool) -> Swift.Void)
