@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommonUISDK
 import AVFoundation
 import CommonCrypto
@@ -12,23 +12,24 @@ import QuickLook
 import Swift
 import UIKit.UIImage
 import UIKit
+import _Concurrency
 import os
 public protocol ActionOptionsCellDelegate : AnyObject {
   func actionOptionsCell(_ cell: CommonUISDK.ActionOptionsTableViewCell, didSelect viewModel: CommonUISDK.ButtonOptionViewModelProtocol, from actionModel: CommonUISDK.ActionOptionsCellViewModel)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionsTableViewCell : CommonUISDK.InteractionCell {
-  weak final public var delegate: CommonUISDK.InteractionCellDelegate?
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionOptionsTableViewCell : CommonUISDK.InteractionCell {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
-  @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
-  @objc override final public var canBecomeFirstResponder: Swift.Bool {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override final public var canBecomeFirstResponder: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override final public func prepareForReuse()
-  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override final public func prepareForReuse()
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
 }
-extension ActionOptionsTableViewCell {
-  final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
+extension CommonUISDK.ActionOptionsTableViewCell {
+  @_Concurrency.MainActor(unsafe) final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
 }
 public protocol ActionOptionViewModelProtocol : CommonUISDK.ButtonOptionViewModelProtocol {
   var iconImage: UIKit.UIImage? { get }
@@ -42,7 +43,7 @@ public struct ActionOptionViewModel : CommonUISDK.ActionOptionViewModelProtocol 
   public let action: (([Swift.String : Any]) -> Swift.Void)
   public init(description: Swift.String, iconImage: UIKit.UIImage? = nil, localisedLabelText: Swift.String, shouldHaveBottomBorder: Swift.Bool, contactOptionAction: @escaping (([Swift.String : Any]) -> Swift.Void))
 }
-extension ActionOptionViewModel : Swift.Equatable {
+extension CommonUISDK.ActionOptionViewModel : Swift.Equatable {
   public static func == (lhs: CommonUISDK.ActionOptionViewModel, rhs: CommonUISDK.ActionOptionViewModel) -> Swift.Bool
 }
 public enum ViewControllerEvent : Swift.Equatable {
@@ -53,11 +54,11 @@ public enum ViewControllerEvent : Swift.Equatable {
   case viewDidDisappear
   case viewDidLayoutSubviews
   case viewControllerDidClose
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CommonUISDK.ViewControllerEvent, b: CommonUISDK.ViewControllerEvent) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: CommonUISDK.ViewControllerEvent, b: CommonUISDK.ViewControllerEvent) -> Swift.Bool
 }
 public protocol MessagingViewModelProtocol {
   var avatarImage: UIKit.UIImage? { get }
@@ -116,7 +117,7 @@ final public class ImageCellViewModel : CommonUISDK.PresentableCellViewModel, Sw
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, filename: Swift.String? = nil, url: Foundation.URL, cachedURL: Foundation.URL?)
   @objc deinit
 }
-extension ImageCellViewModel {
+extension CommonUISDK.ImageCellViewModel {
   final public var topMargin: CoreGraphics.CGFloat {
     get
   }
@@ -136,11 +137,11 @@ public struct StatusViewModel : CommonUISDK.InteractionCellViewModelProtocol, Sw
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool = false, messageStatus: CommonUISDK.Status)
   public static func == (a: CommonUISDK.StatusViewModel, b: CommonUISDK.StatusViewModel) -> Swift.Bool
 }
-extension UIColor {
+extension UIKit.UIColor {
   public static func colorFromHex(_ hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0) -> UIKit.UIColor
 }
-extension UIImageView {
-  @objc dynamic open func nuke_display(image: UIKit.UIImage?)
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func nuke_display(image: UIKit.UIImage?)
 }
 public protocol ResponseOptionsCellViewModelProtocol : CommonUISDK.InteractionCellViewModelProtocol {
   var isMultilineEnabled: Swift.Bool { get }
@@ -174,14 +175,14 @@ public struct AttachmentCellViewModel : CommonUISDK.PresentableCellViewModel, Sw
   public init(id: Swift.String, timestamp: Foundation.Date, name: Swift.String?, isBot: Swift.Bool, messageStatus: CommonUISDK.Status, attachment: CommonUISDK.AttachmentViewModel)
   public static func == (a: CommonUISDK.AttachmentCellViewModel, b: CommonUISDK.AttachmentCellViewModel) -> Swift.Bool
 }
-extension AttachmentCellViewModel {
+extension CommonUISDK.AttachmentCellViewModel {
   public var topMargin: CoreGraphics.CGFloat {
     get
   }
 }
 public protocol NavigationBarShadow {
 }
-extension NavigationBarShadow where Self : UIKit.UIViewController {
+extension CommonUISDK.NavigationBarShadow where Self : UIKit.UIViewController {
   public var navBarShadow: UIKit.UIImageView? {
     get
   }
@@ -199,7 +200,7 @@ public enum StatusLocalizedError : Swift.Equatable {
   case fileSizeLimit(Swift.String)
   public static func == (a: CommonUISDK.StatusLocalizedError, b: CommonUISDK.StatusLocalizedError) -> Swift.Bool
 }
-extension StatusLocalizedError : Swift.CustomStringConvertible {
+extension CommonUISDK.StatusLocalizedError : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
@@ -208,8 +209,8 @@ public enum CellPosition : Swift.Int {
   case left
   case center
   case right
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -219,8 +220,8 @@ public enum CellPinning : Swift.Int {
   case bottom
   case bottomWithinSection
   case topWithinSection
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -231,7 +232,7 @@ public protocol CellViewModelProtocol : CommonUISDK.Identifier {
   var cellPosition: CommonUISDK.CellPosition { get }
   var cellPinning: CommonUISDK.CellPinning { get }
 }
-extension CellViewModelProtocol {
+extension CommonUISDK.CellViewModelProtocol {
   public var cellPinning: CommonUISDK.CellPinning {
     get
   }
@@ -242,7 +243,7 @@ public protocol InteractionCellViewModelProtocol : CommonUISDK.CellViewModelProt
   var isBot: Swift.Bool { get }
   var topMargin: CoreGraphics.CGFloat { get }
 }
-extension InteractionCellViewModelProtocol {
+extension CommonUISDK.InteractionCellViewModelProtocol {
   public var isAgent: Swift.Bool {
     get
   }
@@ -270,7 +271,7 @@ public struct ActionOptionsCellViewModel : CommonUISDK.ActionOptionsCellViewMode
   public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, titleText: Swift.String = Constants.Strings.getInTouchReply, isBot: Swift.Bool = false, isEnabled: Swift.Bool = true, actionOptionViewModels: [CommonUISDK.ButtonOptionViewModelProtocol])
   public static func == (lhs: CommonUISDK.ActionOptionsCellViewModel, rhs: CommonUISDK.ActionOptionsCellViewModel) -> Swift.Bool
 }
-extension CGSize : Swift.Hashable {
+extension CoreGraphics.CGSize : Swift.Hashable {
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -282,8 +283,8 @@ extension CGSize : Swift.Hashable {
   @objc override dynamic public init()
   @objc deinit
 }
-extension UIView {
-  public static func animateViewAppear(_ view: UIKit.UIView, animationGroup: Swift.String, delay: Foundation.TimeInterval = 0)
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static func animateViewAppear(_ view: UIKit.UIView, animationGroup: Swift.String, delay: Foundation.TimeInterval = 0)
 }
 public protocol StatusIndicatorCell {
   var statusIndicatorImageView: UIKit.UIImageView { get }
@@ -369,7 +370,8 @@ public struct InputFieldViewModel : Swift.Equatable {
   public let shouldShowAttachmentIcon: Swift.Bool
   public let endUserHint: Swift.String
   public let keyboardType: UIKit.UIKeyboardType
-  public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType = .default)
+  public let textContentType: UIKit.UITextContentType?
+  public init(enabled: Swift.Bool, shouldShowAttachmentIcon: Swift.Bool, endUserHint: Swift.String? = nil, keyboardType: UIKit.UIKeyboardType = .default, textContentType: UIKit.UITextContentType? = nil)
   public static func == (a: CommonUISDK.InputFieldViewModel, b: CommonUISDK.InputFieldViewModel) -> Swift.Bool
 }
 public enum MimeUtils {
@@ -400,7 +402,7 @@ public struct TextCellViewModel : CommonUISDK.TextCellViewModelProtocol, Swift.E
 @_hasMissingDesignatedInitializers final public class CacheManager {
   @objc deinit
 }
-extension CacheManager : Swift.Equatable {
+extension CommonUISDK.CacheManager : Swift.Equatable {
   public static func == (lhs: CommonUISDK.CacheManager, rhs: CommonUISDK.CacheManager) -> Swift.Bool
 }
 public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
@@ -419,10 +421,10 @@ public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
 @_hasMissingDesignatedInitializers final public class EventListener<Sender> {
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
-  weak final public var delegate: CommonUISDK.InteractionCellDelegate?
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
-  final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
+  @_Concurrency.MainActor(unsafe) final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
   @objc deinit
 }
 public enum Connection : Swift.String {
@@ -432,8 +434,8 @@ public enum Connection : Swift.String {
   case connected
   case failed
   case unreachable
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -441,28 +443,28 @@ public enum Connection : Swift.String {
 public struct ConnectionViewModel : Swift.Hashable {
   public let connection: CommonUISDK.Connection
   public init(connection: CommonUISDK.Connection)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: CommonUISDK.ConnectionViewModel, b: CommonUISDK.ConnectionViewModel) -> Swift.Bool
 }
 public protocol ArticlesTableViewCellDelegate : AnyObject {
   func articlesTableViewCell(_ cell: CommonUISDK.ArticlesTableViewCell, didSelectArticleID articleID: Swift.Int64, andArticleUrl url: Swift.String, withDeflectionId deflectionId: Swift.Int64, andInteractionAccessToken accessToken: Swift.String)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ArticlesTableViewCell : CommonUISDK.InteractionCell {
-  weak final public var delegate: CommonUISDK.InteractionCellDelegate?
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ArticlesTableViewCell : CommonUISDK.InteractionCell {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: CommonUISDK.InteractionCellDelegate?
   @objc override final public func awakeFromNib()
-  @objc override final public func prepareForReuse()
-  @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
-  @objc override final public var canBecomeFirstResponder: Swift.Bool {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override final public func prepareForReuse()
+  @_Concurrency.MainActor(unsafe) @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override final public var canBecomeFirstResponder: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
 }
-extension ArticlesTableViewCell {
-  final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
+extension CommonUISDK.ArticlesTableViewCell {
+  @_Concurrency.MainActor(unsafe) final public func updateWithViewModel(_ viewModel: CommonUISDK.InteractionCellViewModelProtocol)
 }
 public protocol ResponseOptionViewModelProtocol {
   var id: Swift.String { get }
@@ -480,7 +482,7 @@ public protocol Identifier {
   static var staticIdentifier: Swift.String { get }
   var identifier: Swift.String { get }
 }
-extension Identifier {
+extension CommonUISDK.Identifier {
   public static var staticIdentifier: Swift.String {
     get
   }
@@ -517,7 +519,7 @@ public struct ArticlesCellViewModel : CommonUISDK.ArticlesCellViewModelProtocol,
   public init(id: Swift.String = UUID().uuidString, timestamp: Foundation.Date = Date(), name: Swift.String?, isBot: Swift.Bool = false, deflectionId: Swift.Int64, interactionAccessToken: Swift.String, deflectionViewModels: [CommonUISDK.DeflectionArticleViewModel] = [DeflectionArticleViewModel]())
   public static func == (a: CommonUISDK.ArticlesCellViewModel, b: CommonUISDK.ArticlesCellViewModel) -> Swift.Bool
 }
-extension ArticlesCellViewModelProtocol {
+extension CommonUISDK.ArticlesCellViewModelProtocol {
   public var titleText: Swift.String {
     get
   }
@@ -543,19 +545,19 @@ public enum InputFieldAction {
   case textViewDidChange(UIKit.UITextView)
   case didSelectAttachment
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class InputField : UIKit.UIView {
-  weak final public var delegate: CommonUISDK.InputFieldDelegate?
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class InputField : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) weak final public var delegate: CommonUISDK.InputFieldDelegate?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override final public func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
   @objc deinit
 }
-extension InputField : UIKit.UITextViewDelegate {
-  @objc final public func textViewDidChange(_ textView: UIKit.UITextView)
-  @objc final public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+extension CommonUISDK.InputField : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
 }
 public protocol InteractionCellDelegate : AnyObject {
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ActionOptionView : UIKit.UIButton {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionOptionView : UIKit.UIButton {
   @objc deinit
 }
 public struct SeparatorWithTextViewModel : CommonUISDK.InteractionCellViewModelProtocol, Swift.Equatable {
@@ -597,7 +599,7 @@ public typealias InteractionCell = UIKit.UITableViewCell & CommonUISDK.Interacti
 @_hasMissingDesignatedInitializers final public class EquatableCellViewModel {
   @objc deinit
 }
-extension EquatableCellViewModel : Swift.Equatable {
+extension CommonUISDK.EquatableCellViewModel : Swift.Equatable {
   public static func == (lhs: CommonUISDK.EquatableCellViewModel, rhs: CommonUISDK.EquatableCellViewModel) -> Swift.Bool
 }
 public enum HorizontalAlignment {
@@ -607,30 +609,29 @@ public enum HorizontalAlignment {
   case trailing
   case justified
   public static func == (a: CommonUISDK.HorizontalAlignment, b: CommonUISDK.HorizontalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public enum VerticalAlignment {
   case top
   case center
   case bottom
   public static func == (a: CommonUISDK.VerticalAlignment, b: CommonUISDK.VerticalAlignment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
-@objc open class AlignedCollectionViewFlowLayout : UIKit.UICollectionViewFlowLayout {
-  public var horizontalAlignment: CommonUISDK.HorizontalAlignment
-  public var verticalAlignment: CommonUISDK.VerticalAlignment
-  public init(horizontalAlignment: CommonUISDK.HorizontalAlignment = .justified, verticalAlignment: CommonUISDK.VerticalAlignment = .center)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc override dynamic open func shouldInvalidateLayout(forBoundsChange newBounds: CoreGraphics.CGRect) -> Swift.Bool
-  @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
-  @objc override dynamic open func layoutAttributesForElements(in rect: CoreGraphics.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
-  @objc override dynamic public init()
+@objc @_Concurrency.MainActor(unsafe) open class AlignedCollectionViewFlowLayout : UIKit.UICollectionViewFlowLayout {
+  @_Concurrency.MainActor(unsafe) public var horizontalAlignment: CommonUISDK.HorizontalAlignment
+  @_Concurrency.MainActor(unsafe) public var verticalAlignment: CommonUISDK.VerticalAlignment
+  @_Concurrency.MainActor(unsafe) public init(horizontalAlignment: CommonUISDK.HorizontalAlignment = .justified, verticalAlignment: CommonUISDK.VerticalAlignment = .center)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func shouldInvalidateLayout(forBoundsChange newBounds: CoreGraphics.CGRect) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForItem(at indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewLayoutAttributes?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutAttributesForElements(in rect: CoreGraphics.CGRect) -> [UIKit.UICollectionViewLayoutAttributes]?
   @objc deinit
 }
 public protocol ButtonOptionViewModelProtocol {
@@ -638,15 +639,15 @@ public protocol ButtonOptionViewModelProtocol {
   var localizedLabelText: Swift.String { get }
   var shouldHaveBottomBorder: Swift.Bool { get }
 }
-extension UIView {
+extension UIKit.UIView {
   public enum Dimension {
     case height
     case width
     public static func == (a: UIKit.UIView.Dimension, b: UIKit.UIView.Dimension) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public enum Attribute : Swift.String {
     case top
@@ -657,8 +658,8 @@ extension UIView {
     case centerY
     case trailing
     case leading
-    public typealias RawValue = Swift.String
     public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
@@ -667,59 +668,59 @@ extension UIView {
     case horizontal
     case vertical
     public static func == (a: UIKit.UIView.Axis, b: UIKit.UIView.Axis) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
-  public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
     get
   }
-  public var safeBottomAnchor: UIKit.NSLayoutYAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeBottomAnchor: UIKit.NSLayoutYAxisAnchor {
     get
   }
-  public var safeLeftAnchor: UIKit.NSLayoutXAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeLeftAnchor: UIKit.NSLayoutXAxisAnchor {
     get
   }
-  public var safeRightAnchor: UIKit.NSLayoutXAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeRightAnchor: UIKit.NSLayoutXAxisAnchor {
     get
   }
-  public var safeLeadingAnchor: UIKit.NSLayoutXAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeLeadingAnchor: UIKit.NSLayoutXAxisAnchor {
     get
   }
-  public var safeTrailingAnchor: UIKit.NSLayoutXAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeTrailingAnchor: UIKit.NSLayoutXAxisAnchor {
     get
   }
-  public var safeCenterXAnchor: UIKit.NSLayoutXAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeCenterXAnchor: UIKit.NSLayoutXAxisAnchor {
     get
   }
-  public var safeCenterYAnchor: UIKit.NSLayoutYAxisAnchor {
+  @_Concurrency.MainActor(unsafe) public var safeCenterYAnchor: UIKit.NSLayoutYAxisAnchor {
     get
   }
   @discardableResult
-  public func constrainToSuperview(axis: UIKit.UIView.Axis, constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor(unsafe) public func constrainToSuperview(axis: UIKit.UIView.Axis, constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint]
   @discardableResult
-  public func constrainToSuperviewSafeLayout(axis: UIKit.UIView.Axis, constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint?]
+  @_Concurrency.MainActor(unsafe) public func constrainToSuperviewSafeLayout(axis: UIKit.UIView.Axis, constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint?]
   @discardableResult
-  public func constrainToSuperViewSafeLayout(constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint?]
+  @_Concurrency.MainActor(unsafe) public func constrainToSuperViewSafeLayout(constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint?]
   @discardableResult
-  public func constrainToSuperViewEdges(constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor(unsafe) public func constrainToSuperViewEdges(constant: CoreGraphics.CGFloat = 0) -> [UIKit.NSLayoutConstraint]
   @discardableResult
-  public func constrainCenterToView(view: UIKit.UIView) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor(unsafe) public func constrainCenterToView(view: UIKit.UIView) -> [UIKit.NSLayoutConstraint]
   @discardableResult
-  public func constrainToSuperviewSafeLayout(attribute: UIKit.UIView.Attribute, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor(unsafe) public func constrainToSuperviewSafeLayout(attribute: UIKit.UIView.Attribute, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint?
   @discardableResult
-  public func constrainSafeLayout(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView, constant: CoreGraphics.CGFloat = 0.0) -> UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor(unsafe) public func constrainSafeLayout(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView, constant: CoreGraphics.CGFloat = 0.0) -> UIKit.NSLayoutConstraint?
   @discardableResult
-  public func constrainToSuperview(attribute: UIKit.UIView.Attribute, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor(unsafe) public func constrainToSuperview(attribute: UIKit.UIView.Attribute, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
-  public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor(unsafe) public func constrain(dimension: UIKit.UIView.Dimension, withConstant constant: CoreGraphics.CGFloat = 0, relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required) -> UIKit.NSLayoutConstraint
   @discardableResult
-  public func constrain(size: CoreGraphics.CGSize, relation: UIKit.NSLayoutConstraint.Relation = .equal) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor(unsafe) public func constrain(size: CoreGraphics.CGSize, relation: UIKit.NSLayoutConstraint.Relation = .equal) -> [UIKit.NSLayoutConstraint]
   @discardableResult
-  public func constrain(attribute: UIKit.UIView.Attribute, toView view: UIKit.UIView, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor(unsafe) public func constrain(attribute: UIKit.UIView.Attribute, toView view: UIKit.UIView, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
   @discardableResult
-  public func constrain(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView?, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
+  @_Concurrency.MainActor(unsafe) public func constrain(attribute: UIKit.UIView.Attribute, toAttribute: UIKit.UIView.Attribute, ofView view: UIKit.UIView?, relatedBy relation: UIKit.NSLayoutConstraint.Relation = .equal, priority: UIKit.UILayoutPriority = .required, constant: CoreGraphics.CGFloat = 0) -> UIKit.NSLayoutConstraint
 }
 public protocol PresentableCellViewModel : CommonUISDK.InteractionCellViewModelProtocol {
   var url: Foundation.URL { get }

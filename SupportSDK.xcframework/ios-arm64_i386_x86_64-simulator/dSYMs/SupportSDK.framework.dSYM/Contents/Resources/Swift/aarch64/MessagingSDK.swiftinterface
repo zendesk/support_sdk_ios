@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MessagingSDK
 import CommonUISDK
 import Foundation
@@ -7,6 +7,7 @@ import MessagingAPI
 @_exported import MessagingSDK
 import SDKConfigurations
 import Swift
+import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ZDKMessaging) final public class Messaging : ObjectiveC.NSObject {
   @objc public static var instance: MessagingSDK.Messaging {
     @objc get
@@ -18,23 +19,23 @@ import Swift
   @objc deinit
   final public func buildUI(engines: [MessagingAPI.Engine], configs: [SDKConfigurations.Configuration] = []) throws -> UIKit.UIViewController
 }
-extension Messaging : CommonUISDK.MessagingCoordinatorDelegate {
+extension MessagingSDK.Messaging : CommonUISDK.MessagingCoordinatorDelegate {
   final public func messagingCoordinator(_ coordinator: CommonUISDK.MessagingCoordinatorProtocol, didPerformAction action: CommonUISDK.MessagingCoordinatorAction)
 }
-extension Messaging : MessagingAPI.MessagingAPIProtocol {
+extension MessagingSDK.Messaging : MessagingAPI.MessagingAPIProtocol {
   final public func getTransferOptions() -> [MessagingAPI.TransferOptionDescription]
   final public func getConversationLog() -> MessagingAPI.ConversationLogProtocol
   final public func getConfigurations() -> SDKConfigurations.Configurations
   final public func getBotAgentDetails() -> MessagingAPI.AgentDetails
 }
-@objc extension Messaging {
+@objc extension MessagingSDK.Messaging {
   @objc @available(swift, obsoleted: 1.0)
   final public func buildUI(engines: [MessagingAPI.ZDKEngine], configs: [SDKConfigurations.Configuration]) throws -> UIKit.UIViewController
 }
-extension TextResponse : MessagingAPI.LoggableMessage {
+extension MessagingAPI.TextResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
-extension ArticlesResponse : MessagingAPI.LoggableMessage {
+extension MessagingAPI.ArticlesResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
 @objc(ZDKMessagingUIEvent) public enum MessagingUIEvent : Swift.Int {
@@ -45,29 +46,29 @@ extension ArticlesResponse : MessagingAPI.LoggableMessage {
   case viewDidDisappear
   case viewDidLayoutSubviews
   case viewControllerDidClose
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc(ZDKMessagingDelegate) public protocol MessagingDelegate : AnyObject {
+@objc(ZDKMessagingDelegate) public protocol MessagingDelegate {
   @objc func messaging(_ messaging: MessagingSDK.Messaging, didPerformEvent event: MessagingSDK.MessagingUIEvent, context: Any?)
   @objc func messaging(_ messaging: MessagingSDK.Messaging, shouldOpenURL url: Foundation.URL) -> Swift.Bool
 }
-extension TransferResponse : MessagingAPI.LoggableMessage {
+extension MessagingAPI.TransferResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
-extension FileQuery : MessagingAPI.LoggableMessage {
+extension MessagingAPI.FileQuery : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
-extension TextQuery : MessagingAPI.LoggableMessage {
+extension MessagingAPI.TextQuery : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
-extension ImageQuery : MessagingAPI.LoggableMessage {
+extension MessagingAPI.ImageQuery : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
-extension ImageResponse : MessagingAPI.LoggableMessage {
+extension MessagingAPI.ImageResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
 final public class DispatchTimer {
@@ -83,10 +84,10 @@ final public class DispatchTimer {
   @objc override dynamic public init()
   @objc deinit
 }
-extension FileResponse : MessagingAPI.LoggableMessage {
+extension MessagingAPI.FileResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
-extension ActionResponse : MessagingAPI.LoggableMessage {
+extension MessagingAPI.ActionResponse : MessagingAPI.LoggableMessage {
   public func messageLog() -> Swift.String
 }
 extension MessagingSDK.MessagingUIEvent : Swift.Equatable {}
