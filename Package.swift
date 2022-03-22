@@ -23,12 +23,12 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ZendeskSupportSDK",
+            name: "SupportSDK",
             path: "SupportSDK.xcframework"
         ),
         .target(name: "ZendeskSupportSDKTargets",
                 dependencies: [
-                    .target(name: "ZendeskSupportSDK"),
+                    .target(name: "SupportSDK"),
                     .product(name: "ZendeskSupportProvidersSDK", package: "ZendeskSupportProvidersSDK"),
                     .product(name: "ZendeskMessagingSDK", package: "ZendeskMessagingSDK")
                 ],
