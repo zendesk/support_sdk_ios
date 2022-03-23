@@ -16,19 +16,19 @@ let package = Package(
     dependencies: [
         .package(name: "ZendeskSupportProvidersSDK",
                  url: "https://github.com/zendesk/support_providers_sdk_ios",
-                 .exact("5.4.0")),
+                 .branch("bugfix/Xcode13.3-SPM-integration")),
         .package(name: "ZendeskMessagingSDK",
                  url: "https://github.com/zendesk/messaging_sdk_ios",
-                 .exact("3.8.3"))
+                 .branch("bugfix/Xcode13.3-SPM-integration"))
     ],
     targets: [
         .binaryTarget(
-            name: "ZendeskSupportSDK",
+            name: "SupportSDK",
             path: "SupportSDK.xcframework"
         ),
         .target(name: "ZendeskSupportSDKTargets",
                 dependencies: [
-                    .target(name: "ZendeskSupportSDK"),
+                    .target(name: "SupportSDK"),
                     .product(name: "ZendeskSupportProvidersSDK", package: "ZendeskSupportProvidersSDK"),
                     .product(name: "ZendeskMessagingSDK", package: "ZendeskMessagingSDK")
                 ],
