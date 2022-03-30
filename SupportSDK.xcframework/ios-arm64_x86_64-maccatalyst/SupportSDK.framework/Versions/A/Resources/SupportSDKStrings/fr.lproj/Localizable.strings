@@ -51,7 +51,7 @@
 "ios.ZDKRequests.createRequest.messages.today" = "Aujourd’hui";
 "ios.ZDKRequests.createRequest.messages.yesterday" = "Hier";
 "ios.ZDKRequests.createRequest.name.placeholder" = "Nom";
-"ios.ZDKRequests.createRequest.sending" = "Envoi…";
+"ios.ZDKRequests.createRequest.sending" = "Envoi en cours…";
 "ios.ZDKRequests.createRequest.submit.button" = "Envoyer";
 "ios.ZDKRequests.createRequest.title" = "Contactez-nous";
 "ios.ZDKRequests.leftBarButton.title_cancel" = "Annuler";
