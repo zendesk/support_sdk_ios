@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
   s.cocoapods_version = '>= 1.10.0'
   s.source       = { :git => "https://github.com/zendesk/support_sdk_ios.git", :tag => s.version }
   s.vendored_frameworks = 'SupportSDK.xcframework'
-  s.dependency 'ZendeskSupportProvidersSDK', '5.4.1'
+  s.dependency 'ZendeskSupportProvidersSDK', '5.4.2'
   s.dependency 'ZendeskMessagingSDK', '3.8.4'
 end

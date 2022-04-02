@@ -165,12 +165,9 @@ CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
 {
     CGRect screen = [UIScreen mainScreen].bounds;
 
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-
     CGRect rect;
 
-    if (orientation == UIInterfaceOrientationLandscapeLeft ||
-        orientation == UIInterfaceOrientationLandscapeRight) {
+    if (ZDKUIIsLandscape()) {
         if([ZDKUIUtil isOlderVersion:@"8.0"])
         {
             rect = CGRectMake(CGRectGetMidY(screen) - (width * 0.5f),
@@ -221,8 +218,16 @@ CGCenterRectInRect(CGRect rect, CGRect inRect)
 CG_INLINE BOOL
 ZDKUIIsLandscape()
 {
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    return UIInterfaceOrientationIsLandscape(orientation);
+    if #available(iOS 13.0, *) {
+                return UIApplication.shared.windows
+                    .first?
+                    .windowScene?
+                    .interfaceOrientation
+                    .isLandscape ?? false
+    } else {
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        return UIInterfaceOrientationIsLandscape(orientation);
+    }
 }
 
 
