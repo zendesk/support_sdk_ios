@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportSDK - ActionSubscription</title>
+    <link rel="stylesheet" type="text/css" href="/support_sdk_ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/support_sdk_ios">
+            <strong>
+                SupportSDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#actionsubscription.removelistener()">remove​Listener()</a></li><li class="function"><a href="#actionsubscription.linklifecycleto(object:)">link​Life​Cycle​To(object:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Action​Subscription</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">ActionSubscription</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Subscription structure that represents a listener subscription.
+When adding a listener you get a subscription back.
+You can use this subscription to remove the listener, notify about the current state or link the listener lifecycle with an object.</p>
+
+</div>
+
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="actionsubscription.removelistener()">
+    <h3>
+        <code><a href="#actionsubscription.removelistener()">remove​Listener()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">removeListener</span>()  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Remove the listner associated with this subscription. After calling <code>removeListener</code> the listener won't be notified anymore.</p>
+
+</div>
+<div class="discussion">
+    <h1>Example</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addActionListener</span>(...)
+<span class="variable">subscription</span>.<span class="variable">removeListener</span>()
+</code></pre></body></html>
+</div>
+</div>
+<div role="article" class="function" id="actionsubscription.linklifecycleto(object:)">
+    <h3>
+        <code><a href="#actionsubscription.linklifecycleto(object:)">link​Life​Cycle​To(object:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">linkLifeCycleTo</span>(<span class="variable">object</span>: <span class="type">NSObject</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Link the listener associated with this subscription with an object. When the object gets deallocated the listener is removed.
+Useful when adding listeners that updates a UIView. You can link the listener lifecycle to the UIView's lifecycle.
+When the UIView is removed (deallocated) the listener will be removed and will stop it from being notified.</p>
+
+</div>
+<div class="discussion">
+    <h1>Example</h1>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">view</span> = <span class="variable">SomeUIVIew</span>()
+
+<span class="comment">// Listener updates the view</span>
+<span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addActionListener</span>(...)
+
+<span class="comment">// Link the listener lifecycle to the view. No need to manually call `removeListener` anymore.</span>
+<span class="variable">subscription</span>.<span class="variable">linkLifeCycleTo</span>(<span class="variable">object</span>: <span class="type">view</span>)
+</code></pre></body></html>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-04-22T10:05:36+0000">April 22, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

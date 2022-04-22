@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Noe gikk galt og meldingen kunne ikke sendes. Prøv igjen senere.";
 "ios.SupportEngine.messageSend.retry.button" = "Prøv på nytt";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Tusen takk. Det ble sendt en melding til teamet. Du kan vise denne meldingen og legge til flere opplysninger her:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Tusen takk. Det ble sendt en melding til teamet. Hvis de trenger svar, tar de kontakt på e-post.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Fullført";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Oppgi e-postadresse...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Hvis vi trenger svar, tar vi kontakt på e-post. Hva er e-postadressen din?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "E-postadressen du skrev, var feil. Skriv inn en gyldig e-postadresse.";

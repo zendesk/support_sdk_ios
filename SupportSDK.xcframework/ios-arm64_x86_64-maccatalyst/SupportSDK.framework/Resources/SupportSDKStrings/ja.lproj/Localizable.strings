@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "何か問題が発生したため、メッセージを送信できませんでした。後でもう一度やり直してください。";
 "ios.SupportEngine.messageSend.retry.button" = "再試行";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "ありがとうございます。メッセージがチームに送信されました。こちらでメッセージを確認し、情報を追加することもできます。";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "ありがとうございます。メッセージがチームに送信されました。回答が必要な場合は、お客様のメールアドレスにご連絡いたします。";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "成功";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "メールアドレスを入力...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "回答が必要な場合は、メールでご回答をお送りいたします。メールアドレスを教えていただけますか？";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "入力したメールアドレスが間違っています。有効なメールアドレスを入力してください。";

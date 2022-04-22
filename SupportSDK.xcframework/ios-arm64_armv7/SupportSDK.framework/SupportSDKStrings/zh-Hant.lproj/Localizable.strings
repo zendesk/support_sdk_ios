@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "出錯了！我不能傳送您的訊息。請稍後重試。";
 "ios.SupportEngine.messageSend.retry.button" = "重試";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "謝謝。已傳送一條訊息給團隊。您可在此處檢視此訊息，並新增其他詳情：";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "確定";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "謝謝。已傳送一條訊息給團隊。若需回覆，他們將會傳送電子郵件聯絡您。";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "成功";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "輸入電子郵件地址……";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "若需回覆，有人將會傳送電子郵件聯絡您。您的電子郵件地址是？";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "您輸入的電子郵件地址不正確。輸入有效的電子郵件地址。";

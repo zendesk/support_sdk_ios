@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "มีบางอย่างผิดพลาดและฉันไม่สามารถส่งข้อความของคุณได้ โปรดลองอีกครั้งในภายหลัง";
 "ios.SupportEngine.messageSend.retry.button" = "ลองอีกครั้ง";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "ขอขอบคุณ ส่งข้อความไปยังทีมแล้ว คุณสามารถดูข้อความนี้และป้อนรายละเอียดเพิ่มเติมได้ที่นี่:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "ตกลง";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "ขอขอบคุณ ส่งข้อความไปยังทีมแล้ว หากต้องการให้ตอบกลับ ทีมจะติดต่อคุณทางอีเมล";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "สำเร็จแล้ว";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "ป้อนอีเมลของคุณ...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "หากต้องการให้ตอบกลับ จะมีผู้ติดต่อคุณทางอีเมล ที่อยู่อีเมลของคุณคืออะไร";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "ที่อยู่อีเมลที่คุณป้อนไม่ถูกต้อง ป้อนที่อยู่อีเมลที่ถูกต้อง";

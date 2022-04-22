@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "A intervenit o problemă și nu am putut trimite mesajul. Vă rugăm să încercați mai târziu.";
 "ios.SupportEngine.messageSend.retry.button" = "Reîncercați";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Vă mulțumim. A fost trimis un mesaj către membrii echipei. Puteți vizualiza acest mesaj și adăuga detalii suplimentare aici:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Vă mulțumim. A fost trimis un mesaj către membrii echipei. Dacă este necesar un răspuns, veți fi contactat prin e-mail.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Succes";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Introduceți-vă e-mailul...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Dacă este necesar un răspuns, cineva vă va contacta prin e-mail. Care este adresa dumneavoastră de e-mail?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Adresa de e-mail pe care ați introdus-o este incorectă. Introduceți o adresă de e-mail validă.";

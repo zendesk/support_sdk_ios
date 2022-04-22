@@ -52,6 +52,9 @@ public struct PageView<T> : Swift.Encodable where T : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
 }
 public typealias CompletionHandler = (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void
+public struct BaseStore {
+  public func getMachineID() -> Swift.String
+}
 @objc(ZDKUser) public class User : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let id: Swift.String
   @objc final public let name: Swift.String
@@ -202,12 +205,14 @@ public enum LoggerConfig {
 }
 public protocol StoreModule {
   var cacheDirectory: Foundation.URL? { get }
+  var baseStore: ZendeskCoreSDK.BaseStore { get }
   var sessionStore: ZendeskCoreSDK.SessionStore { get }
   func clearAll()
   func clearSettingsAndSession()
   func clearSession()
 }
 @_hasMissingDesignatedInitializers final public class Stores : ZendeskCoreSDK.StoreModule {
+  final public let baseStore: ZendeskCoreSDK.BaseStore
   final public let sessionStore: ZendeskCoreSDK.SessionStore
   final public var cacheDirectory: Foundation.URL? {
     get

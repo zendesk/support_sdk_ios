@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Ada masalah dan saya tidak dapat mengirimi Anda pesan. Coba lagi nanti.";
 "ios.SupportEngine.messageSend.retry.button" = "Coba lagi";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Terima kasih. Pesan sudah dikirimkan kepada tim. Anda dapat melihat pesan ini dan menambah perincian tambahan di sini:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Terima kasih. Pesan sudah dikirimkan kepada tim. Jika diperlukan balasan, mereka akan menghubungi Anda melalui email.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Berhasil";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Masukkan email Anda...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Jika diperlukan balasan, seseorang akan menghubungi Anda melalui email. Apa alamat email Anda?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Alamat email yang Anda masukkan salah. Masukkan alamat email yang valid.";

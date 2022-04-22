@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "गड़बड़ी होने की वजह से आपका मैसेज नहीं भेजा जा सका. कृपया बाद में फिर से कोशिश करें.";
 "ios.SupportEngine.messageSend.retry.button" = "फिर से कोशिश करें";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "धन्यवाद. टीम को संदेश भेज दिया गया है. आप यहाँ यह मैसेज देख सकते हैं और उसमें अन्य जानकारी जोड़ सकते हैं:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "ठीक";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "धन्यवाद. टीम को संदेश भेज दिया गया है. अगर जवाब देने की ज़रूरत होगी, तो वे आपस ईमेल के ज़रिये संपर्क करेंगे.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "सफल";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "अपना ईमेल डालें...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "अगर जवाब देना ज़रूरी होगा, तो कोई न कोई आपसे ईमेल के ज़रिये संपर्क करेगा. आपका ईमेल पता क्या है?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "आपने जो ईमेल पता डाला है, वह गलत है. मान्य ईमेल पता डालें.";

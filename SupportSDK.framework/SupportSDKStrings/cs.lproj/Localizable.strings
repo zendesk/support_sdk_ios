@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Něco se nepovedlo a vaše zpráva nebyla odeslána. Zkuste to prosím znovu později.";
 "ios.SupportEngine.messageSend.retry.button" = "Zkusit znovu";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Děkujeme. Zpráva byla odeslána týmu. Zde si můžete tuto zprávu prohlédnout a přidat další podrobnosti:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Děkujeme. Zpráva byla odeslána týmu. Pokud je potřeba odpověď, budou vás kontaktovat e-mailem.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Úspěch";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Zadejte svou e-mailovou adresu...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Pokud je potřeba odpověď, někdo vás bude kontaktovat e-mailem. Jakou máte e-mailovou adresu?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Zadaná e‑mailová adresa je nesprávná. Zadejte platnou e‑mailovou adresu.";

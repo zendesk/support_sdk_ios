@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Bir hata nedeniyle mesajınızı gönderemedim. Lütfen daha sonra yeniden deneyin.";
 "ios.SupportEngine.messageSend.retry.button" = "Yeniden dene";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Teşekkür ederiz. Ekibe bir mesaj gönderildi. Bu mesajı buradan görüntüleyebilir ve ayrıntılar ekleyebilirsiniz:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "Tamam";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Teşekkür ederiz. Ekibe bir mesaj gönderildi. Yanıt gerekiyorsa sizinle e-posta göndererek iletişim kuracaklardır.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Başarılı";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "E-posta adresinizi girin...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Yanıt gerekirse kısa süre içinde sizinle iletişime geçilecek. E-posta adresiniz?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Girdiğiniz e-posta adresi yanlış. Geçerli bir e-posta adresi girin.";

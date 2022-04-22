@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "У нас какая-то неполадка, не удалось отправить ваше сообщение. Повторите попытку позже.";
 "ios.SupportEngine.messageSend.retry.button" = "Повторить";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Спасибо. Сообщение отправлено в группу поддержки. Просмотрите это сообщение и добавьте нужные сведения здесь:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Спасибо. Сообщение отправлено в группу поддержки. Если требуется ответ, с вами свяжутся по электронной почте.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Готово";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Укажите адрес эл. почты...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Если требуется ответ, с вами свяжутся по электронной почте. Какой у вас адрес электронной почты?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Введен неправильный адрес электронной почты. Введите действительный адрес электронной почты.";

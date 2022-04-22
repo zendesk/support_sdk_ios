@@ -67,7 +67,7 @@
 "ios.ZDKRequests.requestListEmpty.subtitle" = "Започнатите от това приложение разговори ще се виждат тук";
 "ios.ZDKRequests.rightBarButton.title.contact" = "Връзка с нас";
 "ios.sdk.ZDKHelpCenter.article.voting.title" = "Беше ли полезна тази статия?";
-"ios.sdk.ZDKRequests.createRequest.attachment.fileTooBig" = "Макс. обем на прикачения файл е %@ MB";
+"ios.sdk.ZDKRequests.createRequest.attachment.fileTooBig" = "Макс. размер на прикачения файл е %@ MB";
 "ios.sdk.ZDKRequests.leftBarButton.close.title" = "Затваряне";
 "ios.sdk.ZDKRequests.pushNotification.dismiss.title" = "Игнориране";
 "ios.sdk.ZDKRequests.pushNotification.open.title" = "Отваряне";
@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Възникна грешка и не можах да изпратя съобщението. Моля опитайте отново по-късно.";
 "ios.SupportEngine.messageSend.retry.button" = "Нов опит";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Благодарим ви. На екипа е изпратено съобщение. Можете да го видите и да добавите още подробности тук:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "ОК";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Благодарим ви. На екипа е изпратено съобщение. Ако е необходим отговор, ще го получите с имейл.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Готово";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Въведете имейл адреса си...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Ако е необходим отговор, някой ще се свърже с вас по имейл. Какъв е имейл адресът ви?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Въведеният имейл адрес е неправилен. Въведете валиден имейл адрес.";

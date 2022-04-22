@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "出错了，我无法发送您的消息。请稍后重试。";
 "ios.SupportEngine.messageSend.retry.button" = "重试";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "谢谢。消息已发送给团队。您可以在这里查看此消息并添加更多详情：";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "确定";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "谢谢。消息已发送给团队。如果需要回复，他们将通过电邮联系您。";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "成功";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "输入电邮……";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "如果需要回复，有人将通过电邮联系您。您的电邮地址是什么？";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "您输入的电邮地址错误。输入有效的电邮地址。";

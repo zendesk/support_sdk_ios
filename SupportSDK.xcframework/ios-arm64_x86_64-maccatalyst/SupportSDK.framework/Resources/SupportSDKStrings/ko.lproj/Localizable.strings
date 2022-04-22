@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "문제가 발생하여 메시지를 보내지 못했습니다. 나중에 다시 시도하세요.";
 "ios.SupportEngine.messageSend.retry.button" = "다시 시도";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "감사합니다. 팀에 메시지를 보냈습니다. 여기에서 이 메시지를 보고 세부 정보를 더 추가할 수 있습니다.";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "확인";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "감사합니다. 팀에 메시지를 보냈습니다. 답장이 필요하면 팀에서 이메일로 연락을 드릴 것입니다.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "성공";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "이메일을 입력하세요.";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "답장이 필요하면 담당자가 이메일로 연락을 드릴 것입니다. 이메일 주소가 어떻게 되나요?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "입력하신 이메일 주소가 올바르지 않습니다. 올바른 이메일 주소를 입력하세요.";

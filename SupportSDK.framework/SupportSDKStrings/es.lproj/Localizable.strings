@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Algo salió mal y no se pudo enviar su mensaje. Vuelva a intentarlo más tarde.";
 "ios.SupportEngine.messageSend.retry.button" = "Volver a intentar";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Gracias. Se ha enviado un mensaje al equipo. Puede ver el mensaje y agregar detalles adicionales aquí:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "ACEPTAR";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Gracias. Se envió un mensaje al equipo. Si se necesita una respuesta, le enviarán un mensaje por correo electrónico.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Perfecto";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Ingrese su correo electrónico...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Si se necesita una respuesta, alguien le contactará por correo electrónico. ¿Cuál es su dirección de correo electrónico?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "La dirección de correo electrónico que ingresó no es correcta. Ingrese una dirección de correo electrónico válida.";

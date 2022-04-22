@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "حدث خطأ ما ولم أتمكن من إرسال رسالتك. الرجاء إعادة المحاولة لاحقًا.";
 "ios.SupportEngine.messageSend.retry.button" = "إعادة المحاولة";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "شكرًا لك. لقد أُرسِلت رسالة إلى الفريق. يمكنك عرض هذه الرسالة وإضافة المزيد من المعلومات من هنا:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "موافق";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "شكرًا لك. لقد أُرسِلت رسالة إلى الفريق. إذا كان الرد مطلوبًا، فسيتصل بك عضو من الفريق بالبريد الإلكتروني.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "تم بنجاح";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "أدخل عنوان بريدك الإلكتروني...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "إذا كان الرد مطلوبًا، فسيتصل بك عضو من الفريق بالبريد الإلكتروني. ما هو عنوان بريدك الإلكتروني؟";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "عنوان البريد الإلكتروني الذي أدخلته غير صحيح. أدخِل عنوان بريد إلكتروني صالح.";

@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "משהו השתבש ולא הצלחתי לשלוח את ההודעה. נסה שוב מאוחר יותר.";
 "ios.SupportEngine.messageSend.retry.button" = "נסה שוב";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "תודה. הודעה נשלחה לצוות. אפשר להציג את ההודעה הזאת ולהוסיף פרטים כאן:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "אישור";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "תודה. הודעה נשלחה לצוות. אם נדרשת תשובה, הם ייצרו איתך קשר בדואר אלקטרוני.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "הצלחה";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "הזן את כתובת הדואר האלקטרוני שלך...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "אם נדרשת תשובה, מישהו ייצור איתך קשר בדואר אלקטרוני. מה כתובת הדואר האלקטרוני שלך?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "כתובת הדואר האלקטרוני שהזנת שגויה. הזן כתובת דואר אלקטרוני תקינה.";

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportSDK - SupportSDK</title>
+    <link rel="stylesheet" type="text/css" href="/support_sdk_ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/support_sdk_ios">
+            <strong>
+                SupportSDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#classes">Classes</a></li><li><a href="#structures">Structures</a></li><li><a href="#enumerations">Enumerations</a></li><li><a href="#protocols">Protocols</a></li><li><a href="#typealiases">Typealiases</a></li><li><a href="#variables">Variables</a></li><li><a href="#extensions">Extensions</a></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+                <section id="classes">
+        <h2>Classes</h2>
+        <dl>
+            <dt class="class">
+    <a href="/support_sdk_ios/ArticleUiConfiguration" title="class - ArticleUiConfiguration">
+        Article​UiConfiguration
+    </a>
+</dt>
+<dd>
+    <p>Data class used to configure Article Screen</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/HelpCenterUiConfiguration" title="class - HelpCenterUiConfiguration">
+        Help​Center​UiConfiguration
+    </a>
+</dt>
+<dd>
+    <p>Data class used to configure Help Center</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/RequestListUIConfiguration" title="class - RequestListUIConfiguration">
+        Request​List​UIConfiguration
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/RequestUi" title="class - RequestUi">
+        Request​Ui
+    </a>
+</dt>
+<dd>
+    <p>Used to build view controller for ticketing. The returned objects must be presented inside a UINavigationController.
+The containing navigation controller can be presented any way you see fit.</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/RequestUiConfiguration" title="class - RequestUiConfiguration">
+        Request​UiConfiguration
+    </a>
+</dt>
+<dd>
+    <p>Data class used to configure Ticketing</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/SupportUI" title="class - SupportUI">
+        Support​UI
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/ZDKConstants" title="class - ZDKConstants">
+        ZDKConstants
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/ContainerViewController" title="class - ContainerViewController">
+        Container​View​Controller
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/CoordinatingViewController" title="class - CoordinatingViewController">
+        Coordinating​View​Controller
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/HelpCenterCoordinator" title="class - HelpCenterCoordinator">
+        Help​Center​Coordinator
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/RequestCoordinator" title="class - RequestCoordinator">
+        Request​Coordinator
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/SupportEngine" title="class - SupportEngine">
+        Support​Engine
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/RequestAttachment" title="class - RequestAttachment">
+        Request​Attachment
+    </a>
+</dt>
+<dd>
+    <p>Creates an attachment to be uploaded when a request is created</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/Theme" title="class - Theme">
+        Theme
+    </a>
+</dt>
+<dd>
+    <p>Used to style the SDK.</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/DismissUtil" title="class - DismissUtil">
+        Dismiss​Util
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/BlockMiddleware" title="class - BlockMiddleware">
+        Block​Middleware
+    </a>
+</dt>
+<dd>
+    <p>Create a middleware inline with a block.</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/BlockReducer" title="class - BlockReducer">
+        Block​Reducer
+    </a>
+</dt>
+<dd>
+    <p>Create a reducer inline with a block</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/CombinedReducer" title="class - CombinedReducer">
+        Combined​Reducer
+    </a>
+</dt>
+<dd>
+    <p>Reducer that represents a combination of two reducers
+This reducers is not to be implemented by hand. You combine reducer by adding them with the <code>+</code> operator.</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/Store" title="class - Store">
+        Store
+    </a>
+</dt>
+<dd>
+    <p>Store that contains the application state, the reducer logic, the middleware and the listeners</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/SuasDebugLogger" title="class - SuasDebugLogger">
+        Suas​Debug​Logger
+    </a>
+</dt>
+<dd>
+    <p>Used to enable <a href="https://github.com/zendesk/Suas-iOS">Suas</a> logging.
+Suas drives most of the Ticketing UI so the Suas logs can be useful for debugging it.
+Enabling the Suas logger produces a lot of information and will slow down the SDK.</p>
+
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/HelpCenterArticleVotingHandler" title="class - HelpCenterArticleVotingHandler">
+        Help​Center​Article​Voting​Handler
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="class">
+    <a href="/support_sdk_ios/HelpCenterContactUsRouter" title="class - HelpCenterContactUsRouter">
+        Help​Center​Contact​UsRouter
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+    <section id="structures">
+        <h2>Structures</h2>
+        <dl>
+            <dt class="structure">
+    <a href="/support_sdk_ios/Subscription" title="structure - Subscription">
+        Subscription
+    </a>
+</dt>
+<dd>
+    <p>Subscription structure that represents a listener subscription.
+When adding a listener you get a subscription back.
+You can use this subscription to remove the listener, notify about the current state or link the listener lifecycle with an object.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/support_sdk_ios/ActionSubscription" title="structure - ActionSubscription">
+        Action​Subscription
+    </a>
+</dt>
+<dd>
+    <p>Subscription structure that represents a listener subscription.
+When adding a listener you get a subscription back.
+You can use this subscription to remove the listener, notify about the current state or link the listener lifecycle with an object.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/support_sdk_ios/BlockAsyncAction" title="structure - BlockAsyncAction">
+        Block​Async​Action
+    </a>
+</dt>
+<dd>
+    <p>Create an <code>AsyncAction</code> inline by passing a block to the init
+Check <code>AsyncAction</code> for more info</p>
+
+</dd>
+<dt class="structure">
+    <a href="/support_sdk_ios/AsyncMiddleware" title="structure - AsyncMiddleware">
+        Async​Middleware
+    </a>
+</dt>
+<dd>
+    <p>Async Middleware handles actions of type <code>AsyncAction</code></p>
+
+</dd>
+<dt class="structure">
+    <a href="/support_sdk_ios/LoggerMiddleware" title="structure - LoggerMiddleware">
+        Logger​Middleware
+    </a>
+</dt>
+<dd>
+    <p>LoggerMiddleware that logs the action and state when each action is received
+When an action is dispatched, the LoggerMiddleware will print information related to it in the console.</p>
+
+</dd>
+<dt class="structure">
+    <a href="/support_sdk_ios/State" title="structure - State">
+        State
+    </a>
+</dt>
+<dd>
+    <p>Structure that represents the store state. The store state is kept as a <code>Dictionary</code> with <code>String</code> Keys and <code>Any</code> Values (<code>[String: Any]</code>)</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="enumerations">
+        <h2>Enumerations</h2>
+        <dl>
+            <dt class="enumeration">
+    <a href="/support_sdk_ios/FileType" title="enumeration - FileType">
+        File​Type
+    </a>
+</dt>
+<dd>
+    <p>Enum that represents the file types that zendesk supports</p>
+
+</dd>
+<dt class="enumeration">
+    <a href="/support_sdk_ios/Suas" title="enumeration - Suas">
+        Suas
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+    <section id="protocols">
+        <h2>Protocols</h2>
+        <dl>
+            <dt class="protocol">
+    <a href="/support_sdk_ios/ContainerChildControllerDelegate" title="protocol - ContainerChildControllerDelegate">
+        Container​Child​Controller​Delegate
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/ContainerChild" title="protocol - ContainerChild">
+        Container​Child
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/Coordinator" title="protocol - Coordinator">
+        Coordinator
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/Window" title="protocol - Window">
+        Window
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/ApplicationType" title="protocol - ApplicationType">
+        Application​Type
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/Middleware" title="protocol - Middleware">
+        Middleware
+    </a>
+</dt>
+<dd>
+    <p>Middleware protocol that represents a suas store middleware
+A middleware helps extending the dispatch logic of Suas.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/AsyncAction" title="protocol - AsyncAction">
+        Async​Action
+    </a>
+</dt>
+<dd>
+    <p>Async action this type of action is intercepted by <code>AsyncMiddleware</code> and is not dispatched to the reducer.</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/Reducer" title="protocol - Reducer">
+        Reducer
+    </a>
+</dt>
+<dd>
+    <p>Protocol that represents a reducer</p>
+
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/SuasDynamicEquatable" title="protocol - SuasDynamicEquatable">
+        Suas​Dynamic​Equatable
+    </a>
+</dt>
+<dd>
+    <p>Protocol used by <code>EqualsFilter</code> filter callback to compare two state values.
+If your state implements the <code>Equatable</code> protocol there is no code required to implement <code>SuasDynamicEquatable</code></p>
+
+</dd>
+<dt class="protocol">
+    <a href="/support_sdk_ios/Action" title="protocol - Action">
+        Action
+    </a>
+</dt>
+<dd>
+    <p>Action to dispatch to the store</p>
+
+</dd>
+        </dl>
+    </section>
+    <section id="typealiases">
+        <h2>Typealiases</h2>
+        <dl>
+            <dt class="typealias">
+    <a href="/support_sdk_ios/HelpCenterUi" title="typealias - HelpCenterUi">
+        Help​Center​Ui
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/HelpCenterDelegate" title="typealias - HelpCenterDelegate">
+        Help​Center​Delegate
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/ContainerChildController" title="typealias - ContainerChildController">
+        Container​Child​Controller
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/StateKey" title="typealias - StateKey">
+        State​Key
+    </a>
+</dt>
+<dd>
+    <p>Store state is stored as a Dictionary of [StateKey: Any]</p>
+
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/ListenerFunction" title="typealias - ListenerFunction">
+        Listener​Function
+    </a>
+</dt>
+<dd>
+    <p>Callback function called when the listener state is changed</p>
+
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/ActionListenerFunction" title="typealias - ActionListenerFunction">
+        Action​Listener​Function
+    </a>
+</dt>
+<dd>
+    <p>Callback function called when the action listener state is changed</p>
+
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/FilterFunction" title="typealias - FilterFunction">
+        Filter​Function
+    </a>
+</dt>
+<dd>
+    <p>Filter function that decides if the listener should be notified or not</p>
+
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/StateSelector" title="typealias - StateSelector">
+        State​Selector
+    </a>
+</dt>
+<dd>
+    <p>Function that selects part of the full state</p>
+
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/KeyedState" title="typealias - KeyedState">
+        Keyed​State
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/ReducerFunction" title="typealias - ReducerFunction">
+        Reducer​Function
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/DispatchFunction" title="typealias - DispatchFunction">
+        Dispatch​Function
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/NextFunction" title="typealias - NextFunction">
+        Next​Function
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/MiddlewareFunction" title="typealias - MiddlewareFunction">
+        Middleware​Function
+    </a>
+</dt>
+<dd>
+    
+</dd>
+<dt class="typealias">
+    <a href="/support_sdk_ios/GetStateFunction" title="typealias - GetStateFunction">
+        Get​State​Function
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+    <section id="variables">
+        <h2>Variables</h2>
+        <dl>
+            <dt class="variable">
+    <a href="/support_sdk_ios/alwaysFilter" title="variable - alwaysFilter">
+        always​Filter
+    </a>
+</dt>
+<dd>
+    <p>Listener filter callback that always returns true.
+When using this filter callback the Listener will always be notified.</p>
+
+</dd>
+<dt class="variable">
+    <a href="/support_sdk_ios/EqualsFilter" title="variable - EqualsFilter">
+        Equals​Filter
+    </a>
+</dt>
+<dd>
+    <p>Listener filter callback that returns true if the old state and the new state are not equal.
+You can use this filter function when adding a listener if you want your notification function to be called when the state changes.</p>
+
+</dd>
+<dt class="variable">
+    <a href="/support_sdk_ios/defaultLogger" title="variable - defaultLogger">
+        default​Logger
+    </a>
+</dt>
+<dd>
+    
+</dd>
+        </dl>
+    </section>
+<section id="extensions">
+    <h2>Extensions</h2>
+    <dl>
+    <dt class="extension">
+    <a href="/support_sdk_ios/UIApplication">UIApplication</a>
+</dt>
+<dd></dd>
+    </dl>
+<section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-04-22T10:05:36+0000">April 22, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

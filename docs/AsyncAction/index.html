@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportSDK - AsyncAction</title>
+    <link rel="stylesheet" type="text/css" href="/support_sdk_ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/support_sdk_ios">
+            <strong>
+                SupportSDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li><li><a href="#relationships">Types Conforming to Async​Action</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#asyncaction.execute(getstate:dispatch:)">execute(get​State:​dispatch:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Async​Action</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">AsyncAction</span>: <a href="/support_sdk_ios/Action"><span class="type">Action</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Async action this type of action is intercepted by <code>AsyncMiddleware</code> and is not dispatched to the reducer.</p>
+
+</div>
+<div class="discussion">
+    <p>Recepie to use <code>AsyncAction</code></p>
+
+<ol>
+<li>Create an <code>AsyncAction</code> action</li>
+<li>In the block passed at init. Perform any operation (dispatching it on your queue)</li>
+<li>When result is ready, call <code>dispatch</code> passing a new action</li>
+</ol>
+
+<p>If the <code>AsyncMiddleware</code> receives an <code>AsyncAction</code> it does the following:</p>
+
+<ol>
+<li>Call action.execute passing in the dispatch and get state functions</li>
+<li>Stops the action from propagating to other middlewares and reducers</li>
+</ol>
+
+<h1>Example</h1>
+
+<h2>Performing an async loading from disk</h2>
+
+<html><body><pre class="highlight"><code><span class="keyword">struct</span> <span class="type">MyDiskAsyncAction</span>: <span class="type">AsyncAction</span> {
+
+  <span class="keyword">func</span> <span class="function">execute</span>(<span class="variable">getState</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <a href="/support_sdk_ios/GetStateFunction"><span class="type">GetStateFunction</span></a>, <span class="variable">dispatch</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <a href="/support_sdk_ios/DispatchFunction"><span class="type">DispatchFunction</span></a>) {
+    <span class="comment">// Perform some work in a background thread</span>
+    <span class="variable">DispatchQueue</span>(<span class="variable">label</span>: <span class="string literal">"</span><span class="string literal">MyQueue</span><span class="string literal">"</span>).<span class="variable">async</span> {
+      <span class="comment">// Load from disk</span>
+      <span class="comment">// Process loaded</span>
+      <span class="comment">// Do more work</span>
+
+      <span class="comment">// Maybe consult the current state</span>
+      <span class="keyword">let</span> <span class="variable">currentState</span> = <span class="variable">api</span>.<span class="variable">state</span>
+
+      <span class="comment">// At a latter time dont forget to dispatch</span>
+      <span class="variable">dispatch</span>(<span class="variable">DataLoadedAction</span>(<span class="variable">data</span>: <span class="type">data</span>))
+    }
+}
+
+<span class="variable">store</span>.<span class="variable">dispatch</span>(<span class="variable">action</span>: <span class="type">MyDiskAsyncAction</span>())
+</code></pre></body></html>
+<h2>Performing an async network request</h2>
+
+<html><body><pre class="highlight"><code><span class="keyword">struct</span> <span class="type">MyURLAsyncAction</span>: <span class="type">AsyncAction</span> {
+
+  <span class="keyword">func</span> <span class="function">execute</span>(<span class="variable">getState</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <a href="/support_sdk_ios/GetStateFunction"><span class="type">GetStateFunction</span></a>, <span class="variable">dispatch</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <a href="/support_sdk_ios/DispatchFunction"><span class="type">DispatchFunction</span></a>) {
+    <span class="comment">// First dispatch some action syncrhonously</span>
+    <span class="variable">dispatch</span>(<span class="variable">SomeAction</span>(...))
+
+    <span class="keyword">let</span> <span class="variable">session</span> = <span class="variable">URLSession</span>(<span class="variable">configuration</span>: .<span class="variable">default</span>)
+    <span class="comment">// perform a dataTask</span>
+    <span class="variable">session</span>.<span class="variable">dataTask</span>(<span class="variable">with</span>: <span class="type">urlRequest</span>) { <span class="variable">data</span>, <span class="variable">response</span>, <span class="variable">error</span> <span class="keyword">in</span>
+
+      <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">data</span> = <span class="variable">data</span> {
+        <span class="comment">// Do something with the data</span>
+         <span class="variable">dispatch</span>(<span class="variable">RequestSucceeded</span>(<span class="variable">data</span>: <span class="type">data</span>))
+
+      } <span class="keyword">else</span> <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">error</span> = <span class="variable">error</span> {
+
+         <span class="comment">// Error happenend</span>
+         <span class="variable">dispatch</span>(<span class="variable">RequestFaile</span>(<span class="variable">data</span>: <span class="type">data</span>))
+      }
+   }
+}
+
+<span class="variable">store</span>.<span class="variable">dispatch</span>(<span class="variable">action</span>: <span class="type">MyURLAsyncAction</span>())
+</code></pre></body></html>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        <figure>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 3.0.0 (20220226.1711)
+ -->
+<!-- Pages: 1 -->
+<svg width="1319pt" height="292pt"
+ viewBox="0.00 0.00 1319.46 291.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 287.6)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-287.6 1315.46,-287.6 1315.46,4 -4,4"/>
+<!-- AsyncAction -->
+<g id="node1" class="node protocol current">
+<title>AsyncAction</title>
+<g id="a_node1"><a xlink:href="/support_sdk_ios/AsyncAction" xlink:title="AsyncAction">
+<path fill="none" stroke="black" stroke-width="3" d="M741.18,-159.77C741.18,-159.77 549.18,-159.77 549.18,-159.77 543.18,-159.77 537.18,-153.77 537.18,-147.77 537.18,-147.77 537.18,-135.77 537.18,-135.77 537.18,-129.77 543.18,-123.77 549.18,-123.77 549.18,-123.77 741.18,-123.77 741.18,-123.77 747.18,-123.77 753.18,-129.77 753.18,-135.77 753.18,-135.77 753.18,-147.77 753.18,-147.77 753.18,-153.77 747.18,-159.77 741.18,-159.77"/>
+<text text-anchor="middle" x="645.18" y="-138.07" font-family="Menlo" font-size="14.00">AsyncAction</text>
+</a>
+</g>
+</g>
+<!-- Action -->
+<g id="node6" class="node protocol">
+<title>Action</title>
+<g id="a_node6"><a xlink:href="/support_sdk_ios/Action" xlink:title="Action">
+<path fill="none" stroke="black" d="M751.94,-283.6C751.94,-283.6 559.94,-283.6 559.94,-283.6 553.94,-283.6 547.94,-277.6 547.94,-271.6 547.94,-271.6 547.94,-259.6 547.94,-259.6 547.94,-253.6 553.94,-247.6 559.94,-247.6 559.94,-247.6 751.94,-247.6 751.94,-247.6 757.94,-247.6 763.94,-253.6 763.94,-259.6 763.94,-259.6 763.94,-271.6 763.94,-271.6 763.94,-277.6 757.94,-283.6 751.94,-283.6"/>
+<text text-anchor="middle" x="655.94" y="-261.9" font-family="Menlo" font-size="14.00">Action</text>
+</a>
+</g>
+</g>
+<!-- AsyncAction&#45;&gt;Action -->
+<g id="edge1" class="edge conformsTo">
+<title>AsyncAction&#45;&gt;Action</title>
+<path fill="none" stroke="black" d="M646.75,-159.78C648.52,-180.14 651.42,-213.55 653.49,-237.38"/>
+<polygon fill="black" stroke="black" points="650.02,-237.91 654.37,-247.57 656.99,-237.31 650.02,-237.91"/>
+</g>
+<!-- Actions.FetchLocalOnlyRequests -->
+<g id="node2" class="node structure">
+<title>Actions.FetchLocalOnlyRequests</title>
+<path fill="none" stroke="black" d="M1299.46,-97.51C1299.46,-97.51 1059.46,-97.51 1059.46,-97.51 1053.46,-97.51 1047.46,-91.51 1047.46,-85.51 1047.46,-85.51 1047.46,-73.51 1047.46,-73.51 1047.46,-67.51 1053.46,-61.51 1059.46,-61.51 1059.46,-61.51 1299.46,-61.51 1299.46,-61.51 1305.46,-61.51 1311.46,-67.51 1311.46,-73.51 1311.46,-73.51 1311.46,-85.51 1311.46,-85.51 1311.46,-91.51 1305.46,-97.51 1299.46,-97.51"/>
+<text text-anchor="middle" x="1179.46" y="-75.81" font-family="Menlo" font-size="14.00">Actions.FetchLocalOnlyRequests</text>
+</g>
+<!-- Actions.FetchLocalOnlyRequests&#45;&gt;AsyncAction -->
+<g id="edge2" class="edge conformsTo">
+<title>Actions.FetchLocalOnlyRequests&#45;&gt;AsyncAction</title>
+<path fill="none" stroke="black" d="M1047.39,-94.9C960.39,-105.04 847.44,-118.2 763.4,-127.99"/>
+<polygon fill="black" stroke="black" points="762.82,-124.54 753.3,-129.17 763.63,-131.49 762.82,-124.54"/>
+</g>
+<!-- Actions.FetchAgentAvatars -->
+<g id="node3" class="node structure">
+<title>Actions.FetchAgentAvatars</title>
+<path fill="none" stroke="black" d="M743.45,-36C743.45,-36 544.45,-36 544.45,-36 538.45,-36 532.45,-30 532.45,-24 532.45,-24 532.45,-12 532.45,-12 532.45,-6 538.45,0 544.45,0 544.45,0 743.45,0 743.45,0 749.45,0 755.45,-6 755.45,-12 755.45,-12 755.45,-24 755.45,-24 755.45,-30 749.45,-36 743.45,-36"/>
+<text text-anchor="middle" x="643.95" y="-14.3" font-family="Menlo" font-size="14.00">Actions.FetchAgentAvatars</text>
+</g>
+<!-- Actions.FetchAgentAvatars&#45;&gt;AsyncAction -->
+<g id="edge6" class="edge conformsTo">
+<title>Actions.FetchAgentAvatars&#45;&gt;AsyncAction</title>
+<path fill="none" stroke="black" d="M644.13,-36.26C644.33,-56.56 644.66,-89.58 644.9,-113.28"/>
+<polygon fill="black" stroke="black" points="641.4,-113.47 645,-123.43 648.4,-113.4 641.4,-113.47"/>
+</g>
+<!-- BlockAsyncAction -->
+<g id="node4" class="node structure">
+<title>BlockAsyncAction</title>
+<g id="a_node4"><a xlink:href="/support_sdk_ios/BlockAsyncAction" xlink:title="BlockAsyncAction">
+<path fill="none" stroke="black" d="M211.76,-223.44C211.76,-223.44 19.76,-223.44 19.76,-223.44 13.76,-223.44 7.76,-217.44 7.76,-211.44 7.76,-211.44 7.76,-199.44 7.76,-199.44 7.76,-193.44 13.76,-187.44 19.76,-187.44 19.76,-187.44 211.76,-187.44 211.76,-187.44 217.76,-187.44 223.76,-193.44 223.76,-199.44 223.76,-199.44 223.76,-211.44 223.76,-211.44 223.76,-217.44 217.76,-223.44 211.76,-223.44"/>
+<text text-anchor="middle" x="115.76" y="-201.74" font-family="Menlo" font-size="14.00">BlockAsyncAction</text>
+</a>
+</g>
+</g>
+<!-- BlockAsyncAction&#45;&gt;AsyncAction -->
+<g id="edge4" class="edge conformsTo">
+<title>BlockAsyncAction&#45;&gt;AsyncAction</title>
+<path fill="none" stroke="black" d="M223.85,-192.44C311.89,-181.85 436.01,-166.93 526.72,-156.02"/>
+<polygon fill="black" stroke="black" points="527.27,-159.48 536.78,-154.81 526.44,-152.53 527.27,-159.48"/>
+</g>
+<!-- Actions.FetchCachedRequests -->
+<g id="node5" class="node structure">
+<title>Actions.FetchCachedRequests</title>
+<path fill="none" stroke="black" d="M1291.33,-220.57C1291.33,-220.57 1076.33,-220.57 1076.33,-220.57 1070.33,-220.57 1064.33,-214.57 1064.33,-208.57 1064.33,-208.57 1064.33,-196.57 1064.33,-196.57 1064.33,-190.57 1070.33,-184.57 1076.33,-184.57 1076.33,-184.57 1291.33,-184.57 1291.33,-184.57 1297.33,-184.57 1303.33,-190.57 1303.33,-196.57 1303.33,-196.57 1303.33,-208.57 1303.33,-208.57 1303.33,-214.57 1297.33,-220.57 1291.33,-220.57"/>
+<text text-anchor="middle" x="1183.83" y="-198.87" font-family="Menlo" font-size="14.00">Actions.FetchCachedRequests</text>
+</g>
+<!-- Actions.FetchCachedRequests&#45;&gt;AsyncAction -->
+<g id="edge3" class="edge conformsTo">
+<title>Actions.FetchCachedRequests&#45;&gt;AsyncAction</title>
+<path fill="none" stroke="black" d="M1064.28,-189.08C974.75,-178.97 852.84,-165.21 763.59,-155.14"/>
+<polygon fill="black" stroke="black" points="763.75,-151.63 753.42,-153.99 762.96,-158.59 763.75,-151.63"/>
+</g>
+<!-- Actions.FetchRequests -->
+<g id="node7" class="node structure">
+<title>Actions.FetchRequests</title>
+<path fill="none" stroke="black" d="M204,-98.84C204,-98.84 12,-98.84 12,-98.84 6,-98.84 0,-92.84 0,-86.84 0,-86.84 0,-74.84 0,-74.84 0,-68.84 6,-62.84 12,-62.84 12,-62.84 204,-62.84 204,-62.84 210,-62.84 216,-68.84 216,-74.84 216,-74.84 216,-86.84 216,-86.84 216,-92.84 210,-98.84 204,-98.84"/>
+<text text-anchor="middle" x="108" y="-77.14" font-family="Menlo" font-size="14.00">Actions.FetchRequests</text>
+</g>
+<!-- Actions.FetchRequests&#45;&gt;AsyncAction -->
+<g id="edge5" class="edge conformsTo">
+<title>Actions.FetchRequests&#45;&gt;AsyncAction</title>
+<path fill="none" stroke="black" d="M216.06,-93.1C306.07,-103.31 434.08,-117.83 526.84,-128.35"/>
+<polygon fill="black" stroke="black" points="526.51,-131.83 536.84,-129.48 527.29,-124.88 526.51,-131.83"/>
+</g>
+</g>
+</svg>
+
+
+    <figcaption hidden>Inheritance graph for AsyncAction.</figcaption>
+</figure>
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/support_sdk_ios/Action">Action</a></code></dt>
+<dd><p>Action to dispatch to the store</p>
+</dd>
+</dl>
+<h3>Types Conforming to <code>Async​Action</code></h3>
+<dl>
+    <dt class="structure"><code><a href="/support_sdk_ios/BlockAsyncAction">BlockAsyncAction</a></code></dt>
+<dd><p>Create an <code>AsyncAction</code> inline by passing a block to the init
+Check <code>AsyncAction</code> for more info</p>
+</dd>
+</dl>
+</section>
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="asyncaction.execute(getstate:dispatch:)">
+    <h3>
+        <code>execute(get​State:​dispatch:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">func</span> <span class="function">execute</span>(<span class="variable">getState</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <span class="type">GetStateFunction</span>, <span class="variable">dispatch</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <span class="type">DispatchFunction</span>) </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Execution block that is executed in the <code>AsyncMiddleware</code>
+If the <code>AsyncMiddleware</code> receives an <code>AsyncAction</code> it does the following:</p>
+
+</div>
+<div class="discussion">
+    <ol>
+<li>Call action.execute passing in the dispatch and get state functions</li>
+<li>Stops the action from propagating to other middlewares and reducers</li>
+</ol>
+
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-04-22T10:05:36+0000">April 22, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

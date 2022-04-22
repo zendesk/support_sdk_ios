@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Valami hiba történt, ezért nem tudtam elküldeni az üzenetét. Próbálkozzon újra később.";
 "ios.SupportEngine.messageSend.retry.button" = "Újra";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Köszönjük! Az üzenetet elküldtük a csapatnak. Itt megtekintheti ezt az üzenetet, és további információkat adhat meg:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Köszönjük! Az üzenetet elküldtük a csapatnak. Ha az üzenet választ igényel, akkor e-mailben felveszik Önnel a kapcsolatot.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Siker";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Adja meg e-mail-címét...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Ha az üzenet választ igényel, akkor egy munkatárs e-mailben felveszi Önnel a kapcsolatot. Mi az Ön e-mail-címe?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "A megadott e-mail-cím helytelen. Adjon meg egy érvényes e-mail címet.";

@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Errore: impossibile inviare il messaggio. Riprova più tardi.";
 "ios.SupportEngine.messageSend.retry.button" = "Riprova";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Grazie. Un messaggio è stato inviato al team. Puoi visualizzare il messaggio e aggiungere eventuali dettagli qui:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Grazie. Un messaggio è stato inviato al team. Se necessario, ti contatteranno quanto prima via email.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Operazione riuscita";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Inserisci l’indirizzo email...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Se dovesse essere necessaria una risposta, ti contatteremo via email. Qual è il tuo indirizzo email?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "L’indirizzo email inserito non è corretto. Inserisci un indirizzo email valido.";

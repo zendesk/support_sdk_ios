@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportSDK - Store</title>
+    <link rel="stylesheet" type="text/css" href="/support_sdk_ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/support_sdk_ios">
+            <strong>
+                SupportSDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#store.state">state</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#store.dispatch(action:)">dispatch(action:​)</a></li><li class="function"><a href="#store.addlistener(forstatetype:statekey:if:callback:)">add​Listener(for​State​Type:​state​Key:​if:​callback:​)</a></li><li class="function"><a href="#store.addlistener(if:stateselector:callback:)">add​Listener(if:​state​Selector:​callback:​)</a></li><li class="function"><a href="#store.addlistener(if:callback:)">add​Listener(if:​callback:​)</a></li><li class="function"><a href="#store.addactionlistener(actionlistener:)">add​Action​Listener(action​Listener:​)</a></li><li class="function"><a href="#store.reset(state:)">reset(state:​)</a></li><li class="function"><a href="#store.reset(state:forkey:)">reset(state:​for​Key:​)</a></li><li class="function"><a href="#store.resetfullstate(_:)">reset​Full​State(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Store</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Store</span>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Store that contains the application state, the reducer logic, the middleware and the listeners</p>
+
+</div>
+<div class="discussion">
+    <p>The store contains four components:</p>
+
+<ul>
+<li>
+<p><strong>state</strong>: represents the application state.
+This state is partitioned into state keys. Each key can represent a full application screen, flow, or view controller.</p>
+</li>
+<li>
+<p><strong>reducer</strong> represents the logic to update the state. A reducer mainly provides a function that updates the state for a particular action.</p>
+</li>
+<li>
+<p><strong>middleware</strong>: an object (or list of objects) that intercepts an action and can enrich or alter it before finally dispatching it to the reducer.</p>
+</li>
+<li>
+<p><strong>listener</strong>: a function that gets called when a state is changed.</p>
+</li>
+</ul>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="store.state">
+    <h3>
+        <code><a href="#store.state">state</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">state</span>: <a href="/support_sdk_ios/State"><span class="type">State</span></a></body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Get the current state</p>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="store.dispatch(action:)">
+    <h3>
+        <code><a href="#store.dispatch(action:)">dispatch(action:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">dispatch</span>(<span class="variable">action</span>: <a href="/support_sdk_ios/Action"><span class="type">Action</span></a>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Dispatches an action to the store</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>action</th>
+    <td><code class="type">Action</code></td>
+    <td><p>the action to dispatch</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="store.addlistener(forstatetype:statekey:if:callback:)">
+    <h3>
+        <code><a href="#store.addlistener(forstatetype:statekey:if:callback:)">add​Listener(for​State​Type:​state​Key:​if:​callback:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">addListener</span>&lt;<span class="variable">StateType</span>&gt;(<span class="variable">forStateType</span> <span class="variable">type</span>: <span class="type">StateType</span>.<span class="type">Type</span>,
+                                       <span class="variable">stateKey</span>: <span class="type">StateKey</span>? = <span class="keyword">nil</span>,
+                                       <span class="variable">if</span> <span class="variable">filterBlock</span>: <span class="type">FilterFunction</span>&lt;<span class="type">StateType</span>&gt;? = <span class="keyword">nil</span>,
+                                       <span class="variable">callback</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">StateType</span>) -&gt; <span class="type">Void</span>) -&gt; <a href="/support_sdk_ios/Subscription"><span class="type">Subscription</span></a>&lt;<span class="type">StateType</span>&gt;  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Add a listener to the store. The listener will be notified when the state changes.</p>
+
+</div>
+<div class="discussion">
+    <h1>Example</h1>
+
+<h2>Adding a listener</h2>
+
+<p>Add a simple listener for a <code>MyState</code> state type</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">forStateType</span>: <span class="type">MyState</span>.<span class="keyword">self</span>) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// Do something with the state</span>
+}
+</code></pre></body></html>
+<h2>Adding a listener with a filterBlock</h2>
+
+<p>Adding a listener for a state of <code>TodoItemsState</code> type with a filter block.
+In the filterBlock we check that the new state has more items than the old state.
+The Listener will be notified only if the filterBlock returns true.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(
+  <span class="variable">forStateType</span>: <span class="type">TodoItemsState</span>.<span class="keyword">self</span>,
+  <span class="variable">if</span>: { <span class="variable">old</span>, <span class="variable">new</span> <span class="keyword">in</span> <span class="keyword">return</span> <span class="variable">old</span>.<span class="variable">todos</span>.<span class="variable">count</span> &gt; <span class="variable">new</span>.<span class="variable">todos</span>.<span class="variable">count</span> }) { <span class="variable">newState</span> <span class="keyword">in</span>
+    <span class="comment">// Do something with the state</span>
+}
+</code></pre></body></html>
+<h2>Adding a listener with a state key</h2>
+
+<p>Adding a listener for a state of <code>TodoItemsState</code> type, the reducer registered the state key to &quot;todos&quot;</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">forStateType</span>: <span class="type">TodoItemsState</span>.<span class="keyword">self</span>, <span class="variable">stateKey</span>: <span class="string literal">"</span><span class="string literal">todos</span><span class="string literal">"</span>) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// Do something with the state</span>
+}
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>type</th>
+    <td><code class="type">State​Type.​Type</code></td>
+    <td><p>The type of the state to listen to. If the state type is not found, the listener will not be notified.</p>
+</td>
+</tr>
+<tr>
+    <th>state​Key</th>
+    <td><code class="type">State​Key?</code></td>
+    <td><p>(Optional) the state key to listen to. When not passed (or passing nil) the type name from <code>forStateType</code> will be used. Only pass when the state key for the state was changed in the reducer (99% of the times you dont need to set this parameter)</p>
+</td>
+</tr>
+<tr>
+    <th>filter​Block</th>
+    <td><code class="type">Filter​Function&lt;State​Type&gt;?</code></td>
+    <td><p>(Optional) block that receives the old state and the new state. It decides wether the notification for the listener should be sent or not. When not set, the listener is notified whenever the state changed.</p>
+</td>
+</tr>
+<tr>
+    <th>callback</th>
+    <td><code class="type">@escaping (State​Type) -&gt; Void</code></td>
+    <td><p>Notification block called with the new state when the store's state changed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The Listener's subscription that can be used to remove the notification and for other listener related stuff.</p>
+
+</div>
+<div role="article" class="function" id="store.addlistener(if:stateselector:callback:)">
+    <h3>
+        <code><a href="#store.addlistener(if:stateselector:callback:)">add​Listener(if:​state​Selector:​callback:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">addListener</span>&lt;<span class="variable">StateType</span>&gt;(<span class="variable">if</span> <span class="variable">filterBlock</span>: <span class="type">FilterFunction</span>&lt;<a href="/support_sdk_ios/State"><span class="type">State</span></a>&gt;? = <span class="keyword">nil</span>,
+                                       <span class="variable">stateSelector</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <span class="type">StateSelector</span>&lt;<span class="type">StateType</span>&gt;,
+                                       <span class="variable">callback</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="type">StateType</span>) -&gt; <span class="type">Void</span>) -&gt; <a href="/support_sdk_ios/Subscription"><span class="type">Subscription</span></a>&lt;<span class="type">StateType</span>&gt;  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Add a listener to the store with a stateSelector</p>
+
+</div>
+<div class="discussion">
+    <h1>Example</h1>
+
+<h2>Adding a listener with a state selector</h2>
+
+<p>Add a simple listener for the full state with a state selector that selects part of it.</p>
+
+<p>Create a state selector that selects and creates a <code>TodoItemsState</code> from the full <code>Store</code> state.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">stateSelector</span>: <a href="/support_sdk_ios/StateSelector"><span class="type">StateSelector</span></a>&lt;<span class="type">TodoItemsState</span>&gt; = { <span class="variable">state</span> <span class="keyword">in</span>
+  <span class="comment">// Read values from the store</span>
+  <span class="keyword">let</span> <span class="variable">value1</span> = <span class="variable">state</span>.<span class="variable">value</span>(<span class="variable">forKeyOfType</span>: <span class="type">SomeType</span>.<span class="keyword">self</span>)
+  <span class="keyword">let</span> <span class="variable">value2</span> = <span class="variable">state</span>.<span class="variable">value</span>(<span class="variable">forKey</span>: <span class="string literal">"</span><span class="string literal">someKey</span><span class="string literal">"</span>)
+
+  <span class="comment">// Create and return a TodoItemsState</span>
+  <span class="keyword">return</span> <span class="variable">TodoItemsState</span>(.....)
+}
+</code></pre></body></html>
+<p>Add a listener with the state selector and</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">stateSelector</span>: <span class="type">stateSelector</span>) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// newState here is a TodoItemsState</span>
+}
+</code></pre></body></html>
+<h2>Adding a listener with a state selector and a filter block</h2>
+
+<p>Add a simple listener for the full state with a state selector that selects part of it and a filter block that decide when to notify.</p>
+
+<p>Create a state selector that selects and creates a <code>TodoItemsState</code> from the full <code>Store</code> state.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">stateSelector</span>: <a href="/support_sdk_ios/StateSelector"><span class="type">StateSelector</span></a>&lt;<span class="type">TodoItemsState</span>&gt; = { <span class="variable">state</span> <span class="keyword">in</span>
+  <span class="comment">// Read values from the store</span>
+  <span class="keyword">let</span> <span class="variable">value1</span> = <span class="variable">state</span>.<span class="variable">value</span>(<span class="variable">forKeyOfType</span>: <span class="type">SomeType</span>.<span class="keyword">self</span>)
+  <span class="keyword">let</span> <span class="variable">value2</span> = <span class="variable">state</span>.<span class="variable">value</span>(<span class="variable">forKey</span>: <span class="string literal">"</span><span class="string literal">someKey</span><span class="string literal">"</span>)
+
+  <span class="comment">// Create and return a TodoItemsState</span>
+  <span class="keyword">return</span> <span class="variable">TodoItemsState</span>(.....)
+}
+</code></pre></body></html>
+<p>Add a filter block that decides when to notify</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">filterBlock</span>: <a href="/support_sdk_ios/FilterFunction"><span class="type">FilterFunction</span></a>&lt;<a href="/support_sdk_ios/State"><span class="type">State</span></a>&gt; = { <span class="variable">oldState</span>, <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// Read a string from the oldState and newState</span>
+  <span class="comment">// oldState and newState are the full Store state</span>
+  <span class="keyword">let</span> <span class="variable">value1</span> = <span class="variable">oldState</span>.<span class="variable">value</span>(<span class="variable">forKey</span>: <span class="string literal">"</span><span class="string literal">someKey</span><span class="string literal">"</span>, <span class="variable">ofType</span>: <span class="type">String</span>.<span class="keyword">self</span>)
+  <span class="keyword">let</span> <span class="variable">value2</span> = <span class="variable">newState</span>.<span class="variable">value</span>(<span class="variable">forKey</span>: <span class="string literal">"</span><span class="string literal">someKey</span><span class="string literal">"</span>, <span class="variable">ofType</span>: <span class="type">String</span>.<span class="keyword">self</span>)
+
+  <span class="comment">// Compare</span>
+  <span class="keyword">return</span> <span class="variable">value1</span> != <span class="variable">value2</span>
+}
+</code></pre></body></html>
+<p>Add a listener with the state selector and</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">stateSelector</span>: <span class="type">stateSelector</span>) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// newState here is a TodoItemsState</span>
+}
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>filter​Block</th>
+    <td><code class="type">Filter​Function&lt;State&gt;?</code></td>
+    <td><p>(Optional) block that receives the old state and the new state. It decides wether the notification for the listener should be sent or not. When not set, the listener is notified whenever the state changed.</p>
+</td>
+</tr>
+<tr>
+    <th>state​Selector</th>
+    <td><code class="type">@escaping State​Selector&lt;State​Type&gt;</code></td>
+    <td><p>state selector block that selects a part of the full state</p>
+</td>
+</tr>
+<tr>
+    <th>callback</th>
+    <td><code class="type">@escaping (State​Type) -&gt; Void</code></td>
+    <td><p>Notification block called with the new state when the store's state changed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The Listener's subscription that can be used to remove the notification and for other listener related stuff.</p>
+
+</div>
+<div role="article" class="function" id="store.addlistener(if:callback:)">
+    <h3>
+        <code><a href="#store.addlistener(if:callback:)">add​Listener(if:​callback:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">addListener</span>(<span class="variable">if</span> <span class="variable">filterBlock</span>: <span class="type">FilterFunction</span>&lt;<a href="/support_sdk_ios/State"><span class="type">State</span></a>&gt;? = <span class="keyword">nil</span>,
+                            <span class="variable">callback</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<a href="/support_sdk_ios/State"><span class="type">State</span></a>) -&gt; <span class="type">Void</span>) -&gt; <a href="/support_sdk_ios/Subscription"><span class="type">Subscription</span></a>&lt;<a href="/support_sdk_ios/State"><span class="type">State</span></a>&gt;  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Add a listener to the store. The listener will be notified when the state changes.
+The listener will be notified with the full state when</p>
+
+</div>
+<div class="discussion">
+    <h1>Example</h1>
+
+<h2>Adding a listener</h2>
+
+<p>Add a simple listener for the full state.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">addListener</span> { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// Do something with the state</span>
+
+  <span class="comment">// Get value of Any? Type with key "TheKey"</span>
+  <span class="keyword">let</span> <span class="variable">value1</span> = <span class="variable">newState</span>.<span class="variable">value</span>(<span class="variable">forKey</span>: <span class="string literal">"</span><span class="string literal">TheKey</span><span class="string literal">"</span>)
+
+  <span class="comment">// Get value of MyState? Type with key "MyState" (Key value = the type of the state we want)</span>
+  <span class="keyword">let</span> <span class="variable">value2</span> = <span class="variable">newState</span>.<span class="variable">value</span>(<span class="variable">forKeyOfType</span>: <span class="type">MyState</span>.<span class="keyword">self</span>)
+
+  <span class="comment">// Get value of MyState? Type with key "TheKey"</span>
+  <span class="keyword">let</span> <span class="variable">value3</span> = <span class="variable">newState</span>.<span class="variable">value</span>(<span class="variable">forKey</span>: <span class="string literal">"</span><span class="string literal">TheKey</span><span class="string literal">"</span>, <span class="variable">ofType</span>: <span class="type">MyState</span>.<span class="keyword">self</span>)
+}
+</code></pre></body></html>
+<h2>Adding a listener with a filterBlock</h2>
+
+<p>Adding a listener for the full state with a filter block.
+In the filterBlock we check that the new state has more than 10 items.
+The Listener will be notified only if the filterBlock returns true.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">if</span>: { <span class="variable">oldState</span>, <span class="variable">newState</span> <span class="keyword">in</span>
+
+  <span class="comment">// Read values from the oldState and the newState</span>
+  <span class="keyword">let</span> <span class="variable">old</span> = <span class="variable">oldState</span>.<span class="variable">value</span>(<span class="variable">forKeyOfType</span>: <span class="type">TodoItemsState</span>.<span class="keyword">self</span>)!
+  <span class="keyword">let</span> <span class="variable">new</span> = <span class="variable">newState</span>.<span class="variable">value</span>(<span class="variable">forKeyOfType</span>: <span class="type">TodoItemsState</span>.<span class="keyword">self</span>)!
+
+  <span class="keyword">return</span> <span class="variable">new</span>.<span class="variable">todos</span>.<span class="variable">count</span> &gt; <span class="number literal">10</span>
+}) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// Do something with the state</span>
+}
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>filter​Block</th>
+    <td><code class="type">Filter​Function&lt;State&gt;?</code></td>
+    <td><p>(Optional) block that receives the old state and the new state. AnyObjectIt decides wether the notification for the listener should be sent or not. When not set, the listener is notified whenever the state changed.</p>
+</td>
+</tr>
+<tr>
+    <th>callback</th>
+    <td><code class="type">@escaping (State) -&gt; Void</code></td>
+    <td><p>Notification block called with the new state when the store's state changed.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The Listener's subscription that can be used to remove the notification and for other listener related stuff.</p>
+
+</div>
+<div role="article" class="function" id="store.addactionlistener(actionlistener:)">
+    <h3>
+        <code><a href="#store.addactionlistener(actionlistener:)">add​Action​Listener(action​Listener:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">addActionListener</span>(<span class="variable">actionListener</span>: <span class="attribute">@</span><span class="attribute">escaping</span> <span class="type">ActionListenerFunction</span>) -&gt; <a href="/support_sdk_ios/ActionSubscription"><span class="type">ActionSubscription</span></a>  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Add a new action listner to the store. Action listeners will be notified whenever a new action is dispatched.
+Inside the action notification you cast to the specific ation and read the payload of the action.</p>
+
+</div>
+<div class="discussion">
+    <h1>Example</h1>
+
+<p>Add an action listener, this action listener will be notified when an action is dispatched.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">addActionListener</span> { <span class="variable">action</span> <span class="keyword">in</span>
+
+  <span class="comment">// Cast to some of your actions</span>
+  <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">action</span> = <span class="variable">action</span> <span class="keyword">as</span>? <span class="type">MyButtonClickedAction</span> {
+  }
+
+  <span class="comment">// Cast to some other action</span>
+  <span class="keyword">if</span> <span class="keyword">let</span> <span class="variable">action</span> = <span class="variable">action</span> <span class="keyword">as</span>? <span class="type">SomeOtherAction</span> {
+  }
+}
+</code></pre></body></html>
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>action​Listener</th>
+    <td><code class="type">@escaping Action​Listener​Function</code></td>
+    <td><p>Notification block called when an action happens.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The Listener's subscription that can be used to remove the notification and for other listener related stuff.</p>
+
+</div>
+<div role="article" class="function" id="store.reset(state:)">
+    <h3>
+        <code><a href="#store.reset(state:)">reset(state:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">reset</span>(<span class="variable">state</span>: <span class="keyword">Any</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Reset the store internal state for a particular key. They key will be the dynamic type of state.</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>state</th>
+    <td><code class="type">Any</code></td>
+    <td><p>the new state</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="store.reset(state:forkey:)">
+    <h3>
+        <code><a href="#store.reset(state:forkey:)">reset(state:​for​Key:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">reset</span>(<span class="variable">state</span>: <span class="keyword">Any</span>, <span class="variable">forKey</span> <span class="variable">key</span>: <span class="type">StateKey</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Reset the store internal state for a specific key</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>state</th>
+    <td><code class="type">Any</code></td>
+    <td><p>the new state</p>
+</td>
+</tr>
+<tr>
+    <th>key</th>
+    <td><code class="type">State​Key</code></td>
+    <td><p>the state key to set</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+<div role="article" class="function" id="store.resetfullstate(_:)">
+    <h3>
+        <code><a href="#store.resetfullstate(_:)">reset​Full​State(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">resetFullState</span>(<span class="keyword">_</span> <span class="variable">state</span>: <span class="type">KeyedState</span>)  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Resets the full internal state with a new state</p>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>state</th>
+    <td><code class="type">Keyed​State</code></td>
+    <td><p>the state to reset to</p>
+</td>
+</tr>
+  </tbody>
+</table>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-04-22T10:05:36+0000">April 22, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

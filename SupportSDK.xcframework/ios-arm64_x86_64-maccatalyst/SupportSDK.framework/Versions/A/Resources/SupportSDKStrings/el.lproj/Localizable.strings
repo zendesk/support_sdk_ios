@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Παρουσιάστηκε πρόβλημα και δεν κατάφερα να στείλω το μήνυμά σας. Προσπαθήστε ξανά αργότερα.";
 "ios.SupportEngine.messageSend.retry.button" = "Επανάληψη";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Σας ευχαριστούμε. Έχει σταλεί ένα μήνυμα στην ομάδα. Μπορείτε να προβάλετε αυτό το μήνυμα και να προσθέσετε περισσότερες λεπτομέρειες εδώ:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Σας ευχαριστούμε. Έχει σταλεί ένα μήνυμα στην ομάδα. Αν χρειάζεται απάντηση, θα επικοινωνήσουν μαζί σας μέσω email.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Επιτυχία";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Πληκτρολογήστε το email σας...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Αν χρειάζεται απάντηση, κάποιος υπεύθυνος θα επικοινωνήσει μαζί σας μέσω email. Ποια είναι η διεύθυνση email σας;";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Η διεύθυνση email που εισαγάγατε είναι εσφαλμένη. Καταχωρήστε μια έγκυρη διεύθυνση email.";

@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Er is iets fout gegaan. Uw bericht is niet verzonden. Probeer het later opnieuw.";
 "ios.SupportEngine.messageSend.retry.button" = "Opnieuw";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Hartelijk dank. Er is een bericht naar het team verzonden. U kunt dit bericht hier bekijken en aanvullende gegevens toevoegen:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Hartelijk dank. Er is een bericht naar het team verzonden. Als er een reactie nodig is, nemen de teamleden via e-mail contact met u op.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Gelukt";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Geef uw e-mailadres op...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Als er een reactie nodig is, neemt iemand per e-mail contact met u op. Wat is uw e-mailadres?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Het opgegeven e-mailadres is onjuist. Geef een geldig e-mailadres op.";

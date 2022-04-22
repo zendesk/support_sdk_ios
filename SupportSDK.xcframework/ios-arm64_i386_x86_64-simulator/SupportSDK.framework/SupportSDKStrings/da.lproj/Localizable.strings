@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Der gik noget galt, og din meddelelse kunne ikke sendes. Prøv igen senere.";
 "ios.SupportEngine.messageSend.retry.button" = "Prøv igen";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Mange tak. Der er blevet sendt en meddelelse til teamet. Du kan se denne meddelelse og tilføje yderligere detaljer her:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Mange tak. Der er blevet sendt en meddelelse til teamet. De vil kontakte dig via e-mail, hvis et svar er nødvendigt.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Det lykkedes";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Indtast din e-mailadresse ...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Du vil blive kontaktet via e-mail, hvis et svar er nødvendigt. Hvad er din e-mailadresse?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Den indtastede e-mailadresse er forkert. Indtast en gyldig e-mailadresse.";

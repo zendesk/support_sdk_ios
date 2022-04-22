@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Đã xảy ra lỗi và tôi không thể gửi tin nhắn của bạn. Vui lòng thử lại sau.";
 "ios.SupportEngine.messageSend.retry.button" = "Thử lại";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Cảm ơn bạn. Tin nhắn đã được gửi tới đội. Bạn có thể xem tin nhắn này và thêm chi tiết bổ sung tại đây:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Cảm ơn bạn. Tin nhắn đã được gửi tới đội. Nếu cần trả lời, đội sẽ liên hệ với bạn qua email.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Thành công";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Nhập email của bạn...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Nếu cần trả lời, sẽ có người liên hệ với bạn qua email. Địa chỉ email của bạn là gì?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Địa chỉ email bạn nhập không đúng. Nhập một địa chỉ email hợp lệ.";

@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Jotain meni pieleen, enkä voinut lähettää viestiäsi. Yritä uudelleen myöhemmin.";
 "ios.SupportEngine.messageSend.retry.button" = "Yritä uudelleen";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Kiitos! Viesti on lähetetty tiimille. Voit katsoa tätä viestiä ja lisätä lisätietoja tässä:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Kiitos! Viesti on lähetetty tiimille. Jos vastaus tarvitaan, sinuun otetaan yhteyttä sähköpostitse.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Onnistui!";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Anna sähköpostiosoitteesi...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Jos vastaus tarvitaan, joku ottaa sinuun yhteyttä sähköpostitse. Mikä on sähköpostiosoitteesi?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Antamasi sähköpostiosoite ei kelpaa. Anna kelvollinen sähköpostiosoite.";

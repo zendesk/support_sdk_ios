@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportSDK - EqualsFilter</title>
+    <link rel="stylesheet" type="text/css" href="/support_sdk_ios/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/support_sdk_ios">
+            <strong>
+                SupportSDK
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol/>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+<small>Variable</small>
+<span class="name">Equals​Filter</span>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">EqualsFilter</span>: <span class="type">FilterFunction</span>&lt;<span class="keyword">Any</span>&gt;  </body></html></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Listener filter callback that returns true if the old state and the new state are not equal.
+You can use this filter function when adding a listener if you want your notification function to be called when the state changes.</p>
+
+</div>
+<div class="discussion">
+    <p>In order to use this filter block your state types has to implement <code>SuasDynamicEquatable</code> protocol
+Note: if you implement <code>Equatable</code> you can implement <code>SuasDynamicEquatable</code> without any extra code.
+You only have to include <code>SuasDynamicEquatable</code> in the list of protocols for your type (check examples).</p>
+
+<h1>Example</h1>
+
+<h2>Implementing SuasDynamicEquatable manually</h2>
+
+<p>Implementing SuasDynamicEquatable without Equatable</p>
+
+<html><body><pre class="highlight"><code><span class="comment">// Implement SuasDynamicEquatable manually</span>
+<span class="keyword">struct</span> <span class="type">MyState</span>: <a href="/support_sdk_ios/SuasDynamicEquatable"><span class="type">SuasDynamicEquatable</span></a> {
+  <span class="keyword">let</span> <span class="variable">value</span>: <span class="type">Int</span>
+
+  <span class="keyword">func</span> <span class="function">isEqual</span>(<span class="variable">to</span> <span class="variable">other</span>: <span class="keyword">Any</span>) -&gt; <span class="type">Bool</span> {
+    <span class="comment">// Cast to same type</span>
+    <span class="keyword">guard</span> <span class="keyword">let</span> <span class="variable">other</span> = <span class="variable">other</span> <span class="keyword">as</span>? <span class="type">MyState</span> <span class="keyword">else</span> { <span class="keyword">return</span> <span class="keyword">false</span> }
+
+    <span class="comment">// Compare values</span>
+    <span class="keyword">return</span> <span class="variable">other</span>.<span class="variable">value</span> == <span class="keyword">self</span>.<span class="variable">value</span>
+  }
+}
+
+<span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">forStateType</span>: <span class="type">MyState</span>.<span class="keyword">self</span>, <span class="variable">if</span>: <span class="type">EqualsFilter</span>) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// use new state</span>
+}
+</code></pre></body></html>
+<h2>Implementing SuasDynamicEquatable as an extension</h2>
+
+<p>If your type implement equatable</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">struct</span> <span class="type">MyState</span>: <span class="type">Equatable</span> {
+  <span class="keyword">let</span> <span class="variable">value</span>: <span class="type">Int</span>
+  <span class="keyword">static</span> <span class="keyword">func</span> ==(<span class="variable">lhs</span>: <span class="type">MyState</span>, <span class="variable">rhs</span>: <span class="type">MyState</span>) -&gt; <span class="type">Bool</span> { ... }
+}
+</code></pre></body></html>
+<p>You dont need to implement <code>SuasDynamicEquatable</code> just add it as an extension to <code>MyState</code>. No extra code needed.</p>
+
+<html><body><pre class="highlight"><code><span class="keyword">extension</span> <span class="type">MyState</span>: <a href="/support_sdk_ios/SuasDynamicEquatable"><span class="type">SuasDynamicEquatable</span></a> { }
+</code></pre></body></html>
+<p><code>EqualsFilter</code> now works with <code>MyState</code></p>
+
+<html><body><pre class="highlight"><code><span class="keyword">let</span> <span class="variable">subscription</span> = <span class="variable">store</span>.<span class="variable">addListener</span>(<span class="variable">forStateType</span>: <span class="type">MyState</span>.<span class="keyword">self</span>, <span class="variable">if</span>: <span class="type">EqualsFilter</span>) { <span class="variable">newState</span> <span class="keyword">in</span>
+  <span class="comment">// use new state</span>
+}
+</code></pre></body></html>
+</div>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-04-22T10:05:36+0000">April 22, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

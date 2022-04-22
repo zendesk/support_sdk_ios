@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Ett fel inträffade och det gick inte att skicka ditt meddelande. Försök igen senare.";
 "ios.SupportEngine.messageSend.retry.button" = "Försök igen";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Tack. Ett meddelande har skickats till teamet. Du kan se detta meddelande och lägga till mer information här:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Tack. Ett meddelande har skickats till teamet. Om du behöver ett svar blir du kontaktad via e-post.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Klart!";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Ange din e-postadress...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Om du behöver ett svar blir du kontaktad via e-post. Vad är din e-postadress?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Den angivna e-postadressen är felaktig. Ange en giltig e-postadress.";

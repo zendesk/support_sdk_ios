@@ -75,7 +75,9 @@
 "ios.SupportEngine.messageSend.errorMessage" = "Nagkaroon ng problema at hindi ko maipadala ang iyong mensahe. Pakisubukang muli sa ibang pagkakataon.";
 "ios.SupportEngine.messageSend.retry.button" = "Subukang muli";
 "ios.SupportEngine.requestCreated.conversationsEnabledMessage" = "Salamat. Isang mensahe ang ipinadala sa team. Makikita mo ang mensaheng ito at makadaragdag ng mga detalye dito:";
+"ios.SupportEngine.requestCreated.conversationsOff.confirm" = "OK";
 "ios.SupportEngine.requestCreated.conversationsOff.message" = "Salamat. Isang mensahe ang ipinadala sa team. Kung kailangan ng tugon, makikipag-ugnayan sila sa iyo sa pamamagitan ng email.";
+"ios.SupportEngine.requestCreated.conversationsOff.title" = "Success";
 "ios.SupportEngine.requestCreated.emailPrompt.hint" = "Ilagay ang email mo...";
 "ios.SupportEngine.requestCreated.emailPrompt.message" = "Kung kailangan ng tugon, may makikipag-ugnayan sa iyo sa pamamagitan ng email. Ano ang email address mo?";
 "ios.SupportEngine.requestCreated.emailValidationFailed.message" = "Mali ang inilagay mong email address. Maglagay ng balidong email address.";
