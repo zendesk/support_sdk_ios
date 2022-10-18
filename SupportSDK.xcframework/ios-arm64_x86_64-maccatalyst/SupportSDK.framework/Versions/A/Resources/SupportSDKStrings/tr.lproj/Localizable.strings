@@ -18,7 +18,7 @@
 "ios.ZDKRequests.connectionError" = "Bağlantı yok";
 "ios.ZDKRequests.conversations.addAttachments.accessibility" = "Ek iliştir";
 "ios.ZDKRequests.conversations.agentFile.accessibility" = "Temsilcinin %@ adlı dosya eki.";
-"ios.ZDKRequests.conversations.agentImage.accessibility" = "Temsilcinin %@ adlı resim eki.";
+"ios.ZDKRequests.conversations.agentImage.accessibility" = "Temsilcinin %@ adlı görsel eki.";
 "ios.ZDKRequests.conversations.agentSent.accessibility" = "%@ tarafından şu saatte gönderildi: %@.";
 "ios.ZDKRequests.conversations.agentText.accessibility" = "Temsilci mesajı: %@.";
 "ios.ZDKRequests.conversations.attachmentCarousel.attachment.accessibility" = "%@ adlı iliştirilmiş dosya.";
@@ -28,7 +28,7 @@
 "ios.ZDKRequests.conversations.attachmentIndicator.oneAttachmentsSelected.accessibility" = "Bir ek seçildi.";
 "ios.ZDKRequests.conversations.back.button" = "Geri";
 "ios.ZDKRequests.conversations.userFile.accessibility" = "%@ adlı dosya.";
-"ios.ZDKRequests.conversations.userImage.accessibility" = "%@ adlı resim.";
+"ios.ZDKRequests.conversations.userImage.accessibility" = "%@ adlı görsel.";
 "ios.ZDKRequests.conversations.userSent.accessibility" = "Sizin tarafınızdan şu saatte gönderildi: %@.";
 "ios.ZDKRequests.conversations.userText.accessibility" = "Mesaj: %@";
 "ios.ZDKRequests.createRequest.attachments.confirm" = "Tamam";

@@ -160,17 +160,40 @@
 
 @end
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+/**
+ * Helper for device orientation.
+ */
+CG_INLINE BOOL
+ZDKUIIsLandscape()
+{
+    if (@available(iOS 13.0, *)) {
+        UIWindow *firstWindow = [[[UIApplication sharedApplication] windows] firstObject];
+        if (firstWindow == nil) { return NO; }
+        
+        UIWindowScene *windowScene = firstWindow.windowScene;
+        if (windowScene == nil){ return NO; }
+        
+        return UIInterfaceOrientationIsLandscape(windowScene.interfaceOrientation);
+    } else {
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        return UIInterfaceOrientationIsLandscape(orientation);
+    }
+}
+
+#pragma clang diagnostic pop
+
 CG_INLINE CGRect
 CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
 {
     CGRect screen = [UIScreen mainScreen].bounds;
 
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    Boolean isLandscape = ZDKUIIsLandscape();
 
     CGRect rect;
 
-    if (orientation == UIInterfaceOrientationLandscapeLeft ||
-        orientation == UIInterfaceOrientationLandscapeRight) {
+    if (isLandscape) {
         if([ZDKUIUtil isOlderVersion:@"8.0"])
         {
             rect = CGRectMake(CGRectGetMidY(screen) - (width * 0.5f),
@@ -213,18 +236,6 @@ CGCenterRectInRect(CGRect rect, CGRect inRect)
                       CGRectGetWidth(rect),
                       CGRectGetHeight(rect));
 }
-
-
-/**
- * Helper for device orientation.
- */
-CG_INLINE BOOL
-ZDKUIIsLandscape()
-{
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    return UIInterfaceOrientationIsLandscape(orientation);
-}
-
 
 /**
  * Returns the full screen frame with no attempt to account for the status bar.

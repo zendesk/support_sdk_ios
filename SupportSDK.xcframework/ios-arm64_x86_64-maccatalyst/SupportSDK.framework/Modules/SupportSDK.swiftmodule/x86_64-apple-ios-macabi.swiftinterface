@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportSDK
 import AVFoundation
 import CommonUISDK
@@ -15,6 +15,7 @@ import SupportProvidersSDK
 import Swift
 import UIKit
 import ZendeskCoreSDK
+import _Concurrency
 import os
 @_inheritsConvenienceInitializers @available(*, deprecated, renamed: "CommonTheme")
 @objc(ZDKTheme) public class Theme : ObjectiveC.NSObject {
@@ -158,12 +159,12 @@ final public class BlockMiddleware : SupportSDK.Middleware {
   @objc deinit
 }
 public func + (lhs: SupportSDK.Middleware, rhs: SupportSDK.Middleware) -> SupportSDK.Middleware
-@_hasMissingDesignatedInitializers @objc(ZDKCoordinatingViewController) public class CoordinatingViewController : SupportSDK.ContainerViewController {
-  @objc public init(coordinator: SupportSDK.Coordinator)
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+@_hasMissingDesignatedInitializers @objc(ZDKCoordinatingViewController) @_Concurrency.MainActor(unsafe) public class CoordinatingViewController : SupportSDK.ContainerViewController {
+  @objc @_Concurrency.MainActor(unsafe) public init(coordinator: SupportSDK.Coordinator)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(ZDKRequestListUiConfiguration) final public class RequestListUIConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
@@ -259,21 +260,21 @@ public protocol ApplicationType {
   var topWindow: SupportSDK.Window? { get }
 }
 extension UIKit.UIApplication : SupportSDK.ApplicationType {
-  public var topWindow: SupportSDK.Window? {
+  @_Concurrency.MainActor(unsafe) public var topWindow: SupportSDK.Window? {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers public class ContainerViewController : UIKit.UIViewController {
-  @objc override dynamic public func viewDidLoad()
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ContainerViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 extension SupportSDK.ContainerViewController : SupportSDK.ContainerChildControllerDelegate {
-  @objc dynamic public var navItem: UIKit.UINavigationItem? {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var navItem: UIKit.UINavigationItem? {
     @objc get
   }
-  @objc dynamic public func willDismiss()
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func willDismiss()
 }
 @_inheritsConvenienceInitializers @objc(ZDKHelpCenterUiConfiguration) final public class HelpCenterUiConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
   @objc final public var labels: [Swift.String] {

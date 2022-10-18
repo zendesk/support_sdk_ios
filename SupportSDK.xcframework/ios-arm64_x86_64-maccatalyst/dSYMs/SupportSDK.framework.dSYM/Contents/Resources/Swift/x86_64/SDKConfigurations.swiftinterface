@@ -1,9 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SDKConfigurations
 import Foundation
 @_exported import SDKConfigurations
 import Swift
+import _Concurrency
 @objc(ZDKConfiguration) public protocol Configuration : ObjectiveC.NSObjectProtocol {
   @objc init()
 }

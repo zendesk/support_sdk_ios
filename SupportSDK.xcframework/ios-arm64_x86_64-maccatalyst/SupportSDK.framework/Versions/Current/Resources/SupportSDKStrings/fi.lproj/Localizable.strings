@@ -7,7 +7,7 @@
 "ios.ZDKHelpCenter.doubleTapHint.accessibility" = "Näytä kaksoisnapauttamalla";
 "ios.ZDKHelpCenter.helpCenterOverview.see_all.singletitle" = "Lue 1 artikkeli";
 "ios.ZDKHelpCenter.helpCenterOverview.see_all.title" = "Näytä kaikki %lu artikkelia";
-"ios.ZDKHelpCenter.helpCenterOverview.title" = "Apua";
+"ios.ZDKHelpCenter.helpCenterOverview.title" = "Ohje ja tuki";
 "ios.ZDKHelpCenter.noArticles.title" = "Artikkeleja ei löytynyt";
 "ios.ZDKHelpCenter.search.noResults.title" = "Ei tuloksia haulle";
 "ios.ZDKHelpCenter.section.accessibility" = "Osio: %@.";
