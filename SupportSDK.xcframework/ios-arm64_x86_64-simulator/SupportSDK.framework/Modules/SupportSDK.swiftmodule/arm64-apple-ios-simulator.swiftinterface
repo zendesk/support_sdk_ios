@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportSDK
 import AVFoundation
 import CommonUISDK
@@ -19,10 +19,10 @@ import _Concurrency
 import os
 @_inheritsConvenienceInitializers @available(*, deprecated, renamed: "CommonTheme")
 @objc(ZDKTheme) public class Theme : ObjectiveC.NSObject {
-  @objc public static var currentTheme: SupportSDK.Theme
+  @objc public static let currentTheme: SupportSDK.Theme
   @objc public var primaryColor: UIKit.UIColor {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc override dynamic public init()
   @objc deinit
@@ -41,7 +41,7 @@ extension SupportSDK.Reducer {
 final public class BlockReducer<StateType> : SupportSDK.Reducer {
   final public let initialState: StateType
   final public let stateKey: Swift.String
-  public convenience init(initialState: StateType, reduce: @escaping SupportSDK.ReducerFunction<StateType>)
+  convenience public init(initialState: StateType, reduce: @escaping SupportSDK.ReducerFunction<StateType>)
   public init(initialState: StateType, stateKey: SupportSDK.StateKey, reduce: @escaping SupportSDK.ReducerFunction<StateType>)
   final public func reduce(state: StateType, action: SupportSDK.Action) -> StateType?
   @objc deinit
@@ -66,7 +66,7 @@ public struct LoggerMiddleware : SupportSDK.Middleware {
   public init(showTimestamp: Swift.Bool = true, showDuration: Swift.Bool = false, lineLength: Swift.Int? = nil, predicate: ((SupportSDK.State, SupportSDK.Action) -> Swift.Bool)? = nil, debugOnly: Swift.Bool = true, titleFormatter: ((SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String)? = nil, stateTransformer: ((SupportSDK.State) -> Any)? = nil, actionTransformer: ((SupportSDK.Action) -> Any)? = nil, logger: @escaping (Swift.String) -> Swift.Void = defaultLogger)
   public func onAction(action: SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
 }
-public var defaultLogger: (_ string: Swift.String) -> ()
+public let defaultLogger: (_ string: Swift.String) -> ()
 public struct Subscription<StateType> {
   public func informWithCurrentState()
   public func removeListener()
@@ -76,8 +76,8 @@ public struct ActionSubscription {
   public func removeListener()
   public func linkLifeCycleTo(object: ObjectiveC.NSObject)
 }
-public var alwaysFilter: (Any, Any) -> Swift.Bool
-public var EqualsFilter: (_ oldSubState: Any, _ newSubState: Any) -> Swift.Bool
+public let alwaysFilter: (Any, Any) -> Swift.Bool
+public let EqualsFilter: (_ oldSubState: Any, _ newSubState: Any) -> Swift.Bool
 public protocol AsyncAction : SupportSDK.Action {
   func execute(getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction)
 }
@@ -120,7 +120,7 @@ public protocol Action {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class HelpCenterArticleVotingHandler : ObjectiveC.NSObject, SupportSDK.ZDKHelpCenterArticleRatingHandlerProtocol {
-  @objc public convenience init(withArticleId articleId: Swift.String, andLocale locale: Swift.String)
+  @objc convenience public init(withArticleId articleId: Swift.String, andLocale locale: Swift.String)
   @objc public func articleRatingVoteSelected(_ ratingState: SupportSDK.ZDKHelpCenterArticleRatingStateProtocol, at index: Swift.Int)
   @objc public func currentArticleVote() -> Swift.Int
   @objc deinit
@@ -132,7 +132,7 @@ public protocol Action {
   @available(swift, obsoleted: 1.0)
   @objc final public var objcEngines: [MessagingAPI.ZDKEngine] {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
@@ -214,7 +214,7 @@ extension SupportSDK.Suas {
 @objc(ZDKSupportUI) public class SupportUI : ObjectiveC.NSObject {
   @objc public var helpCenterLocaleOverride: Swift.String? {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc public class func initialize(withZendesk zendesk: ZendeskCoreSDK.Zendesk?)
   @objc public static var instance: SupportSDK.SupportUI? {
@@ -279,23 +279,23 @@ extension SupportSDK.ContainerViewController : SupportSDK.ContainerChildControll
 @_inheritsConvenienceInitializers @objc(ZDKHelpCenterUiConfiguration) final public class HelpCenterUiConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
   @objc final public var labels: [Swift.String] {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc final public var groupType: SupportProvidersSDK.ZDKHelpCenterOverviewGroupType {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc final public var showContactOptions: Swift.Bool
   @objc final public var showContactOptionsOnEmptySearch: Swift.Bool
   @objc final public var groupIds: [Foundation.NSNumber] {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   final public var engines: [MessagingAPI.Engine]
   @available(swift, obsoleted: 1.0)
   @objc final public var objcEngines: [MessagingAPI.ZDKEngine] {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc final public var overviewContentModel: SupportProvidersSDK.ZDKHelpCenterOverviewContentModel {
     get
@@ -313,11 +313,11 @@ public struct State {
   public init(dictionary: [SupportSDK.StateKey : Any])
   public subscript(key: Swift.String) -> Any? {
     get
-    set(newValue)
+    set
   }
   public subscript<Type>(forKey key: Swift.String, ofType type: Type.Type) -> Type? {
     get
-    set(newValue)
+    set
   }
   public subscript<Type>(forKeyOfType type: Type.Type) -> Type? {
     get
@@ -371,8 +371,11 @@ public typealias HelpCenterDelegate = SupportSDK.ZDKHelpCenterDelegate
 @_inheritsConvenienceInitializers @objc(ZDKSuasDebugLogger) final public class SuasDebugLogger : ObjectiveC.NSObject {
   @objc public static var enabled: Swift.Bool {
     @objc get
-    @objc set(newValue)
+    @objc set
   }
   @objc override dynamic public init()
   @objc deinit
 }
+extension SupportSDK.FileType : Swift.Equatable {}
+extension SupportSDK.FileType : Swift.Hashable {}
+extension SupportSDK.FileType : Swift.RawRepresentable {}

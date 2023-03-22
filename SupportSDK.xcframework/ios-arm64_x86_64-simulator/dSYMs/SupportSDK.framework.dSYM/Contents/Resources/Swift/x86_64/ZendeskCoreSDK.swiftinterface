@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZendeskCoreSDK
 import Foundation
 import Swift
@@ -23,7 +23,7 @@ public protocol URLService {
   var request: Foundation.URLRequest { get }
   var environment: ZendeskCoreSDK.AccountDetails { get }
 }
-@objc(ZDKUserFieldOption) public class UserFieldOption : ObjectiveC.NSObject, Swift.Decodable {
+@objc(ZDKClassicUserFieldOption) public class UserFieldOption : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let id: Swift.String
   @objc final public let name: Swift.String
   @objc final public let position: Swift.Int
@@ -55,7 +55,7 @@ public typealias CompletionHandler = (Foundation.Data?, Foundation.URLResponse?,
 public struct BaseStore {
   public func getMachineID() -> Swift.String
 }
-@objc(ZDKUser) public class User : ObjectiveC.NSObject, Swift.Decodable {
+@objc(ZDKClassicUser) public class User : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let id: Swift.String
   @objc final public let name: Swift.String
   @objc final public let content_url: Swift.String
@@ -76,7 +76,7 @@ public struct ActionDescription {
   }
   public init(localisedLabel: Swift.String, localisedAccessibilityLabel: Swift.String, iconName: Swift.String? = nil, bundleUrl: Foundation.URL? = nil)
 }
-@objc final public class ZDKPushProvider : ObjectiveC.NSObject {
+@objc(ZDKClassicPushProvider) final public class ZDKPushProvider : ObjectiveC.NSObject {
   @objc public init(zendesk: ZendeskCoreSDK.Zendesk)
   @objc final public func register(deviceIdentifier: Swift.String, locale: Swift.String, completion: @escaping (Swift.String?, Swift.Error?) -> Swift.Void)
   @objc final public func register(UAIdentifier: Swift.String, locale: Swift.String, completion: @escaping (Swift.String?, Swift.Error?) -> Swift.Void)
@@ -92,7 +92,7 @@ public protocol ProviderModule {
 extension Foundation.NSNotification.Name {
   public static let zendeskNotInitialised: Foundation.Notification.Name
 }
-@_hasMissingDesignatedInitializers @objc(ZDKZendesk) final public class Zendesk : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @objc(ZDKClassicZendesk) final public class Zendesk : ObjectiveC.NSObject {
   @objc final public var zendeskUrl: Swift.String {
     @objc get
   }
@@ -170,7 +170,7 @@ extension ZendeskCoreSDK.PushRegistrationProvider {
   final public func registerForPush(withUAChannelId identifier: Swift.String, locale: Swift.String, callback: @escaping (ZendeskCoreSDK.PushRegistrationResult) -> Swift.Void)
   final public func unregisterForPush()
 }
-@objc final public class ZDKUserProvider : ObjectiveC.NSObject {
+@objc(ZDKClassicUserProvider) final public class ZDKUserProvider : ObjectiveC.NSObject {
   @objc public init(zendesk: ZendeskCoreSDK.Zendesk)
   @objc final public func getUserWithCompletion(_ completion: @escaping ((ZendeskCoreSDK.User?, Swift.Error?) -> Swift.Void))
   @objc final public func setUserFields(_ userFields: [Swift.String : Any], completion: @escaping ((ZendeskCoreSDK.User?, Swift.Error?) -> Swift.Void))
@@ -257,7 +257,7 @@ public struct ActionHandlerRegistry {
   public func handlers(forAction actionName: Swift.String) -> [ZendeskCoreSDK.ActionHandler]
   public mutating func remove<T>(actionHandler: T) where T : Swift.Equatable, T : ZendeskCoreSDK.ActionHandler
 }
-@objc(ZDKLogLevel) public enum LogLevel : Swift.Int {
+@objc(ZDKClassicLogLevel) public enum LogLevel : Swift.Int {
   case error, warn, info, debug, verbose
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
@@ -265,7 +265,7 @@ public struct ActionHandlerRegistry {
     get
   }
 }
-@_inheritsConvenienceInitializers @objc(ZDKCoreLogger) final public class CoreLogger : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc(ZDKClassicCoreLogger) final public class CoreLogger : ObjectiveC.NSObject {
   @objc public static var logLevel: ZendeskCoreSDK.LogLevel
   @objc public static var enabled: Swift.Bool
   @objc public static func error(_ message: Swift.String)
@@ -279,7 +279,7 @@ public struct ActionHandlerRegistry {
 public struct NilAction : Swift.Encodable {
   public func encode(to encoder: Swift.Encoder) throws
 }
-@objc(ZDKUserField) public class UserField : ObjectiveC.NSObject, Swift.Decodable {
+@objc(ZDKClassicUserField) public class UserField : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let id: Swift.String
   @objc final public let url: Swift.String
   @objc final public let key: Swift.String
@@ -341,7 +341,7 @@ extension ZendeskCoreSDK.Identity : Swift.Equatable {
 @objc public protocol ZDKObjCIdentity {
   @objc var type: ZendeskCoreSDK.IdentityType { get }
 }
-@objc(ZDKIdentityType) public enum IdentityType : Swift.Int {
+@objc(ZDKClassicIdentityType) public enum IdentityType : Swift.Int {
   case anonymous
   case jwt
   public init?(rawValue: Swift.Int)
@@ -403,7 +403,7 @@ public enum Reporter {
   case none
 }
 public typealias ProgressCallback = (_ totalbytesExcpectedToWrite: Swift.Int64, _ totalBytesWritten: Swift.Int64) -> Swift.Void
-@_inheritsConvenienceInitializers @objc(ZDKHelpCenterUtil) final public class HelpCenterUtil : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc(ZDKClassicHelpCenterUtil) final public class HelpCenterUtil : ObjectiveC.NSObject {
   @objc public static var zendeskURL: Swift.String? {
     @objc get
   }

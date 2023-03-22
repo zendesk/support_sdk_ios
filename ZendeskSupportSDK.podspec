@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZendeskSupportSDK"
-  s.version      = "6.0.0"
+  s.version      = "7.0.0"
   s.summary      = "ZendeskSupportSDK #{s.version.to_s}"
   s.homepage     = "https://developer.zendesk.com/embeddables"
   s.license      = {
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
   s.author       = 'Zendesk'
   s.platform     = :ios, '11.0'
   s.requires_arc = true
-  s.swift_version = '5.5.2'
+  s.swift_version = '5.3.0'
   s.cocoapods_version = '>= 1.10.0'
   s.source       = { :git => "https://github.com/zendesk/support_sdk_ios.git", :tag => s.version }
   s.vendored_frameworks = 'SupportSDK.xcframework'
-  s.dependency 'ZendeskSupportProvidersSDK', '6.0.0'
-  s.dependency 'ZendeskMessagingSDK', '4.0.0'
+  s.dependency 'ZendeskSupportProvidersSDK', '~> 7.0.0'
+  s.dependency 'ZendeskMessagingSDK', '~> 5.0.0'
 end
