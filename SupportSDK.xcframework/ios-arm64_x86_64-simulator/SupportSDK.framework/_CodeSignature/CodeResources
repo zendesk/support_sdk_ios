@@ -6,23 +6,23 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		Ijh9ZC05jT7+tR1bEi62rmygFNc=
+		mk4mvTRs/xRQu+V0Yv78zIAlgqw=
 		</data>
 		<key>AwesomeImagePicker.nib</key>
 		<data>
-		ph9e/qvCK+RcTJjGfgBnLuneI58=
+		QKINa2wkye4xgl+hKox3p27pokk=
 		</data>
 		<key>CameraCell.nib/objects-12.3+.nib</key>
 		<data>
-		20av5Y6EokvVBLxmi/BlQh2RwAE=
+		APhen+RbYDHChkMTSXc7IhqTPYI=
 		</data>
 		<key>CameraCell.nib/runtime.nib</key>
 		<data>
-		LLmtvmb8gQWcTWd4GhPxPkGofOo=
+		bH5AS4IWRoEkWTN/YEHBw+kgOhk=
 		</data>
 		<key>CreateRequest.nib</key>
 		<data>
-		514ZilPVTMbxCi9xbq6UR3mt450=
+		iB4eDusLnW9V23GkWTJqXPs39M0=
 		</data>
 		<key>Headers/SupportSDK-Prefix.pch</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/SupportSDK-Swift.h</key>
 		<data>
-		nBZtbdvt80RWN6u1pdh6QPi7zU8=
+		fZwv6HZ2oESyyXnV9EB6zH0lScU=
 		</data>
 		<key>Headers/SupportSDK.h</key>
 		<data>
@@ -86,55 +86,71 @@
 		</data>
 		<key>ImageCell.nib</key>
 		<data>
-		Wy5BJ2MBnYxwX0zs/fKbLMRt/YE=
+		gRVMGs1qyQsYBDLW1TRPprnHRQg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DofFiM2a7IFEAPqCMjlMs2EEMSI=
+		tJGNAl7tKxGzBurRL7TA3NOpYBg=
 		</data>
 		<key>InputFileCell.nib/objects-12.3+.nib</key>
 		<data>
-		ndmfUtkI+ttyQTTcSFdOhf1A9V8=
+		15Oz8yaKstImrzLm9pzNqy5RneI=
 		</data>
 		<key>InputFileCell.nib/runtime.nib</key>
 		<data>
-		EvqIM1PTFLE9l7x+zLryOyny0vI=
+		VrQQtXbkx4K+SJw9qX9Q294aykA=
 		</data>
 		<key>InputImageCell.nib/objects-12.3+.nib</key>
 		<data>
-		IDU2agWQ0X3Ur1r8rqS5kazeZQA=
+		ccCPlsOI2+MtouPWNGQnK+DPbxg=
 		</data>
 		<key>InputImageCell.nib/runtime.nib</key>
 		<data>
-		FaA1av9lAwTlDxkXzpI3rl0pNbI=
+		xpFg0trECcV8PmRJDVL/Fow7I4A=
+		</data>
+		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<data>
+		JwICT5sRsL1i3HM2p6Asre/CmGw=
+		</data>
+		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		wuHJoPzW3eOlVmz9vgwEqGmopBo=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		hBYE2lOWPMpBrMuUApCSN/49qYc=
+		KOdxLwnQSuw8NXZ1LrTnf7s1+5o=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		NtC10O7RjBCVX/V4jzl8jqNrs/U=
+		wuHJoPzW3eOlVmz9vgwEqGmopBo=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		N21J8zV7zxSqHzbFs736dxw3IPI=
+		bYAvRj5ZevowN5rp/Oge+ZCSfIM=
+		</data>
+		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		JwICT5sRsL1i3HM2p6Asre/CmGw=
+		</data>
+		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		HaLxv6HzHpNRjJn7GkIxtNf4DFo=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xw7NHo68Ewk62cfPTFK2RTU9Jwg=
+		L4+JwGMA5SQFeBGXPb+v2aHmILA=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tAPSX/mY1859DdGwLtSyIZr1y/Y=
+		HaLxv6HzHpNRjJn7GkIxtNf4DFo=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		dAHtOA3bBvXf4YmjrF282drEu4g=
+		q4YM8yEWfhXM/uf5qETwWeqzbDc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		fMm7jglQURhw8jVz5KgpF17ijKw=
+		rv6xugCyFzw9ocRs+C+4RYk+9+k=
 		</data>
 		<key>PrivateHeaders/ZDKAppearanceApplicator+Private.h</key>
 		<data>
@@ -174,23 +190,23 @@
 		</data>
 		<key>RequestController.nib</key>
 		<data>
-		D8Xisd3VPGnsqMnpapq6G+zSwMY=
+		IOP+v+sEC16LBeJrhGsKqFLIl9U=
 		</data>
 		<key>RequestListTableViewCell.nib</key>
 		<data>
-		0clDzemXquXN1cMPhm5OxYozZLI=
+		F5ahaFhtxgfuF7CMISnzXJk8PXE=
 		</data>
 		<key>RequestListViewController.nib</key>
 		<data>
-		Zjx4nnniNbb1GQuuG2g8k9sb+vc=
+		5h52DpT3VQ2lMOtFgi9uNdY/pUs=
 		</data>
 		<key>SidebarCell.nib/objects-12.3+.nib</key>
 		<data>
-		yhHqzcyv+Xk/l6JB7t7vxwH/oEM=
+		sdlh27Q7W8L+pK0haz1SbTAAoHU=
 		</data>
 		<key>SidebarCell.nib/runtime.nib</key>
 		<data>
-		vfo0aCexxk1hGMS02ND1niECSxk=
+		2OZQy0jX2vx7F6um29HJt4LVyPE=
 		</data>
 		<key>SupportSDKStrings/Info.plist</key>
 		<data>
@@ -504,51 +520,51 @@
 		</dict>
 		<key>ZDKHelpCenterArticleRatingView.nib</key>
 		<data>
-		3RimUqh76XdejzmJ+RMnJWsh7F4=
+		Cp+Ro0hSVoX/7XFxureXeNzdxxI=
 		</data>
 		<key>ZDKHelpCenterOverviewArticleTableViewCell.nib</key>
 		<data>
-		P4x9E0ALX/tnsIVmuBcBzHGgH0M=
+		U2tWJfgDBcOoK2QSJlFodP84NGQ=
 		</data>
 		<key>ZDKHelpCenterOverviewController.nib</key>
 		<data>
-		2X7nWDOxlRzmwj7FkXjZOW7uhfU=
+		tnidPuPk5DXuU0hoF7ZuPk+LN2c=
 		</data>
 		<key>ZDKHelpCenterOverviewFooterView.nib</key>
 		<data>
-		cqvsOSFrkvpniurNhsy9Hlc/2Es=
+		DXY3HGOcjHEthLfi4bQE//HBuqY=
 		</data>
 		<key>ZDKHelpCenterOverviewHeaderView.nib</key>
 		<data>
-		So3gUwVYL4IC+RrX5ZfYNQta7JI=
+		LauCIdPo4L0SO+6oEftz71i0wyo=
 		</data>
 		<key>ZDKHelpCenterOverviewLoadingTableViewCell.nib</key>
 		<data>
-		W8HbDxl0SiX6z87W+cpR6ZQOisA=
+		y4OMi7XGP5VP7Uq0vPAOW4AZ9o4=
 		</data>
 		<key>ZDKHelpCenterOverviewSectionTableViewCell.nib</key>
 		<data>
-		EabuSCBrs2yQTTJn+206IAcUyfc=
+		mhWjLOwr26NXxVxPOMUAORd1iu0=
 		</data>
 		<key>ZDKHelpCenterOverviewSeeAllTableViewCell.nib</key>
 		<data>
-		6hZt+6GkyE3UvRsnlw/6R3vEErA=
+		HzdSQxYbOGqqVobqxqFXV0TENVY=
 		</data>
 		<key>ZDKHelpCenterOverviewSpacerTableViewCell.nib</key>
 		<data>
-		PX9tLKrsZ84XMiidV19ijCiT+xk=
+		89XAhb65ow1S0BdDzmUzGfTJtHw=
 		</data>
 		<key>ZDKHelpCenterSearchResultTableViewCell.nib</key>
 		<data>
-		M7RpM51z1Oxsm8UMtdsW3AKHMwM=
+		NOtbajR3qM8Sv77Tt0v2k5rMmMw=
 		</data>
 		<key>ZDKHelpCenterSearchResultViewController.nib</key>
 		<data>
-		UD0Lc3sYt2HyMDfn/+w+GOS/TLk=
+		TXMgltW1uJ4Lg9uTOjxKZN0H7ew=
 		</data>
 		<key>ZendeskLogoView.nib</key>
 		<data>
-		U0h1qL91YSBD72KD9WWo6KHxLwI=
+		5nTRRVL7wplD/jc7eG1I6zzWAWs=
 		</data>
 		<key>help_center_article_style.css</key>
 		<data>
@@ -609,35 +625,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k61IMy9SDbyu0qDo2zMzK7NXA5CetTfAMBDxjyNMpII=
+			0FyW1KObdXraqDzNjLBgKk2nXlYPzl1Lsk1JSzF1isg=
 			</data>
 		</dict>
 		<key>AwesomeImagePicker.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wtpHL0gK/a+XCO1vGO0x9TmA/XbJ4Kbrs3qYSDENSis=
+			I0ESCvMqVKPUG0+kx36SCGkcPesD9OP6L57AZiArIyk=
 			</data>
 		</dict>
 		<key>CameraCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kOnPOxQM8DuWtid7inyyXFR+Qu28Y8y7K/Hwd2tCokc=
+			WpJe1ZUhyuQgEVlndjU1r+8TGtaoeFzExc8mqUY++jA=
 			</data>
 		</dict>
 		<key>CameraCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VRArEtD53/ET/x2SlEZPlRaD8yq1PfCsWbMNjNecFWE=
+			e6AeUOnx5WPhssWp7VevJP5wekD+I7LhnX0Lij66PUM=
 			</data>
 		</dict>
 		<key>CreateRequest.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LqA079tCIZlv3N0XPT71KFoRZ9ETncRDnV5P/rrWbVU=
+			X/eYENTaLCwAiyFi0WDPMGWb+RbIgwJNHF0SRM1Toew=
 			</data>
 		</dict>
 		<key>Headers/SupportSDK-Prefix.pch</key>
@@ -651,7 +667,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lpy+MDg1uiU03J8T0QpiCGTWb2Z2UiX2Q5uDvGGpLAM=
+			7scUZdT/eM6hgTD/nyRS30+Y//XF/oDdpukRBsjM8tM=
 			</data>
 		</dict>
 		<key>Headers/SupportSDK.h</key>
@@ -749,84 +765,112 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rRlgzwYP1pbFgHoxDBHK6ljgTpV86zGiEyo5HKNf0bo=
+			hB+xscYtjTgrZvgdmvOel5w9VjVc8NZMSlyCmcJKBaI=
 			</data>
 		</dict>
 		<key>InputFileCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sork7AjgbFuePx9uYKhe5oHoL/9ztjXnZaQ2shH27Zs=
+			wBFmuIBpy9VUyHlvh1UfIDGq2CXYQmW/XlUiQJfxyp4=
 			</data>
 		</dict>
 		<key>InputFileCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g06tL9OKk8mEx2kGaEojxnU7KHIEPENw93c1W9gMpXk=
+			2njAOL08sCnE145X6ECRMue3SlPgY/4F1lwz4dUm4qw=
 			</data>
 		</dict>
 		<key>InputImageCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OtEoV3ycJoazKNRRvm141b4mQcxSyKlTMmpiHGiMMEM=
+			Jjjut/ToTwyjT9w7f4/y5TgQqjz1ojhkS4izHEmAgIs=
 			</data>
 		</dict>
 		<key>InputImageCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MQ9G1ud8INghvpZDepYqFfKarXfikSpeSiOZXJjw53w=
+			/ISJnC98xlPdPuval2u5qYVjV3/xn9qs4dXwoGhHjXY=
+			</data>
+		</dict>
+		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lBehmnVsS1e1NykgqC7dNr9QlcJJtkoi7LEJPJp6gtQ=
+			</data>
+		</dict>
+		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ByA4cFSmg3w7ho5apRSs5qNWmhDq8C1GRN+qGtOLMWk=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w+qyTUkM0S2f/86yTxl6VRKbH2ZhXiS5dODUqaFZug8=
+			BmFyk35U5zlV6xWJYiH7iBMbEvoUweKt5M+Xb3fSVh4=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W+MLP5yJXxL/Uai72T9ubMAUTMS/qWD9Ds87XSQ9Nb0=
+			ByA4cFSmg3w7ho5apRSs5qNWmhDq8C1GRN+qGtOLMWk=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dVpDXGCwfiCSpClJmBSzo/mDLFyDYGngc5WcXJ8Q86Q=
+			jYsJ7kqzOSeQUtKcfAhPq291g7rrBtZE3ciFOJ4BZLk=
+			</data>
+		</dict>
+		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lBehmnVsS1e1NykgqC7dNr9QlcJJtkoi7LEJPJp6gtQ=
+			</data>
+		</dict>
+		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pqczgpF4B2yOCi0cktkph7etVMOkA/6eeVC0pSNxWU8=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gUON+zGc8Q+GSjschouU9I250TVVgVStjNzeckiu4+o=
+			ehpX4xRV47i1NgXCWew0/aoqnBfD1QF5fK1z8nzbzoA=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0lOeeV7amoLL8dSq/M5uaqCBoP9QV0IOstu3dLgAs7g=
+			pqczgpF4B2yOCi0cktkph7etVMOkA/6eeVC0pSNxWU8=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hEErporIxh+vRB35VrzEOyY7b4iG28rxmHTAFwkBjKE=
+			1zoctYtLvxr/qv6M66TAhrvgDdEHTgQx/mAHCaHoHHA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WQKJCXsYhLdDGmyYqPhnpwRuEZtUaE91afM0GGoMLYc=
+			V2pQRGVfZVouQtdDc/H8GjRXQvryQDGsEJdTzJ30QKc=
 			</data>
 		</dict>
 		<key>PrivateHeaders/ZDKAppearanceApplicator+Private.h</key>
@@ -896,35 +940,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BAKXjIL96ZchsY8YPtaaGF3kgfoszsrwEXFKWGafSFc=
+			S5iop/zQtqBgpAmIWgoZV4hACidhv1L9qQ/KXDAcEG8=
 			</data>
 		</dict>
 		<key>RequestListTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dW5gwR/hJdRbbcbUkFLECA1JQcdF1mXPQHlAMu+ihdU=
+			0BCIBMTxM8cXCPLaq1OjacBku3jtw0LIHlq39RFf65c=
 			</data>
 		</dict>
 		<key>RequestListViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dAmvs3m4aWG5FZA3yEMtJjbTSdSLJ/dRH4ijL8i4STc=
+			foCJ3MHeJyGJ808DcN7p7l+Hciolq+2EPnkge3lP0yg=
 			</data>
 		</dict>
 		<key>SidebarCell.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vtbmW2NxYMQMtvQU0Tp+Hi+caO0CmRPmoeyXiK9IQ08=
+			jAo9TM+OqAPw51y/BcnlJ8uwU4+rKxZHLVs0F8U+7Yo=
 			</data>
 		</dict>
 		<key>SidebarCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i9Sd6y2irMYmxQJOG00KeCtxLv5wD1RqgCdRWslRQcI=
+			nmtw8c90C+JmqPCLeMDohS3cYYUEQ5XLYodZ3aIJqWI=
 			</data>
 		</dict>
 		<key>SupportSDKStrings/Info.plist</key>
@@ -1244,84 +1288,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DnDlgJ84C6rI4UVX1FWd4/4F75DKW/Mhlj+mhhSQQvM=
+			DU+kxBAB1qF6fK6FUXADKglYiyO9hKj6YfSHYF+K3Bw=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewArticleTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J23sC5+CsSE55BTREriw0aBufTfd5CLfX52yByVTb5M=
+			vIsa0nMq0Yb9+VChxPDTWWUo3O5xnF4tsklbRCGRX9I=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			euHwgdozmlrM90NFZxwJ8IUN0a4DOG7BEOfn0Zj6tFE=
+			t4VGVQz4RN+7C2TV71LnCVq/gvD7tsc2OCTSRxJGnlE=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewFooterView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8s/16T7zmuOhjZwh6VlNRugLZ4QACwV+wXvkACXVprI=
+			2O/3A4+pmvJua0wzxV2DddjSt6cQkFfyKiu4oJUi8lg=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewHeaderView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FKMoIwQwWT8m5TY+5bIO4wrYNfhM70+35ZSG8Ixd7qA=
+			jgtLF+MEiI293gfhxzhILBsSFGhMycNnmh/XbXCJimg=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewLoadingTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FvOl6QdgcSid1QNwkM3p47dvVLkjqStkgkixwUJVyAA=
+			jb+Ko3irB6a7JGT6xM1kEF65A6V95Ijn86hVSppVX8M=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewSectionTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1RBxQIKhXstRFDrSDc564L32Q0vaAec/pOaEsNGFKik=
+			QO2jFEMDo+gYmSeM0w4LsoOA+By6HMmtF/jJ2d48SyQ=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewSeeAllTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E+j1i+cUba+H+8bUvmUSFN6LLufhqohrAYcZPxjnHoo=
+			JuClIJTZPbCDbvCAutBdAYajLPVVQXN3xlw0J22wRPM=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterOverviewSpacerTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FzEC/A4n4k0aRUa5EpVLH96CD7Wf7c/BY6m5uvaI45Y=
+			Ws255H4CpTVr6aGxklyWo4oFj/ovD7NIdN9M6KWCYbk=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterSearchResultTableViewCell.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOy/TXAFvLTCIVqO3QwuETizb4Mcmt/PSrkOzbllw2c=
+			f6wP/lWFXRpSmU1iHdI0V6EooCA+3xhJpSZExt2w/5g=
 			</data>
 		</dict>
 		<key>ZDKHelpCenterSearchResultViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wVOhN7mZCImA6d+CWfHT0T8B0CekG2KSJ3GZFej2BcM=
+			ZJxHW3ymreFD43yljxqI5o9wkP8JTUPYQsrZN607pzc=
 			</data>
 		</dict>
 		<key>ZendeskLogoView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xszcWzRB1w39o2lfqEkuqrTgG+I/R/sxqKAyUtJcHl4=
+			JrS0SV4scw4c4KXyluK+0dbgEtCGKNbBT3D14bCMn6w=
 			</data>
 		</dict>
 		<key>help_center_article_style.css</key>

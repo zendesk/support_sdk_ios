@@ -1,12 +1,15 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportProvidersSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import SupportProvidersSDK
 import Swift
 import UIKit
 import ZendeskCoreSDK
 import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ZDKHelpCenterBlips) public class HelpCenterBlips : ObjectiveC.NSObject {
   @objc deinit
 }
@@ -18,7 +21,7 @@ extension SupportProvidersSDK.HelpCenterBlips {
 @_inheritsConvenienceInitializers @objc(ZDKAttachmentSettings) public class AttachmentSettings : ObjectiveC.NSObject, Swift.Decodable, ZendeskCoreSDK.DecodableDefault {
   @objc final public let enabled: Swift.Bool
   @objc final public let maxAttachmentSize: Swift.Int
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override required dynamic public init()
   public typealias DefaultType = SupportProvidersSDK.AttachmentSettings
   public static var `default`: SupportProvidersSDK.AttachmentSettings {
@@ -32,7 +35,7 @@ extension SupportProvidersSDK.HelpCenterBlips {
   @objc deinit
 }
 public struct NoActionBlip : Swift.Encodable {
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension SupportProvidersSDK.ZDKRequestProvider {
   @objc dynamic public func getUpdatesForDevice(callback: @escaping (SupportProvidersSDK.RequestUpdates?) -> Swift.Void)
@@ -44,8 +47,8 @@ extension SupportProvidersSDK.ZDKRequestProvider {
 @_hasMissingDesignatedInitializers @objc(ZDKRequestForStorage) public class RequestForStorage : ObjectiveC.NSObject, Swift.Codable {
   public var commentCount: Swift.Int
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 extension SupportProvidersSDK.RequestForStorage {
   @objc dynamic public class func createFromRequest(_ request: SupportProvidersSDK.ZDKRequest, readCommentCount: Swift.Int) -> SupportProvidersSDK.RequestForStorage
@@ -57,7 +60,7 @@ public protocol ConversationsSettingsProviderProtocol {
 @_inheritsConvenienceInitializers @objc(ZDKConversationsSettings) public class ConversationsSettings : ObjectiveC.NSObject, Swift.Decodable, ZendeskCoreSDK.DecodableDefault {
   public typealias DefaultType = SupportProvidersSDK.ConversationsSettings
   @objc final public let enabled: Swift.Bool
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override required dynamic public init()
   public static var `default`: SupportProvidersSDK.ConversationsSettings {
     get
@@ -73,8 +76,8 @@ public enum DispatcherNotifications {
   public static let UnauthorizedNotificationName: Swift.String
 }
 @_inheritsConvenienceInitializers @objc final public class DispatcherAdapter : ObjectiveC.NSObject {
-  @objc public static func performRequest(zendesk: ZendeskCoreSDK.Zendesk, urlRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLResponse?, Foundation.Data?, Swift.Error?) -> Swift.Void)
-  @objc public static func convertError(response: Foundation.URLResponse?, originalError error: Swift.Error?) -> Swift.Error?
+  @objc public static func performRequest(zendesk: ZendeskCoreSDK.Zendesk, urlRequest: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLResponse?, Foundation.Data?, (any Swift.Error)?) -> Swift.Void)
+  @objc public static func convertError(response: Foundation.URLResponse?, originalError error: (any Swift.Error)?) -> (any Swift.Error)?
   @objc public static func logError(url: Foundation.URL, response: Foundation.URLResponse?, error: Foundation.NSError?)
   @objc public static func clearSettingsAndSession()
   @objc override dynamic public init()
@@ -98,7 +101,7 @@ extension SupportProvidersSDK.LegacyRequestStorageMigrator {
   @objc final public let attachmentSettings: SupportProvidersSDK.AttachmentSettings
   @objc final public let ticketFormsSettings: SupportProvidersSDK.TicketFormsSettings
   @objc final public let contactUsSettings: SupportProvidersSDK.ContactUsSettings
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override required dynamic public init()
   public static var `default`: SupportProvidersSDK.SupportSettings {
     get
@@ -122,7 +125,7 @@ extension SupportProvidersSDK.RequestBlips {
   @objc final public let helpCenterArticleVotingEnabled: Swift.Bool
   @objc final public let enabled: Swift.Bool
   @objc final public let locale: Swift.String
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override required dynamic public init()
   public static var `default`: SupportProvidersSDK.HelpCenterSettings {
     get
@@ -137,7 +140,7 @@ extension SupportProvidersSDK.RequestBlips {
 @_inheritsConvenienceInitializers @objc(ZDKTicketFormsSettings) public class TicketFormsSettings : ObjectiveC.NSObject, Swift.Decodable, ZendeskCoreSDK.DecodableDefault {
   public typealias DefaultType = SupportProvidersSDK.TicketFormsSettings
   @objc final public let available: Swift.Bool
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override required dynamic public init()
   public static var `default`: SupportProvidersSDK.TicketFormsSettings {
     get
@@ -153,7 +156,7 @@ extension SupportProvidersSDK.RequestBlips {
   public typealias DefaultType = SupportProvidersSDK.ContactUsSettings
   @objc final public let tags: [Swift.String]
   @objc public init(with tags: [Swift.String])
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc override required dynamic public init()
   public static var `default`: SupportProvidersSDK.ContactUsSettings {
     get
@@ -184,7 +187,7 @@ extension SupportProvidersSDK.ZDKHelpCenterProvider : SupportProvidersSDK.HelpCe
   @objc final public var detailTitle: Swift.String {
     @objc get
   }
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc final public func sectionByReplacing(articles: [SupportProvidersSDK.HelpCenterArticleViewModel]) -> SupportProvidersSDK.HelpCenterSectionViewModel
   @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc deinit
@@ -192,7 +195,7 @@ extension SupportProvidersSDK.ZDKHelpCenterProvider : SupportProvidersSDK.HelpCe
 @_hasMissingDesignatedInitializers @objc(ZDKHelpCenterArticleViewModel) final public class HelpCenterArticleViewModel : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let name: Swift.String
   @objc final public let id: Swift.String, section_id: Swift.String
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc public static func convert(articles: [SupportProvidersSDK.ZDKHelpCenterArticle]) -> [SupportProvidersSDK.HelpCenterArticleViewModel]
   @objc deinit
 }
@@ -224,7 +227,7 @@ extension SupportProvidersSDK.ZDKHelpCenterProvider : SupportProvidersSDK.HelpCe
 }
 public struct RequestUserAction : Swift.Encodable {
   public init(requestId: Swift.String)
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public protocol RequestStorageProtocol {
   func store(value: Any?, forKey key: Swift.String) -> Swift.Bool
@@ -246,7 +249,7 @@ extension SupportProvidersSDK.RequestStorage {
   @objc dynamic public func storeRequestsAndResetCacheTime(_ requests: [SupportProvidersSDK.RequestForStorage]) -> Swift.Bool
 }
 @objc(ZDKHelpCenterCategoryViewModelContainer) final public class HelpCenterCategoryViewModelContainer : ObjectiveC.NSObject, Swift.Decodable {
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc public static func parse(data: Foundation.Data) throws -> [SupportProvidersSDK.HelpCenterCategoryViewModel]
   @objc deinit
 }
@@ -255,7 +258,7 @@ extension SupportProvidersSDK.RequestStorage {
   @objc final public var sections: [SupportProvidersSDK.HelpCenterSectionViewModel]
   final public let id: Swift.String
   final public let section_count: Swift.Int
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc final public func update(section newSection: SupportProvidersSDK.HelpCenterSectionViewModel) -> SupportProvidersSDK.HelpCenterCategoryViewModel
   @objc deinit
 }

@@ -1,8 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SupportSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import CommonUISDK
+import DeveloperToolsSupport
 import Foundation
 import MessagingAPI
 import MessagingSDK
@@ -13,9 +15,12 @@ import SDKConfigurations
 import SupportProvidersSDK
 @_exported import SupportSDK
 import Swift
+import SwiftUI
 import UIKit
 import ZendeskCoreSDK
 import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
 import os
 @_inheritsConvenienceInitializers @available(*, deprecated, renamed: "CommonTheme")
 @objc(ZDKTheme) public class Theme : ObjectiveC.NSObject {
@@ -31,7 +36,7 @@ public protocol Reducer {
   associatedtype StateType
   var initialState: Self.StateType { get }
   var stateKey: SupportSDK.StateKey { get }
-  func reduce(state: Self.StateType, action: SupportSDK.Action) -> Self.StateType?
+  func reduce(state: Self.StateType, action: any SupportSDK.Action) -> Self.StateType?
 }
 extension SupportSDK.Reducer {
   public var stateKey: SupportSDK.StateKey {
@@ -43,14 +48,14 @@ final public class BlockReducer<StateType> : SupportSDK.Reducer {
   final public let stateKey: Swift.String
   convenience public init(initialState: StateType, reduce: @escaping SupportSDK.ReducerFunction<StateType>)
   public init(initialState: StateType, stateKey: SupportSDK.StateKey, reduce: @escaping SupportSDK.ReducerFunction<StateType>)
-  final public func reduce(state: StateType, action: SupportSDK.Action) -> StateType?
+  final public func reduce(state: StateType, action: any SupportSDK.Action) -> StateType?
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class CombinedReducer : SupportSDK.Reducer {
   final public var initialState: Any {
     get
   }
-  final public func reduce(state: Any, action: SupportSDK.Action) -> Any?
+  final public func reduce(state: Any, action: any SupportSDK.Action) -> Any?
   public typealias StateType = Any
   @objc deinit
 }
@@ -63,8 +68,8 @@ public func + <R1, R2>(lhs: R1, rhs: R2) -> SupportSDK.CombinedReducer where R1 
   @objc deinit
 }
 public struct LoggerMiddleware : SupportSDK.Middleware {
-  public init(showTimestamp: Swift.Bool = true, showDuration: Swift.Bool = false, lineLength: Swift.Int? = nil, predicate: ((SupportSDK.State, SupportSDK.Action) -> Swift.Bool)? = nil, debugOnly: Swift.Bool = true, titleFormatter: ((SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String)? = nil, stateTransformer: ((SupportSDK.State) -> Any)? = nil, actionTransformer: ((SupportSDK.Action) -> Any)? = nil, logger: @escaping (Swift.String) -> Swift.Void = defaultLogger)
-  public func onAction(action: SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
+  public init(showTimestamp: Swift.Bool = true, showDuration: Swift.Bool = false, lineLength: Swift.Int? = nil, predicate: ((SupportSDK.State, any SupportSDK.Action) -> Swift.Bool)? = nil, debugOnly: Swift.Bool = true, titleFormatter: ((any SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String)? = nil, stateTransformer: ((SupportSDK.State) -> Any)? = nil, actionTransformer: ((any SupportSDK.Action) -> Any)? = nil, logger: @escaping (Swift.String) -> Swift.Void = defaultLogger)
+  public func onAction(action: any SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
 }
 public let defaultLogger: (_ string: Swift.String) -> ()
 public struct Subscription<StateType> {
@@ -87,14 +92,14 @@ public struct BlockAsyncAction : SupportSDK.AsyncAction {
 }
 public struct AsyncMiddleware : SupportSDK.Middleware {
   public init()
-  public func onAction(action: SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
+  public func onAction(action: any SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
 }
 @_hasMissingDesignatedInitializers final public class Store {
   final public var state: SupportSDK.State
   @objc deinit
 }
 extension SupportSDK.Store {
-  final public func dispatch(action: SupportSDK.Action)
+  final public func dispatch(action: any SupportSDK.Action)
 }
 extension SupportSDK.Store {
   final public func addListener<StateType>(forStateType type: StateType.Type, stateKey: SupportSDK.StateKey? = nil, if filterBlock: SupportSDK.FilterFunction<StateType>? = nil, callback: @escaping (StateType) -> Swift.Void) -> SupportSDK.Subscription<StateType>
@@ -111,26 +116,26 @@ public protocol Action {
 }
 @_inheritsConvenienceInitializers @objc(ZDKRequestUi) final public class RequestUi : ObjectiveC.NSObject {
   @objc public static func buildRequestList() -> UIKit.UIViewController
-  @objc public static func buildRequestList(with configurations: [SDKConfigurations.Configuration]) -> UIKit.UIViewController
+  @objc public static func buildRequestList(with configurations: [any SDKConfigurations.Configuration]) -> UIKit.UIViewController
   @objc public static func buildRequestUi() -> UIKit.UIViewController
-  @objc public static func buildRequestUi(with configurations: [SDKConfigurations.Configuration]) -> UIKit.UIViewController
+  @objc public static func buildRequestUi(with configurations: [any SDKConfigurations.Configuration]) -> UIKit.UIViewController
   @objc public static func buildRequestUi(requestId: Swift.String) -> UIKit.UIViewController
-  @objc public static func buildRequestUi(requestId: Swift.String, configurations: [SDKConfigurations.Configuration]) -> UIKit.UIViewController
+  @objc public static func buildRequestUi(requestId: Swift.String, configurations: [any SDKConfigurations.Configuration]) -> UIKit.UIViewController
   @objc override dynamic public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class HelpCenterArticleVotingHandler : ObjectiveC.NSObject, SupportSDK.ZDKHelpCenterArticleRatingHandlerProtocol {
   @objc convenience public init(withArticleId articleId: Swift.String, andLocale locale: Swift.String)
-  @objc public func articleRatingVoteSelected(_ ratingState: SupportSDK.ZDKHelpCenterArticleRatingStateProtocol, at index: Swift.Int)
+  @objc public func articleRatingVoteSelected(_ ratingState: any SupportSDK.ZDKHelpCenterArticleRatingStateProtocol, at index: Swift.Int)
   @objc public func currentArticleVote() -> Swift.Int
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc(ZDKArticleUiConfiguration) final public class ArticleUiConfiguration : ObjectiveC.NSObject, SDKConfigurations.Configuration {
   @objc override required dynamic public init()
   @objc final public var showContactOptions: Swift.Bool
-  final public var engines: [MessagingAPI.Engine]
+  final public var engines: [any MessagingAPI.Engine]
   @available(swift, obsoleted: 1.0)
-  @objc final public var objcEngines: [MessagingAPI.ZDKEngine] {
+  @objc final public var objcEngines: [any MessagingAPI.ZDKEngine] {
     @objc get
     @objc set
   }
@@ -138,7 +143,7 @@ public protocol Action {
   @objc deinit
 }
 @objc(ZDKHelpCenterContactUsRouter) final public class HelpCenterContactUsRouter : ObjectiveC.NSObject {
-  @objc required public init(withPresentingViewController presentingViewController: UIKit.UIViewController, configurations: [SDKConfigurations.Configuration], engines: [MessagingAPI.ZDKEngine])
+  @objc required public init(withPresentingViewController presentingViewController: UIKit.UIViewController, configurations: [any SDKConfigurations.Configuration], engines: [any MessagingAPI.ZDKEngine])
   @objc final public func decideButtonActionForNavBar()
   @objc final public func decideButtonActionForEmptySearch()
   @objc deinit
@@ -148,19 +153,19 @@ public protocol Action {
   @objc var navItem: UIKit.UINavigationItem? { get }
 }
 @objc(ZDKContainerChild) public protocol ContainerChild : ObjectiveC.NSObjectProtocol {
-  @objc var childDelegate: SupportSDK.ContainerChildControllerDelegate? { get set }
+  @objc var childDelegate: (any SupportSDK.ContainerChildControllerDelegate)? { get set }
 }
 public protocol Middleware {
-  func onAction(action: SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
+  func onAction(action: any SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
 }
 final public class BlockMiddleware : SupportSDK.Middleware {
   public init(actionFunction: @escaping SupportSDK.MiddlewareFunction)
-  final public func onAction(action: SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
+  final public func onAction(action: any SupportSDK.Action, getState: @escaping SupportSDK.GetStateFunction, dispatch: @escaping SupportSDK.DispatchFunction, next: @escaping SupportSDK.NextFunction)
   @objc deinit
 }
-public func + (lhs: SupportSDK.Middleware, rhs: SupportSDK.Middleware) -> SupportSDK.Middleware
+public func + (lhs: any SupportSDK.Middleware, rhs: any SupportSDK.Middleware) -> any SupportSDK.Middleware
 @_hasMissingDesignatedInitializers @objc(ZDKCoordinatingViewController) @_Concurrency.MainActor(unsafe) public class CoordinatingViewController : SupportSDK.ContainerViewController {
-  @objc @_Concurrency.MainActor(unsafe) public init(coordinator: SupportSDK.Coordinator)
+  @objc @_Concurrency.MainActor(unsafe) public init(coordinator: any SupportSDK.Coordinator)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
@@ -175,27 +180,27 @@ public func + (lhs: SupportSDK.Middleware, rhs: SupportSDK.Middleware) -> Suppor
 }
 public typealias ContainerChildController = UIKit.UIViewController & SupportSDK.ContainerChild
 @objc(ZDKCoordinator) public protocol Coordinator {
-  @objc func start(present: @escaping (SupportSDK.ContainerChildController) -> Swift.Void, with containerDelegate: SupportSDK.ContainerChildControllerDelegate)
+  @objc func start(present: @escaping (any UIKit.UIViewController & SupportSDK.ContainerChild) -> Swift.Void, with containerDelegate: any SupportSDK.ContainerChildControllerDelegate)
 }
 @objc(ZDKHelpCenterCoordinator) final public class HelpCenterCoordinator : ObjectiveC.NSObject, SupportSDK.Coordinator {
-  @objc public init(helpCenterController: UIKit.UIViewController & SupportSDK.ContainerChild, uiConfigurations: [SDKConfigurations.Configuration] = [])
-  @objc final public func start(present: @escaping (SupportSDK.ContainerChildController) -> Swift.Void, with containerDelegate: SupportSDK.ContainerChildControllerDelegate)
+  @objc public init(helpCenterController: any UIKit.UIViewController & SupportSDK.ContainerChild, uiConfigurations: [any SDKConfigurations.Configuration] = [])
+  @objc final public func start(present: @escaping (any UIKit.UIViewController & SupportSDK.ContainerChild) -> Swift.Void, with containerDelegate: any SupportSDK.ContainerChildControllerDelegate)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers final public class RequestCoordinator : ObjectiveC.NSObject, SupportSDK.Coordinator {
-  @objc final public func start(present: @escaping (SupportSDK.ContainerChildController) -> Swift.Void, with containerDelegate: SupportSDK.ContainerChildControllerDelegate)
+  @objc final public func start(present: @escaping (any UIKit.UIViewController & SupportSDK.ContainerChild) -> Swift.Void, with containerDelegate: any SupportSDK.ContainerChildControllerDelegate)
   @objc deinit
 }
 public typealias StateKey = Swift.String
 public typealias ListenerFunction<Type> = (Type) -> Swift.Void
-public typealias ActionListenerFunction = (SupportSDK.Action) -> Swift.Void
+public typealias ActionListenerFunction = (any SupportSDK.Action) -> Swift.Void
 public typealias FilterFunction<StateType> = (StateType, StateType) -> Swift.Bool
 public typealias StateSelector<SelectedType> = (SupportSDK.State) -> (SelectedType?)
 public typealias KeyedState = [SupportSDK.StateKey : Any]
-public typealias ReducerFunction<Type> = (Type, SupportSDK.Action) -> Type?
-public typealias DispatchFunction = (SupportSDK.Action) -> Swift.Void
+public typealias ReducerFunction<Type> = (Type, any SupportSDK.Action) -> Type?
+public typealias DispatchFunction = (any SupportSDK.Action) -> Swift.Void
 public typealias NextFunction = SupportSDK.DispatchFunction
-public typealias MiddlewareFunction = (SupportSDK.Action, () -> SupportSDK.State, (SupportSDK.Action) -> Swift.Void, (SupportSDK.Action) -> Swift.Void) -> Swift.Void
+public typealias MiddlewareFunction = (any SupportSDK.Action, () -> SupportSDK.State, (any SupportSDK.Action) -> Swift.Void, (any SupportSDK.Action) -> Swift.Void) -> Swift.Void
 public typealias GetStateFunction = () -> SupportSDK.State
 extension SupportSDK.Suas {
   public static var enableDebugLogging: Swift.Bool
@@ -224,9 +229,9 @@ extension SupportSDK.Suas {
   @objc deinit
 }
 public enum Suas {
-  public static func createStore<R>(reducer: R, state: SupportSDK.KeyedState, middleware: SupportSDK.Middleware? = nil) -> SupportSDK.Store where R : SupportSDK.Reducer
-  public static func createStore<R, StateType>(reducer: R, state: StateType, middleware: SupportSDK.Middleware? = nil) -> SupportSDK.Store where R : SupportSDK.Reducer
-  public static func createStore<R>(reducer: R, middleware: SupportSDK.Middleware? = nil) -> SupportSDK.Store where R : SupportSDK.Reducer
+  public static func createStore<R>(reducer: R, state: SupportSDK.KeyedState, middleware: (any SupportSDK.Middleware)? = nil) -> SupportSDK.Store where R : SupportSDK.Reducer
+  public static func createStore<R, StateType>(reducer: R, state: StateType, middleware: (any SupportSDK.Middleware)? = nil) -> SupportSDK.Store where R : SupportSDK.Reducer
+  public static func createStore<R>(reducer: R, middleware: (any SupportSDK.Middleware)? = nil) -> SupportSDK.Store where R : SupportSDK.Reducer
 }
 extension Swift.String : SupportSDK.SuasDynamicEquatable {
 }
@@ -239,7 +244,7 @@ extension Swift.String : SupportSDK.SuasDynamicEquatable {
   final public func isConversationOngoing() -> Swift.Bool
   @objc final public func isConversationOngoing(_ completion: @escaping (Swift.Bool) -> Swift.Void)
   @objc public static func engine() throws -> SupportSDK.SupportEngine
-  final public func start(messagingAPI: MessagingAPI.MessagingAPIProtocol)
+  final public func start(messagingAPI: any MessagingAPI.MessagingAPIProtocol)
   final public func stop()
   final public func onEvent(_ event: MessagingAPI.Event)
   @objc deinit
@@ -251,16 +256,16 @@ extension SupportSDK.SupportEngine : MessagingAPI.Observable {
 public protocol Window {
   var windowLevel: UIKit.UIWindow.Level { get set }
   var layer: QuartzCore.CALayer { get }
-  var bounds: CoreGraphics.CGRect { get }
+  var bounds: CoreFoundation.CGRect { get }
   func addSubview(_ view: UIKit.UIView)
 }
 extension UIKit.UIWindow : SupportSDK.Window {
 }
 public protocol ApplicationType {
-  var topWindow: SupportSDK.Window? { get }
+  var topWindow: (any SupportSDK.Window)? { get }
 }
 extension UIKit.UIApplication : SupportSDK.ApplicationType {
-  @_Concurrency.MainActor(unsafe) public var topWindow: SupportSDK.Window? {
+  @_Concurrency.MainActor(unsafe) public var topWindow: (any SupportSDK.Window)? {
     get
   }
 }
@@ -291,9 +296,9 @@ extension SupportSDK.ContainerViewController : SupportSDK.ContainerChildControll
     @objc get
     @objc set
   }
-  final public var engines: [MessagingAPI.Engine]
+  final public var engines: [any MessagingAPI.Engine]
   @available(swift, obsoleted: 1.0)
-  @objc final public var objcEngines: [MessagingAPI.ZDKEngine] {
+  @objc final public var objcEngines: [any MessagingAPI.ZDKEngine] {
     @objc get
     @objc set
   }
