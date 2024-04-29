@@ -1,2 +1,2 @@
-github "zendesk/support_providers_sdk_ios" ~> 8.0.1
+github "zendesk/support_providers_sdk_ios" ~> 8.0.2
 github "zendesk/messaging_sdk_ios" ~> 6.0.1
