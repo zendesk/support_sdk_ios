@@ -90,7 +90,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		djUe3SuIiFdY2N5fOhPxSejDBhQ=
+		/gBL9QeZN8y7Hh0t4YK8TV75sg8=
 		</data>
 		<key>InputFileCell.nib/objects-12.3+.nib</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bYAvRj5ZevowN5rp/Oge+ZCSfIM=
+		SNX9NuAHHggIUNG+j7ziACjqrf4=
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -146,7 +146,7 @@
 		</data>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		q4YM8yEWfhXM/uf5qETwWeqzbDc=
+		bfVjqItMyl2enivG/Zsu2YRxsnY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -828,7 +828,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jYsJ7kqzOSeQUtKcfAhPq291g7rrBtZE3ciFOJ4BZLk=
+			kGhMATjXDPYpJNE2Yg15HS6hxyVpP2rJ5m42XQoslb8=
 			</data>
 		</dict>
 		<key>Modules/SupportSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -863,7 +863,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1zoctYtLvxr/qv6M66TAhrvgDdEHTgQx/mAHCaHoHHA=
+			MlckdegZZGUSGgltoMGm5ABaoKOqZmpSOrV6G2Rk2yU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
