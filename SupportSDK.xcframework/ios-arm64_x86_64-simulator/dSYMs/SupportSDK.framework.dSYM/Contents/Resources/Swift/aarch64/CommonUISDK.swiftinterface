@@ -24,7 +24,6 @@ public protocol ActionOptionsCellDelegate : AnyObject {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ActionOptionsTableViewCell : CommonUISDK.InteractionCell {
   @_Concurrency.MainActor(unsafe) weak final public var delegate: (any CommonUISDK.InteractionCellDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc override final public func awakeFromNib()
   @_Concurrency.MainActor(unsafe) @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override final public var canBecomeFirstResponder: Swift.Bool {
     @objc get
@@ -428,7 +427,6 @@ public struct MessagingViewModel : CommonUISDK.MessagingViewModelProtocol {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class TypingIndicatorTableViewCell : CommonUISDK.InteractionCell {
   @_Concurrency.MainActor(unsafe) weak final public var delegate: (any CommonUISDK.InteractionCellDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc override final public func awakeFromNib()
   @_Concurrency.MainActor(unsafe) final public func updateWithViewModel(_ viewModel: any CommonUISDK.InteractionCellViewModelProtocol)
   @objc deinit
 }
@@ -459,7 +457,6 @@ public protocol ArticlesTableViewCellDelegate : AnyObject {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) final public class ArticlesTableViewCell : CommonUISDK.InteractionCell {
   @_Concurrency.MainActor(unsafe) weak final public var delegate: (any CommonUISDK.InteractionCellDelegate)?
-  @_Concurrency.MainActor(unsafe) @objc override final public func awakeFromNib()
   @_Concurrency.MainActor(unsafe) @objc override final public func prepareForReuse()
   @_Concurrency.MainActor(unsafe) @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override final public var canBecomeFirstResponder: Swift.Bool {

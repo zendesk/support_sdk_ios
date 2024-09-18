@@ -1,12 +1,15 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MessagingAPI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import MessagingAPI
 import SDKConfigurations
 import Swift
 import UIKit
 import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
 public struct SystemMessage : MessagingAPI.SeparatorItem, Swift.Hashable {
   public var status: MessagingAPI.ItemDeliveryStatus {
     get
@@ -80,8 +83,8 @@ public struct TextQuery : MessagingAPI.Query, MessagingAPI.TextItem, Swift.Hasha
 }
 final public class BotMessageDispatcher {
   final public var isInteractionInProcess: Swift.Bool
-  public init(typingDelay: Swift.Int = 1200, botDetails: @escaping () -> MessagingAPI.AgentDetails, onUpdate: @escaping (MessagingAPI.Update) -> Swift.Void, onDequeue: @escaping (MessagingAPI.MessagingItem) -> Swift.Void)
-  final public func append(_ messagingItems: [MessagingAPI.MessagingItem], onPostSend: (() -> Swift.Void)? = nil)
+  public init(typingDelay: Swift.Int = 1200, botDetails: @escaping () -> MessagingAPI.AgentDetails, onUpdate: @escaping (MessagingAPI.Update) -> Swift.Void, onDequeue: @escaping (any MessagingAPI.MessagingItem) -> Swift.Void)
+  final public func append(_ messagingItems: [any MessagingAPI.MessagingItem], onPostSend: (() -> Swift.Void)? = nil)
   @objc deinit
 }
 @objc public protocol ZDKEngine {
@@ -92,7 +95,7 @@ public protocol Engine : MessagingAPI.ZDKEngine {
   @available(*, deprecated, message: "Use isConversationOngoing(_ completion: @escaping (Bool) -> Void) instead")
   func isConversationOngoing() -> Swift.Bool
   func isConversationOngoing(_ completion: @escaping (Swift.Bool) -> Swift.Void)
-  func start(messagingAPI: MessagingAPI.MessagingAPIProtocol)
+  func start(messagingAPI: any MessagingAPI.MessagingAPIProtocol)
   func stop()
   func onEvent(_ event: MessagingAPI.Event)
   func observeUpdates(_ callback: @escaping (MessagingAPI.Update) -> Swift.Void) -> MessagingAPI.ObservationToken
@@ -195,7 +198,7 @@ extension MessagingAPI.Action {
 }
 public protocol MessagingAPIProtocol : AnyObject {
   func getTransferOptions() -> [MessagingAPI.TransferOptionDescription]
-  func getConversationLog() -> MessagingAPI.ConversationLogProtocol
+  func getConversationLog() -> any MessagingAPI.ConversationLogProtocol
   func getConfigurations() -> SDKConfigurations.Configurations
   func getBotAgentDetails() -> MessagingAPI.AgentDetails
 }
@@ -208,8 +211,8 @@ public protocol MessagingAPIProtocol : AnyObject {
   public static func == (a: MessagingAPI.AgentDetails, b: MessagingAPI.AgentDetails) -> Swift.Bool
 }
 public struct EquatableMessagingItem {
-  public let messagingItem: MessagingAPI.MessagingItem
-  public init(_ messagingItem: MessagingAPI.MessagingItem)
+  public let messagingItem: any MessagingAPI.MessagingItem
+  public init(_ messagingItem: any MessagingAPI.MessagingItem)
 }
 extension MessagingAPI.EquatableMessagingItem : Swift.Equatable {
   public static func == (lhs: MessagingAPI.EquatableMessagingItem, rhs: MessagingAPI.EquatableMessagingItem) -> Swift.Bool
@@ -347,10 +350,10 @@ public struct FileResponse : MessagingAPI.Response, MessagingAPI.AttachmentItem,
 public enum Update : Swift.Equatable {
   case showTyping(agent: MessagingAPI.AgentDetails)
   case hideTyping
-  case applyMessagingItems(items: [MessagingAPI.MessagingItem], animated: Swift.Bool)
-  case updateMessagingItem(item: MessagingAPI.MessagingItem, animated: Swift.Bool)
+  case applyMessagingItems(items: [any MessagingAPI.MessagingItem], animated: Swift.Bool)
+  case updateMessagingItem(item: any MessagingAPI.MessagingItem, animated: Swift.Bool)
   case removeMessagingItem(id: Swift.String, animated: Swift.Bool)
-  case appendMessagingItems(items: [MessagingAPI.MessagingItem], animated: Swift.Bool)
+  case appendMessagingItems(items: [any MessagingAPI.MessagingItem], animated: Swift.Bool)
   case updateActiveAgent(agent: MessagingAPI.AgentDetails)
   case updateConnectionStatus(_: MessagingAPI.ConnectionStatus)
   case updateInputFieldState(_: MessagingAPI.InputFieldState)
@@ -446,6 +449,7 @@ public protocol SeparatorItem : MessagingAPI.MessagingItem {
     get
   }
 }
+extension MessagingAPI.AgentDetails : Swift.Sendable {}
 extension MessagingAPI.ConnectionStatus : Swift.Equatable {}
 extension MessagingAPI.ConnectionStatus : Swift.Hashable {}
 extension MessagingAPI.ConnectionStatus : Swift.RawRepresentable {}
