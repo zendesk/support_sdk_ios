@@ -1,10 +1,13 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SDKConfigurations
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import SDKConfigurations
 import Swift
 import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
 @objc(ZDKConfiguration) public protocol Configuration : ObjectiveC.NSObjectProtocol {
   @objc init()
 }
@@ -20,11 +23,11 @@ import _Concurrency
   }
 }
 @objc(ZDKConfigurations) final public class Configurations : ObjectiveC.NSObject {
-  public typealias ConfigArrayType = [SDKConfigurations.Configuration]
+  public typealias ConfigArrayType = [any SDKConfigurations.Configuration]
   @objc final public var configs: SDKConfigurations.Configurations.ConfigArrayType {
     get
   }
-  @objc public init(configs: [SDKConfigurations.Configuration])
+  @objc public init(configs: [any SDKConfigurations.Configuration])
   @objc deinit
 }
 extension SDKConfigurations.Configurations : Swift.Collection {
@@ -37,7 +40,7 @@ extension SDKConfigurations.Configurations : Swift.Collection {
   @objc final public var endIndex: SDKConfigurations.Configurations.Index {
     @objc get
   }
-  @objc final public func insert(_ configuration: SDKConfigurations.Configuration)
+  @objc final public func insert(_ configuration: any SDKConfigurations.Configuration)
   @objc final public subscript(index: SDKConfigurations.Configurations.Index) -> Swift.IndexingIterator<SDKConfigurations.Configurations>.Element {
     @objc get
   }
@@ -47,7 +50,7 @@ extension SDKConfigurations.Configurations : Swift.Collection {
   final public func index(after i: SDKConfigurations.Configurations.Index) -> SDKConfigurations.Configurations.Index
   final public func addDefaultConfigIfNeeded<T>(ofType type: T.Type) where T : SDKConfigurations.Configuration
   @available(swift, obsoleted: 1.0)
-  @objc final public func addDefaultConfigIfNeeded(_ config: SDKConfigurations.Configuration)
+  @objc final public func addDefaultConfigIfNeeded(_ config: any SDKConfigurations.Configuration)
   public typealias Indices = Swift.DefaultIndices<SDKConfigurations.Configurations>
   public typealias Iterator = Swift.IndexingIterator<SDKConfigurations.Configurations>
   public typealias SubSequence = Swift.Slice<SDKConfigurations.Configurations>

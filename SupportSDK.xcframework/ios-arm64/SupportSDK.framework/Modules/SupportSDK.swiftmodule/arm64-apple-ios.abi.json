@@ -15426,13 +15426,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/ViewModel\/ImageItem.swift",
-      "kind": "BooleanLiteral",
-      "offset": 528,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/Views\/Cells\/SidebarCell.swift",
       "kind": "IntegerLiteral",
       "offset": 524,
@@ -15610,7 +15603,7 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/InputField\/Views\/AttachmentInput\/InputAttachmentCollectionViewState.swift",
       "kind": "StringLiteral",
-      "offset": 6261,
+      "offset": 6232,
       "length": 2,
       "value": "\"\""
     },
@@ -18809,7 +18802,7 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/RequestTable\/RequestTableState.swift",
       "kind": "IntegerLiteral",
-      "offset": 3467,
+      "offset": 3438,
       "length": 1,
       "value": "0"
     },
