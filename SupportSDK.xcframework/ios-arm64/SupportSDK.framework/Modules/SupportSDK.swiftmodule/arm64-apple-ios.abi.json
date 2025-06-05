@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "SupportSDK",
+    "printedName": "SupportSDK",
     "children": [
       {
         "kind": "Import",
@@ -429,6 +429,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -617,7 +631,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               }
             ],
@@ -686,6 +700,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -819,7 +849,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(τ_0_0, SupportSDK.Action) -> τ_0_0?",
+                "printedName": "(τ_0_0, any SupportSDK.Action) -> τ_0_0?",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -837,7 +867,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(τ_0_0, SupportSDK.Action)",
+                    "printedName": "(τ_0_0, any SupportSDK.Action)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -847,7 +877,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Action",
-                        "printedName": "SupportSDK.Action",
+                        "printedName": "any SupportSDK.Action",
                         "usr": "s:10SupportSDK6ActionP"
                       }
                     ]
@@ -900,7 +930,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(τ_0_0, SupportSDK.Action) -> τ_0_0?",
+                "printedName": "(τ_0_0, any SupportSDK.Action) -> τ_0_0?",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -918,7 +948,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(τ_0_0, SupportSDK.Action)",
+                    "printedName": "(τ_0_0, any SupportSDK.Action)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -928,7 +958,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Action",
-                        "printedName": "SupportSDK.Action",
+                        "printedName": "any SupportSDK.Action",
                         "usr": "s:10SupportSDK6ActionP"
                       }
                     ]
@@ -974,7 +1004,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               }
             ],
@@ -1003,6 +1033,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Reducer",
@@ -1099,7 +1143,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               }
             ],
@@ -1125,6 +1169,20 @@
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Reducer",
@@ -1406,6 +1464,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -1611,12 +1683,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((SupportSDK.State, SupportSDK.Action) -> Swift.Bool)?",
+                "printedName": "((SupportSDK.State, any SupportSDK.Action) -> Swift.Bool)?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(SupportSDK.State, SupportSDK.Action) -> Swift.Bool",
+                    "printedName": "(SupportSDK.State, any SupportSDK.Action) -> Swift.Bool",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1627,7 +1699,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(SupportSDK.State, SupportSDK.Action)",
+                        "printedName": "(SupportSDK.State, any SupportSDK.Action)",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -1638,7 +1710,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Action",
-                            "printedName": "SupportSDK.Action",
+                            "printedName": "any SupportSDK.Action",
                             "usr": "s:10SupportSDK6ActionP"
                           }
                         ]
@@ -1659,12 +1731,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String)?",
+                "printedName": "((any SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String)?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String",
+                    "printedName": "(any SupportSDK.Action, Foundation.Date, Swift.UInt64) -> Swift.String",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1675,12 +1747,12 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Tuple",
-                        "printedName": "(SupportSDK.Action, Foundation.Date, Swift.UInt64)",
+                        "printedName": "(any SupportSDK.Action, Foundation.Date, Swift.UInt64)",
                         "children": [
                           {
                             "kind": "TypeNominal",
                             "name": "Action",
-                            "printedName": "SupportSDK.Action",
+                            "printedName": "any SupportSDK.Action",
                             "usr": "s:10SupportSDK6ActionP"
                           },
                           {
@@ -1733,12 +1805,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "((SupportSDK.Action) -> Any)?",
+                "printedName": "((any SupportSDK.Action) -> Any)?",
                 "children": [
                   {
                     "kind": "TypeFunc",
                     "name": "Function",
-                    "printedName": "(SupportSDK.Action) -> Any",
+                    "printedName": "(any SupportSDK.Action) -> Any",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -1748,7 +1820,7 @@
                       {
                         "kind": "TypeNominal",
                         "name": "Action",
-                        "printedName": "SupportSDK.Action",
+                        "printedName": "any SupportSDK.Action",
                         "usr": "s:10SupportSDK6ActionP"
                       }
                     ]
@@ -1800,7 +1872,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               },
               {
@@ -1824,7 +1896,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1834,7 +1906,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -1842,7 +1914,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1852,7 +1924,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -1877,6 +1949,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Middleware",
@@ -2214,6 +2300,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -2277,6 +2379,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -2628,7 +2746,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2638,7 +2756,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -2671,6 +2789,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Action",
             "printedName": "Action",
             "usr": "s:10SupportSDK6ActionP",
@@ -2697,7 +2829,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(@escaping () -> SupportSDK.State, @escaping (SupportSDK.Action) -> ()) -> ()",
+                "printedName": "(@escaping () -> SupportSDK.State, @escaping (any SupportSDK.Action) -> ()) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2707,7 +2839,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(() -> SupportSDK.State, (SupportSDK.Action) -> ())",
+                    "printedName": "(() -> SupportSDK.State, (any SupportSDK.Action) -> ())",
                     "children": [
                       {
                         "kind": "TypeFunc",
@@ -2730,7 +2862,7 @@
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(SupportSDK.Action) -> ()",
+                        "printedName": "(any SupportSDK.Action) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -2740,7 +2872,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Action",
-                            "printedName": "SupportSDK.Action",
+                            "printedName": "any SupportSDK.Action",
                             "usr": "s:10SupportSDK6ActionP"
                           }
                         ]
@@ -2790,7 +2922,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2800,7 +2932,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -2825,6 +2957,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "AsyncAction",
@@ -2880,7 +3026,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               },
               {
@@ -2904,7 +3050,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2914,7 +3060,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -2922,7 +3068,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -2932,7 +3078,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -2957,6 +3103,20 @@
           "RawDocComment"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Middleware",
@@ -3090,7 +3250,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               }
             ],
@@ -3444,7 +3604,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -3454,7 +3614,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -3586,7 +3746,23 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -3599,6 +3775,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -3682,12 +3874,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[SDKConfigurations.Configuration]",
+                "printedName": "[any SDKConfigurations.Configuration]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Configuration",
-                    "printedName": "SDKConfigurations.Configuration",
+                    "printedName": "any SDKConfigurations.Configuration",
                     "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration"
                   }
                 ],
@@ -3747,12 +3939,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[SDKConfigurations.Configuration]",
+                "printedName": "[any SDKConfigurations.Configuration]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Configuration",
-                    "printedName": "SDKConfigurations.Configuration",
+                    "printedName": "any SDKConfigurations.Configuration",
                     "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration"
                   }
                 ],
@@ -3825,12 +4017,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[SDKConfigurations.Configuration]",
+                "printedName": "[any SDKConfigurations.Configuration]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Configuration",
-                    "printedName": "SDKConfigurations.Configuration",
+                    "printedName": "any SDKConfigurations.Configuration",
                     "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration"
                   }
                 ],
@@ -3895,6 +4087,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4034,7 +4240,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "ZDKHelpCenterArticleRatingStateProtocol",
-                "printedName": "SupportSDK.ZDKHelpCenterArticleRatingStateProtocol",
+                "printedName": "any SupportSDK.ZDKHelpCenterArticleRatingStateProtocol",
                 "usr": "c:objc(pl)ZDKHelpCenterArticleRatingStateProtocol"
               },
               {
@@ -4119,6 +4325,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4371,12 +4591,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[MessagingAPI.Engine]",
+                "printedName": "[any MessagingAPI.Engine]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Engine",
-                    "printedName": "MessagingAPI.Engine",
+                    "printedName": "any MessagingAPI.Engine",
                     "usr": "s:12MessagingAPI6EngineP"
                   }
                 ],
@@ -4404,12 +4624,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[MessagingAPI.Engine]",
+                    "printedName": "[any MessagingAPI.Engine]",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Engine",
-                        "printedName": "MessagingAPI.Engine",
+                        "printedName": "any MessagingAPI.Engine",
                         "usr": "s:12MessagingAPI6EngineP"
                       }
                     ],
@@ -4439,12 +4659,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[MessagingAPI.Engine]",
+                    "printedName": "[any MessagingAPI.Engine]",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Engine",
-                        "printedName": "MessagingAPI.Engine",
+                        "printedName": "any MessagingAPI.Engine",
                         "usr": "s:12MessagingAPI6EngineP"
                       }
                     ],
@@ -4547,6 +4767,20 @@
             "printedName": "Configuration",
             "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration",
             "mangledName": "$s17SDKConfigurations13ConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -4679,12 +4913,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[SDKConfigurations.Configuration]",
+                "printedName": "[any SDKConfigurations.Configuration]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Configuration",
-                    "printedName": "SDKConfigurations.Configuration",
+                    "printedName": "any SDKConfigurations.Configuration",
                     "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration"
                   }
                 ],
@@ -4693,12 +4927,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[MessagingAPI.ZDKEngine]",
+                "printedName": "[any MessagingAPI.ZDKEngine]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "ZDKEngine",
-                    "printedName": "MessagingAPI.ZDKEngine",
+                    "printedName": "any MessagingAPI.ZDKEngine",
                     "usr": "c:@M@MessagingAPI@objc(pl)ZDKEngine"
                   }
                 ],
@@ -4803,6 +5037,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -4996,6 +5244,22 @@
           "AccessControl",
           "ObjC",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5011,12 +5275,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "SupportSDK.ContainerChildControllerDelegate?",
+                "printedName": "(any SupportSDK.ContainerChildControllerDelegate)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "ContainerChildControllerDelegate",
-                    "printedName": "SupportSDK.ContainerChildControllerDelegate",
+                    "printedName": "any SupportSDK.ContainerChildControllerDelegate",
                     "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate"
                   }
                 ],
@@ -5040,12 +5304,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "SupportSDK.ContainerChildControllerDelegate?",
+                    "printedName": "(any SupportSDK.ContainerChildControllerDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ContainerChildControllerDelegate",
-                        "printedName": "SupportSDK.ContainerChildControllerDelegate",
+                        "printedName": "any SupportSDK.ContainerChildControllerDelegate",
                         "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate"
                       }
                     ],
@@ -5078,12 +5342,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "SupportSDK.ContainerChildControllerDelegate?",
+                    "printedName": "(any SupportSDK.ContainerChildControllerDelegate)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "ContainerChildControllerDelegate",
-                        "printedName": "SupportSDK.ContainerChildControllerDelegate",
+                        "printedName": "any SupportSDK.ContainerChildControllerDelegate",
                         "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate"
                       }
                     ],
@@ -5116,6 +5380,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5163,7 +5443,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               },
               {
@@ -5187,7 +5467,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -5197,7 +5477,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -5205,7 +5485,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -5215,7 +5495,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -5242,6 +5522,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -5263,7 +5559,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action, () -> SupportSDK.State, (SupportSDK.Action) -> (), (SupportSDK.Action) -> ()) -> ()",
+                "printedName": "(any SupportSDK.Action, () -> SupportSDK.State, (any SupportSDK.Action) -> (), (any SupportSDK.Action) -> ()) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -5273,12 +5569,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(SupportSDK.Action, () -> SupportSDK.State, (SupportSDK.Action) -> (), (SupportSDK.Action) -> ())",
+                    "printedName": "(any SupportSDK.Action, () -> SupportSDK.State, (any SupportSDK.Action) -> (), (any SupportSDK.Action) -> ())",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Action",
-                        "printedName": "SupportSDK.Action",
+                        "printedName": "any SupportSDK.Action",
                         "usr": "s:10SupportSDK6ActionP"
                       },
                       {
@@ -5305,7 +5601,7 @@
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(SupportSDK.Action) -> ()",
+                        "printedName": "(any SupportSDK.Action) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -5315,7 +5611,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Action",
-                            "printedName": "SupportSDK.Action",
+                            "printedName": "any SupportSDK.Action",
                             "usr": "s:10SupportSDK6ActionP"
                           }
                         ],
@@ -5326,7 +5622,7 @@
                       {
                         "kind": "TypeFunc",
                         "name": "Function",
-                        "printedName": "(SupportSDK.Action) -> ()",
+                        "printedName": "(any SupportSDK.Action) -> ()",
                         "children": [
                           {
                             "kind": "TypeNominal",
@@ -5336,7 +5632,7 @@
                           {
                             "kind": "TypeNominal",
                             "name": "Action",
-                            "printedName": "SupportSDK.Action",
+                            "printedName": "any SupportSDK.Action",
                             "usr": "s:10SupportSDK6ActionP"
                           }
                         ],
@@ -5372,7 +5668,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Action",
-                "printedName": "SupportSDK.Action",
+                "printedName": "any SupportSDK.Action",
                 "usr": "s:10SupportSDK6ActionP"
               },
               {
@@ -5396,7 +5692,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -5406,7 +5702,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -5414,7 +5710,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(SupportSDK.Action) -> ()",
+                "printedName": "(any SupportSDK.Action) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -5424,7 +5720,7 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Action",
-                    "printedName": "SupportSDK.Action",
+                    "printedName": "any SupportSDK.Action",
                     "usr": "s:10SupportSDK6ActionP"
                   }
                 ]
@@ -5453,6 +5749,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Middleware",
             "printedName": "Middleware",
             "usr": "s:10SupportSDK10MiddlewareP",
@@ -5468,19 +5778,19 @@
           {
             "kind": "TypeNominal",
             "name": "Middleware",
-            "printedName": "SupportSDK.Middleware",
+            "printedName": "any SupportSDK.Middleware",
             "usr": "s:10SupportSDK10MiddlewareP"
           },
           {
             "kind": "TypeNominal",
             "name": "Middleware",
-            "printedName": "SupportSDK.Middleware",
+            "printedName": "any SupportSDK.Middleware",
             "usr": "s:10SupportSDK10MiddlewareP"
           },
           {
             "kind": "TypeNominal",
             "name": "Middleware",
-            "printedName": "SupportSDK.Middleware",
+            "printedName": "any SupportSDK.Middleware",
             "usr": "s:10SupportSDK10MiddlewareP"
           }
         ],
@@ -5668,7 +5978,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "Coordinator",
-                "printedName": "SupportSDK.Coordinator",
+                "printedName": "any SupportSDK.Coordinator",
                 "usr": "c:@M@SupportSDK@objc(pl)ZDKCoordinator"
               }
             ],
@@ -5678,6 +5988,7 @@
             "moduleName": "SupportSDK",
             "objc_name": "initWithCoordinator:",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "ObjC"
@@ -5704,6 +6015,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "Override",
@@ -5737,6 +6049,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "Override"
@@ -5769,6 +6082,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "Override"
@@ -5801,6 +6115,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "Override"
@@ -5857,6 +6172,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override"
             ],
@@ -5869,6 +6185,7 @@
         "moduleName": "SupportSDK",
         "objc_name": "ZDKCoordinatingViewController",
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "AccessControl",
           "ObjC"
@@ -5882,6 +6199,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -6168,6 +6499,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -6262,7 +6607,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UIKit.UIViewController & SupportSDK.ContainerChild) -> ()",
+                "printedName": "(any UIKit.UIViewController & SupportSDK.ContainerChild) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6272,14 +6617,14 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ProtocolComposition",
-                    "printedName": "UIKit.UIViewController & SupportSDK.ContainerChild"
+                    "printedName": "any UIKit.UIViewController & SupportSDK.ContainerChild"
                   }
                 ]
               },
               {
                 "kind": "TypeNominal",
                 "name": "ContainerChildControllerDelegate",
-                "printedName": "SupportSDK.ContainerChildControllerDelegate",
+                "printedName": "any SupportSDK.ContainerChildControllerDelegate",
                 "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate"
               }
             ],
@@ -6307,6 +6652,22 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -6328,17 +6689,17 @@
               {
                 "kind": "TypeNominal",
                 "name": "ProtocolComposition",
-                "printedName": "UIKit.UIViewController & SupportSDK.ContainerChild"
+                "printedName": "any UIKit.UIViewController & SupportSDK.ContainerChild"
               },
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[SDKConfigurations.Configuration]",
+                "printedName": "[any SDKConfigurations.Configuration]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Configuration",
-                    "printedName": "SDKConfigurations.Configuration",
+                    "printedName": "any SDKConfigurations.Configuration",
                     "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration"
                   }
                 ],
@@ -6370,7 +6731,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UIKit.UIViewController & SupportSDK.ContainerChild) -> ()",
+                "printedName": "(any UIKit.UIViewController & SupportSDK.ContainerChild) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6380,14 +6741,14 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ProtocolComposition",
-                    "printedName": "UIKit.UIViewController & SupportSDK.ContainerChild"
+                    "printedName": "any UIKit.UIViewController & SupportSDK.ContainerChild"
                   }
                 ]
               },
               {
                 "kind": "TypeNominal",
                 "name": "ContainerChildControllerDelegate",
-                "printedName": "SupportSDK.ContainerChildControllerDelegate",
+                "printedName": "any SupportSDK.ContainerChildControllerDelegate",
                 "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate"
               }
             ],
@@ -6451,6 +6812,20 @@
             "printedName": "Coordinator",
             "usr": "c:@M@SupportSDK@objc(pl)ZDKCoordinator",
             "mangledName": "$s10SupportSDK11CoordinatorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -6521,7 +6896,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(UIKit.UIViewController & SupportSDK.ContainerChild) -> ()",
+                "printedName": "(any UIKit.UIViewController & SupportSDK.ContainerChild) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6531,14 +6906,14 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ProtocolComposition",
-                    "printedName": "UIKit.UIViewController & SupportSDK.ContainerChild"
+                    "printedName": "any UIKit.UIViewController & SupportSDK.ContainerChild"
                   }
                 ]
               },
               {
                 "kind": "TypeNominal",
                 "name": "ContainerChildControllerDelegate",
-                "printedName": "SupportSDK.ContainerChildControllerDelegate",
+                "printedName": "any SupportSDK.ContainerChildControllerDelegate",
                 "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate"
               }
             ],
@@ -6602,6 +6977,20 @@
             "printedName": "Coordinator",
             "usr": "c:@M@SupportSDK@objc(pl)ZDKCoordinator",
             "mangledName": "$s10SupportSDK11CoordinatorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -7393,6 +7782,20 @@
           },
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -7794,6 +8197,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -7936,12 +8353,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "SupportSDK.Middleware?",
+                "printedName": "(any SupportSDK.Middleware)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Middleware",
-                    "printedName": "SupportSDK.Middleware",
+                    "printedName": "any SupportSDK.Middleware",
                     "usr": "s:10SupportSDK10MiddlewareP"
                   }
                 ],
@@ -7986,12 +8403,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "SupportSDK.Middleware?",
+                "printedName": "(any SupportSDK.Middleware)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Middleware",
-                    "printedName": "SupportSDK.Middleware",
+                    "printedName": "any SupportSDK.Middleware",
                     "usr": "s:10SupportSDK10MiddlewareP"
                   }
                 ],
@@ -8031,12 +8448,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "SupportSDK.Middleware?",
+                "printedName": "(any SupportSDK.Middleware)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Middleware",
-                    "printedName": "SupportSDK.Middleware",
+                    "printedName": "any SupportSDK.Middleware",
                     "usr": "s:10SupportSDK10MiddlewareP"
                   }
                 ],
@@ -8159,6 +8576,22 @@
         "moduleName": "SupportSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -8807,7 +9240,7 @@
               {
                 "kind": "TypeNominal",
                 "name": "MessagingAPIProtocol",
-                "printedName": "MessagingAPI.MessagingAPIProtocol",
+                "printedName": "any MessagingAPI.MessagingAPIProtocol",
                 "usr": "s:12MessagingAPI0A11APIProtocolP"
               }
             ],
@@ -8959,6 +9392,20 @@
             "printedName": "Engine",
             "usr": "s:12MessagingAPI6EngineP",
             "mangledName": "$s12MessagingAPI6EngineP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -9396,6 +9843,22 @@
         "moduleName": "SupportSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9411,12 +9874,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "SupportSDK.Window?",
+                "printedName": "(any SupportSDK.Window)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Window",
-                    "printedName": "SupportSDK.Window",
+                    "printedName": "any SupportSDK.Window",
                     "usr": "s:10SupportSDK6WindowP"
                   }
                 ],
@@ -9437,12 +9900,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "SupportSDK.Window?",
+                    "printedName": "(any SupportSDK.Window)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Window",
-                        "printedName": "SupportSDK.Window",
+                        "printedName": "any SupportSDK.Window",
                         "usr": "s:10SupportSDK6WindowP"
                       }
                     ],
@@ -9468,6 +9931,22 @@
         "moduleName": "SupportSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -9556,6 +10035,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl",
               "Override"
@@ -9612,6 +10092,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Override"
             ],
@@ -9653,6 +10134,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "Required"
             ],
@@ -9686,6 +10168,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -9744,6 +10227,7 @@
             "declAttributes": [
               "Dynamic",
               "ObjC",
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -9756,6 +10240,7 @@
         "mangledName": "$s10SupportSDK23ContainerViewControllerC",
         "moduleName": "SupportSDK",
         "declAttributes": [
+          "Preconcurrency",
           "Custom",
           "AccessControl",
           "ObjC"
@@ -9770,10 +10255,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "ContainerChildControllerDelegate",
-            "printedName": "ContainerChildControllerDelegate",
-            "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate",
-            "mangledName": "$s10SupportSDK32ContainerChildControllerDelegateP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -9837,6 +10329,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContainerChildControllerDelegate",
+            "printedName": "ContainerChildControllerDelegate",
+            "usr": "c:@M@SupportSDK@objc(pl)ZDKContainerChildControllerDelegate",
+            "mangledName": "$s10SupportSDK32ContainerChildControllerDelegateP"
           }
         ]
       },
@@ -10461,12 +10960,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[MessagingAPI.Engine]",
+                "printedName": "[any MessagingAPI.Engine]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Engine",
-                    "printedName": "MessagingAPI.Engine",
+                    "printedName": "any MessagingAPI.Engine",
                     "usr": "s:12MessagingAPI6EngineP"
                   }
                 ],
@@ -10494,12 +10993,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[MessagingAPI.Engine]",
+                    "printedName": "[any MessagingAPI.Engine]",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Engine",
-                        "printedName": "MessagingAPI.Engine",
+                        "printedName": "any MessagingAPI.Engine",
                         "usr": "s:12MessagingAPI6EngineP"
                       }
                     ],
@@ -10529,12 +11028,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[MessagingAPI.Engine]",
+                    "printedName": "[any MessagingAPI.Engine]",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Engine",
-                        "printedName": "MessagingAPI.Engine",
+                        "printedName": "any MessagingAPI.Engine",
                         "usr": "s:12MessagingAPI6EngineP"
                       }
                     ],
@@ -10676,6 +11175,20 @@
             "printedName": "Configuration",
             "usr": "c:@M@SDKConfigurations@objc(pl)ZDKConfiguration",
             "mangledName": "$s17SDKConfigurations13ConfigurationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -10986,6 +11499,22 @@
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
         ]
       },
       {
@@ -11672,6 +12201,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ExpressibleByDictionaryLiteral",
             "printedName": "ExpressibleByDictionaryLiteral",
             "children": [
@@ -11793,6 +12336,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -12594,6 +13151,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -13285,6 +13856,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -13736,6 +14321,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -13903,10 +14502,25 @@
         "mangledName": "$sSS",
         "moduleName": "Swift",
         "declAttributes": [
+          "EagerMove",
           "Frozen"
         ],
         "isExternal": true,
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "SuasDynamicEquatable",
@@ -14453,12 +15067,6 @@
                         "name": "TransferRepresentation",
                         "printedName": "CoreTransferable.TransferRepresentation",
                         "usr": "s:16CoreTransferable22TransferRepresentationP"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Sendable",
-                        "printedName": "Swift.Sendable",
-                        "usr": "s:s8SendableP"
                       }
                     ]
                   }
@@ -14481,6 +15089,7 @@
         "intro_iOS": "2.0",
         "objc_name": "UIWindow",
         "declAttributes": [
+          "Preconcurrency",
           "Available",
           "ObjC",
           "NonSendable",
@@ -14496,6 +15105,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -14588,12 +15211,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "SupportSDK.Window?",
+                "printedName": "(any SupportSDK.Window)?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Window",
-                    "printedName": "SupportSDK.Window",
+                    "printedName": "any SupportSDK.Window",
                     "usr": "s:10SupportSDK6WindowP"
                   }
                 ],
@@ -14605,6 +15228,7 @@
             "mangledName": "$sSo13UIApplicationC10SupportSDKE9topWindowAC0E0_pSgvp",
             "moduleName": "SupportSDK",
             "declAttributes": [
+              "Preconcurrency",
               "Custom",
               "AccessControl"
             ],
@@ -14618,12 +15242,12 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "SupportSDK.Window?",
+                    "printedName": "(any SupportSDK.Window)?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Window",
-                        "printedName": "SupportSDK.Window",
+                        "printedName": "any SupportSDK.Window",
                         "usr": "s:10SupportSDK6WindowP"
                       }
                     ],
@@ -14647,6 +15271,7 @@
         "intro_iOS": "2.0",
         "objc_name": "UIApplication",
         "declAttributes": [
+          "Preconcurrency",
           "Available",
           "ObjC",
           "NonSendable",
@@ -14661,6 +15286,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -14749,6 +15388,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14821,6 +15474,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -14891,6 +15558,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -14966,6 +15647,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -15026,6 +15721,7 @@
         "intro_iOS": "2.0",
         "objc_name": "UITextField",
         "declAttributes": [
+          "Preconcurrency",
           "Available",
           "ObjC",
           "NonSendable",
@@ -15042,6 +15738,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -15126,6 +15836,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "RequestStorageProtocol",
             "printedName": "RequestStorageProtocol",
             "usr": "s:19SupportProvidersSDK22RequestStorageProtocolP",
@@ -15144,6 +15868,7 @@
         "intro_iOS": "2.0",
         "objc_name": "UITextView",
         "declAttributes": [
+          "Preconcurrency",
           "Available",
           "ObjC",
           "NonSendable",
@@ -15160,6 +15885,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -15229,6 +15968,36 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITextSearching",
+            "printedName": "UITextSearching",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "DocumentIdentifier",
+                "printedName": "DocumentIdentifier",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.AnyHashable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyHashable",
+                        "printedName": "Swift.AnyHashable",
+                        "usr": "s:s11AnyHashableV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:5UIKit15UITextSearchingP",
+            "mangledName": "$s5UIKit15UITextSearchingP"
           }
         ]
       }
@@ -15236,6 +16005,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/ViewModel\/AwsomeImagePickerFlowLayout.swift",
+      "kind": "BooleanLiteral",
+      "offset": 552,
+      "length": 4,
+      "value": "true"
+    },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Actions.swift",
       "kind": "BooleanLiteral",
@@ -15356,13 +16132,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/InputField\/Views\/ConversationTextView.swift",
-      "kind": "StringLiteral",
-      "offset": 327,
-      "length": 20,
-      "value": "\"SupportSDK.ConversationTextView\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/Views\/Cells\/CameraCell.swift",
       "kind": "IntegerLiteral",
       "offset": 448,
@@ -15375,13 +16144,6 @@
       "offset": 461,
       "length": 3,
       "value": "268"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/Views\/Cells\/CameraCell.swift",
-      "kind": "StringLiteral",
-      "offset": 294,
-      "length": 10,
-      "value": "\"SupportSDK.CameraCell\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Suas\/Middlewares\/LoggerMiddleware\/LoggerMiddleware.swift",
@@ -15447,13 +16209,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Services\/RichText\/RichRender.swift",
-      "kind": "StringLiteral",
-      "offset": 196,
-      "length": 10,
-      "value": "\"SupportSDK.RichRender\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/Service\/SessionQueue.swift",
       "kind": "StringLiteral",
       "offset": 669,
@@ -15473,13 +16228,6 @@
       "offset": 1112,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/ViewModel\/AwesomeImagePickerDelegate.swift",
-      "kind": "StringLiteral",
-      "offset": 408,
-      "length": 26,
-      "value": "\"SupportSDK.AwesomeImagePickerDelegate\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/ViewModel\/AwesomeImagePickerDelegate.swift",
@@ -15524,13 +16272,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/AvatarView\/AvatarTitle.swift",
-      "kind": "StringLiteral",
-      "offset": 175,
-      "length": 11,
-      "value": "\"SupportSDK.AvatarTitle\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Suas\/Listener.swift",
       "kind": "BooleanLiteral",
       "offset": 5241,
@@ -15543,13 +16284,6 @@
       "offset": 7374,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/AttachmentUtilities\/FabHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 647,
-      "length": 10,
-      "value": "\"SupportSDK.FabHandler\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Suas\/Store.swift",
@@ -15629,18 +16363,11 @@
       "value": "\"HC.article.voting\""
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/ZDKHelpCenter\/UI\/HelpCenterArticleVotingHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 355,
-      "length": 30,
-      "value": "\"SupportSDK.HelpCenterArticleVotingHandler\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/InputField\/Views\/InputTextAttachmentsView.swift",
-      "kind": "StringLiteral",
-      "offset": 268,
-      "length": 24,
-      "value": "\"SupportSDK.InputTextAttachmentsView\""
+      "kind": "FloatLiteral",
+      "offset": 3170,
+      "length": 4,
+      "value": "35.0"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Config\/ArticleUiConfiguration.swift",
@@ -15655,20 +16382,6 @@
       "offset": 965,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/ZDKHelpCenter\/UI\/HelpCenterContactUsRouter.swift",
-      "kind": "StringLiteral",
-      "offset": 743,
-      "length": 25,
-      "value": "\"SupportSDK.HelpCenterContactUsRouter\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/InputField\/Views\/InputField.swift",
-      "kind": "StringLiteral",
-      "offset": 288,
-      "length": 10,
-      "value": "\"SupportSDK.InputField\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/Views\/SidebarButton.swift",
@@ -15811,13 +16524,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Coordinator\/CoordinatingViewController.swift",
-      "kind": "StringLiteral",
-      "offset": 245,
-      "length": 26,
-      "value": "\"SupportSDK.CoordinatingViewController\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Config\/RequestListUIConfiguration.swift",
       "kind": "BooleanLiteral",
       "offset": 958,
@@ -15833,24 +16539,10 @@
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Coordinator\/Coordinator.swift",
-      "kind": "StringLiteral",
-      "offset": 501,
-      "length": 21,
-      "value": "\"SupportSDK.HelpCenterCoordinator\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Coordinator\/Coordinator.swift",
       "kind": "Array",
       "offset": 2354,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Coordinator\/Coordinator.swift",
-      "kind": "StringLiteral",
-      "offset": 1838,
-      "length": 18,
-      "value": "\"SupportSDK.RequestCoordinator\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Suas\/Common.swift",
@@ -15883,9 +16575,9 @@
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Config\/SupportUI.swift",
       "kind": "StringLiteral",
-      "offset": 713,
-      "length": 9,
-      "value": "\"SupportSDK.SupportUI\""
+      "offset": 2204,
+      "length": 63,
+      "value": "\"Instance of SupportUI is nil, have you initialized SupportUI?\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/UploadedAttachmentCacher.swift",
@@ -15930,13 +16622,6 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/ValidatableTextField.swift",
-      "kind": "StringLiteral",
-      "offset": 184,
-      "length": 20,
-      "value": "\"SupportSDK.ValidatableTextField\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/InputField\/Views\/TextView.swift",
       "kind": "StringLiteral",
       "offset": 1057,
@@ -15956,13 +16641,6 @@
       "offset": 1518,
       "length": 5,
       "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Engine\/SupportEngine.swift",
-      "kind": "StringLiteral",
-      "offset": 1072,
-      "length": 13,
-      "value": "\"SupportSDK.SupportEngine\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Suas\/StoreDeinitCallback.swift",
@@ -15993,13 +16671,6 @@
       "value": "[\"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\"]"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/RequestController\/RequestController.swift",
-      "kind": "StringLiteral",
-      "offset": 322,
-      "length": 17,
-      "value": "\"SupportSDK.RequestController\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/TicketRequestOperation.swift",
       "kind": "Array",
       "offset": 757,
@@ -16026,20 +16697,6 @@
       "offset": 1725,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/CreateRequest\/CreateRequestController.swift",
-      "kind": "StringLiteral",
-      "offset": 260,
-      "length": 23,
-      "value": "\"SupportSDK.CreateRequestController\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/CreateRequest\/CreateRequestDataProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 563,
-      "length": 13,
-      "value": "\"Description\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/CreateRequest\/CreateRequestDataProvider.swift",
@@ -16105,27 +16762,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/RequestContainer\/RequestContainerController.swift",
-      "kind": "StringLiteral",
-      "offset": 429,
-      "length": 26,
-      "value": "\"SupportSDK.RequestContainerController\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/RequestTable\/RequestTable.swift",
-      "kind": "StringLiteral",
-      "offset": 255,
-      "length": 12,
-      "value": "\"SupportSDK.RequestTable\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/Views\/PreviewView.swift",
-      "kind": "StringLiteral",
-      "offset": 288,
-      "length": 11,
-      "value": "\"SupportSDK.PreviewView\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileCell\/FileCellViewModel.swift",
       "kind": "FloatLiteral",
       "offset": 252,
@@ -16140,11 +16776,11 @@
       "value": "93"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/RequestList\/UI\/RequestListTableViewHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 384,
-      "length": 27,
-      "value": "\"SupportSDK.RequestListTableViewHandler\""
+      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/AttachmentUtilities\/SharedDocument.swift",
+      "kind": "BooleanLiteral",
+      "offset": 374,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Constants.swift",
@@ -17730,34 +18366,6 @@
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Constants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15165,
-      "length": 3,
-      "value": "401"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Constants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15197,
-      "length": 3,
-      "value": "422"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Constants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15165,
-      "length": 3,
-      "value": "401"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Constants.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15197,
-      "length": 3,
-      "value": "422"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Constants.swift",
       "kind": "StringLiteral",
       "offset": 15314,
       "length": 32,
@@ -17863,27 +18471,6 @@
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/ImageCell\/ImageCellImageView.swift",
-      "kind": "StringLiteral",
-      "offset": 341,
-      "length": 9,
-      "value": "\"SupportSDK.ImageView\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/ImageCell\/ImageCellImageView.swift",
-      "kind": "StringLiteral",
-      "offset": 341,
-      "length": 9,
-      "value": "\"SupportSDK.ImageView\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/ImageCell\/ImageCellImageView.swift",
-      "kind": "StringLiteral",
-      "offset": 341,
-      "length": 9,
-      "value": "\"SupportSDK.ImageView\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/ImageCell\/ImageCellImageView.swift",
       "kind": "FloatLiteral",
       "offset": 2642,
       "length": 4,
@@ -17895,27 +18482,6 @@
       "offset": 2649,
       "length": 3,
       "value": "9.0"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/AvatarView\/AvatarImageView.swift",
-      "kind": "StringLiteral",
-      "offset": 179,
-      "length": 15,
-      "value": "\"SupportSDK.AvatarImageView\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/AvatarView\/AvatarImageView.swift",
-      "kind": "StringLiteral",
-      "offset": 179,
-      "length": 15,
-      "value": "\"SupportSDK.AvatarImageView\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/AvatarView\/AvatarImageView.swift",
-      "kind": "StringLiteral",
-      "offset": 179,
-      "length": 15,
-      "value": "\"SupportSDK.AvatarImageView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
@@ -18009,97 +18575,6 @@
       "value": "\"image\/heic\""
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 319,
-      "length": 3,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 332,
-      "length": 3,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 345,
-      "length": 5,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 360,
-      "length": 4,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 374,
-      "length": 5,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 389,
-      "length": 10,
-      "value": "6"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 409,
-      "length": 11,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 430,
-      "length": 7,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 447,
-      "length": 5,
-      "value": "9"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 462,
-      "length": 7,
-      "value": "10"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 479,
-      "length": 6,
-      "value": "11"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/FileType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 495,
-      "length": 4,
-      "value": "12"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/AttachmentUtilities\/CamerLibraryHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 527,
-      "length": 28,
-      "value": "\"SupportSDK.ConcreteCameraLibraryHandler\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/Cells\/StatusView.swift",
       "kind": "BooleanLiteral",
       "offset": 1256,
@@ -18136,10 +18611,10 @@
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/ProgressBar\/ProgressBar.swift",
-      "kind": "StringLiteral",
-      "offset": 1068,
-      "length": 11,
-      "value": "\"SupportSDK.ProgressBar\""
+      "kind": "IntegerLiteral",
+      "offset": 3349,
+      "length": 1,
+      "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/RequestList\/UI\/RequestListViewController.swift",
@@ -18233,11 +18708,11 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/RequestLoadingController.swift",
-      "kind": "StringLiteral",
-      "offset": 183,
-      "length": 24,
-      "value": "\"SupportSDK.RequestLoadingController\""
+      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/InputField\/Views\/AttachmentInput\/InputAttachmentCollectionView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7109,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/ViewModel\/AwesomeImagePickerViewModel.swift",
@@ -18252,13 +18727,6 @@
       "offset": 2223,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentPicker\/ViewModel\/AwesomeImagePickerViewModel.swift",
-      "kind": "StringLiteral",
-      "offset": 2071,
-      "length": 35,
-      "value": "\"SupportSDK.ConcreteAwesomeImagePickerViewModel\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/Cells\/BubbleView.swift",
@@ -18394,13 +18862,6 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentView.swift",
-      "kind": "StringLiteral",
-      "offset": 253,
-      "length": 14,
-      "value": "\"SupportSDK.AttachmentView\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/PlaceHolderTextView.swift",
       "kind": "BooleanLiteral",
       "offset": 479,
@@ -18413,13 +18874,6 @@
       "offset": 1005,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/PlaceHolderTextView.swift",
-      "kind": "StringLiteral",
-      "offset": 177,
-      "length": 19,
-      "value": "\"SupportSDK.PlaceHolderTextView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Services\/RequestFetcher.swift",
@@ -18450,39 +18904,11 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/RequestAttachment.swift",
-      "kind": "StringLiteral",
-      "offset": 322,
-      "length": 17,
-      "value": "\"SupportSDK.RequestAttachment\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentDetailPresenter.swift",
-      "kind": "StringLiteral",
-      "offset": 261,
-      "length": 25,
-      "value": "\"SupportSDK.AttachmentDetailPresenter\""
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/AttachmentDetailPresenter.swift",
-      "kind": "StringLiteral",
-      "offset": 1245,
-      "length": 28,
-      "value": "\"SupportSDK.AttachmentMessagePreviewItem\""
-    },
-    {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/ImageCell\/ImageCellPlaceHolderView.swift",
       "kind": "IntegerLiteral",
       "offset": 475,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Attachments\/ImageCell\/ImageCellPlaceHolderView.swift",
-      "kind": "StringLiteral",
-      "offset": 260,
-      "length": 15,
-      "value": "\"SupportSDK.PlaceHolderView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Engine\/SupportEngineModel.swift",
@@ -18546,48 +18972,6 @@
       "offset": 406,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
-      "kind": "IntegerLiteral",
-      "offset": 923,
-      "length": 9,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
-      "kind": "IntegerLiteral",
-      "offset": 942,
-      "length": 13,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
-      "kind": "IntegerLiteral",
-      "offset": 965,
-      "length": 6,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
-      "kind": "IntegerLiteral",
-      "offset": 923,
-      "length": 9,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
-      "kind": "IntegerLiteral",
-      "offset": 942,
-      "length": 13,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
-      "kind": "IntegerLiteral",
-      "offset": 965,
-      "length": 6,
-      "value": "3"
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Models\/Message.swift",
@@ -18700,13 +19084,6 @@
       "offset": 233,
       "length": 2,
       "value": "12"
-    },
-    {
-      "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/Views\/AvatarView\/AvatarTitleView.swift",
-      "kind": "StringLiteral",
-      "offset": 173,
-      "length": 15,
-      "value": "\"SupportSDK.AvatarTitleView\""
     },
     {
       "filePath": "\/Users\/admin\/actions-runner\/_work\/zendesk_mobile_sdks_ios\/zendesk_mobile_sdks_ios\/SupportSDK\/SupportSDK\/Source\/Request\/RequestQueue\/RequestQueueMiddleware.swift",
