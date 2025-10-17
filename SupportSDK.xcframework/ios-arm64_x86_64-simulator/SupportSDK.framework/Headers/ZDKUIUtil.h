@@ -187,7 +187,10 @@ ZDKUIIsLandscape()
 CG_INLINE CGRect
 CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
 {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     CGRect screen = [UIScreen mainScreen].bounds;
+    #pragma clang diagnostic pop
 
     Boolean isLandscape = ZDKUIIsLandscape();
 
@@ -243,7 +246,10 @@ CGCenterRectInRect(CGRect rect, CGRect inRect)
 CG_INLINE CGRect
 ZDKUIScreenFrame()
 {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    #pragma clang diagnostic pop
 
     CGFloat width = screenSize.width;
     CGFloat height = screenSize.height;
