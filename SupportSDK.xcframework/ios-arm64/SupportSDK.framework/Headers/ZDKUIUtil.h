@@ -187,7 +187,31 @@ ZDKUIIsLandscape()
 CG_INLINE CGRect
 CGRectMakeCenteredInScreen(CGFloat width, CGFloat height)
 {
-    CGRect screen = [UIScreen mainScreen].bounds;
+    CGRect screen;
+    if (@available(iOS 13.0, *)) {
+        UIWindowScene *windowScene = nil;
+        NSSet<UIScene *> *connectedScenes = [UIApplication sharedApplication].connectedScenes;
+        for (UIScene *scene in connectedScenes) {
+            if ([scene isKindOfClass:[UIWindowScene class]]) {
+                windowScene = (UIWindowScene *)scene;
+                break;
+            }
+        }
+        if (windowScene != nil) {
+            screen = windowScene.screen.bounds;
+        } else {
+            // Fallback to mainScreen if no scene available (early launch, background, etc.)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+            screen = [UIScreen mainScreen].bounds;
+#pragma clang diagnostic pop
+        }
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        screen = [UIScreen mainScreen].bounds;
+#pragma clang diagnostic pop
+    }
 
     Boolean isLandscape = ZDKUIIsLandscape();
 
@@ -243,7 +267,31 @@ CGCenterRectInRect(CGRect rect, CGRect inRect)
 CG_INLINE CGRect
 ZDKUIScreenFrame()
 {
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGSize screenSize;
+    if (@available(iOS 13.0, *)) {
+        UIWindowScene *windowScene = nil;
+        NSSet<UIScene *> *connectedScenes = [UIApplication sharedApplication].connectedScenes;
+        for (UIScene *scene in connectedScenes) {
+            if ([scene isKindOfClass:[UIWindowScene class]]) {
+                windowScene = (UIWindowScene *)scene;
+                break;
+            }
+        }
+        if (windowScene != nil) {
+            screenSize = windowScene.screen.bounds.size;
+        } else {
+            // Fallback to mainScreen if no scene available (early launch, background, etc.)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+            screenSize = [UIScreen mainScreen].bounds.size;
+#pragma clang diagnostic pop
+        }
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        screenSize = [UIScreen mainScreen].bounds.size;
+#pragma clang diagnostic pop
+    }
 
     CGFloat width = screenSize.width;
     CGFloat height = screenSize.height;
